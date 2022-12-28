@@ -83,16 +83,17 @@ select {
 
 /*****Colors*****/
 
-root {
+:root {
     --black: black;
     --white: white;
-    --primary-blue: #004F88; 
+    --navy-blue: #000080;
+    --super-darl-blue: #000040; 
 }
 
 
 /*****Fonts*****/
 
-root {
+:root {
     --primary: font-family: 'Montserrat', sans-serif;
 }
 
@@ -116,10 +117,10 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background: rgb(255, 255, 255);
+    background: var(--white);
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--primary);
 }
 
 header {
@@ -145,7 +146,7 @@ nav {
 } 
 
 nav ul {
-    color:rgb(255, 255, 255);
+    color:var(--white);
     font-size: 16px;
     font-weight: bold;
     list-style: none;
@@ -171,7 +172,7 @@ nav ul li {
 }
 
 li a {
-    color:rgb(255, 255, 255);
+    color:var(--white);
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
@@ -179,7 +180,7 @@ li a {
 }
 
 li a:hover {
-    text-shadow: 0 0 .4rem white;
+    text-shadow: 0 0 .4rem var(--white);
 }
 
 .nav-button {
@@ -241,11 +242,11 @@ li a:hover {
     width: 100%;
     text-align: center;
     margin: 1.25rem 0;
-    color: #004F88;
+    color: var(--primary-blue);
 }
 
 .project-cards {
-    background-color: rgb(255, 255, 255);
+    background-color: var(--white);
     gap: 1.25rem;
     margin: 2rem;
     padding: 0 2rem 2rem 2rem;
@@ -362,7 +363,7 @@ button svg {
 /*****Contact*****/
 
 .contact {
-    background-color: #1385d6;
+    background-color: var(--primary-blue);
     margin: 0;
     padding: 0;
     display: flex;
@@ -436,18 +437,15 @@ textarea:valid~label {
     nav {
         justify-content: center;
         align-items: center;
-    }
-    
-    .oval-background {
-       width: 90%;
-       height: 70%;
-       border: 1px solid #004F88;
-       border-radius: 5rem / 2.5rem;
-       background-color: #004F88;
-       backdrop-filter: blur(1rem);
-       box-shadow: 0 0 2rem #004F88;
-       justify-content: center;
-       align-items: center;
+        width: 100%;
+        height: 2.5rem;
+        background-color: var(--super-darl-blue);
+        backdrop-filter: blur(1rem);
+        opacity: .9;
+        max-width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
     }
 
     nav ul {
