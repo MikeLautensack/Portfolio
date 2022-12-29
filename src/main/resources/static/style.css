@@ -88,13 +88,19 @@ select {
     --white: white;
     --navy-blue: #000080;
     --super-darl-blue: #000040; 
+    --color1: #1c2127;
+    --color2: #0b385f;
+    --color3: #3373b0;
+    --color4: #bed4e9;
+    --color5: #e7f1fb;
 }
 
 
 /*****Fonts*****/
 
 :root {
-    --primary: font-family: 'Montserrat', sans-serif;
+    --primary: 'Open Sans', sans-serif;
+    --signature: 'Great Vibes', sans-serif;
 }
 
 /*************************/
@@ -117,7 +123,8 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background: var(--white);
+    background-color: var(--color4);
+    color: var(--color4);
     margin: 0;
     padding: 0;
     font-family: var(--primary);
@@ -129,7 +136,6 @@ header {
     height: 811px;
     margin: 0;
     padding: 0;
-    color: white;
 }
 
 /*****Navigation*****/
@@ -146,7 +152,6 @@ nav {
 } 
 
 nav ul {
-    color:var(--white);
     font-size: 16px;
     font-weight: bold;
     list-style: none;
@@ -172,15 +177,15 @@ nav ul li {
 }
 
 li a {
-    color:var(--white);
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
     scroll-behavior: smooth;
+    color: var(--color4);
 }
 
 li a:hover {
-    text-shadow: 0 0 .4rem var(--white);
+    text-shadow: 0 0 .4rem var(--color4);
 }
 
 .nav-button {
@@ -196,6 +201,8 @@ li a:hover {
     z-index: 2000;
     border: none;
 }
+
+
 
 /*****Hero*****/
 
@@ -216,6 +223,7 @@ li a:hover {
 
 .hero h1 {
     font-size: 3rem;
+    font-family: var(--signature);
 }
 
 .hero h2 {
@@ -231,31 +239,61 @@ li a:hover {
     margin-top: 3rem;
 }
 
+/*****About*****/
+
+.about {
+    background-color: var(--color2);
+    height: auto;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+.about h1 {
+    padding: 1rem;
+}
+
+.profile-pic-box {
+    padding: 15%;
+}
+
+.picture {
+    align-items: center;
+    justify-content: center;
+}
+
+.bio {
+    padding: 1rem;
+}
+
+.bio p {
+    margin: 1rem;
+}
+
 /*****Projects*****/
 
 .projects {
-
 }
 
 .projects-heading {
     font-size: 3rem;
     width: 100%;
     text-align: center;
-    margin: 1.25rem 0;
-    color: var(--primary-blue);
+    margin: 0;
+    padding: 2rem;
+    color: var(--color2);
 }
 
 .project-cards {
-    background-color: var(--white);
+    background-color: var(--color4);
     gap: 1.25rem;
-    margin: 2rem;
+    margin: 0 2rem;
     padding: 0 2rem 2rem 2rem;
     grid-template-columns: 1fr;
     border-radius: 1rem;
 }
 
 .card {
-    background-color: gray;
+    background-color: var(--color3);
     width: 100%;
     aspect-ratio: 1;
     position: relative;
@@ -269,7 +307,7 @@ li a:hover {
     padding: 0;
     position: absolute;
     bottom: 0;
-    background-color: #004F88;
+    background-color: var(--color2);
     border-radius: 0 0 1rem 1rem;
 }
 
@@ -279,7 +317,6 @@ li a:hover {
     padding: 0;
     width: 100%;
     height: 50%;
-    color: white;
     font-size: .6rem;
     justify-content: center;
 }
@@ -337,53 +374,122 @@ li a:hover {
 .git-hub {
     margin: 0;
     padding: 0;
-    border: 1px solid white;
+    border: 1px solid var(--color4);
     border-radius: 1rem;
     width: 60%;
     min-width: 2.75rem;
     height: 75%;
     background: transparent;
-    color: white;
     font-weight: bold;
+    color: var(--color4);
 }
 
 .launch:hover,
 .git-hub:hover {
-    text-shadow: 0 0 .4rem white;
-    box-shadow: 0 0 .25rem white, inset 0 0 .25rem white;
+    text-shadow: 0 0 .4rem var(--color4);
+    box-shadow: 0 0 .25rem var(--color4), inset 0 0 .25rem var(--color4);
 
 }
 
 button svg {
-    color: white;
+    color: var(--color4);
     height: 85%;
     aspect-ratio: 1;
     vertical-align: middle;
 }
+
+#calculator {
+    background-image: url(assets/calculator.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*****Skills*****/
+
+.skills {
+    background-color: var(--color3);
+}
+
+.skills-icons {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:3rem;
+    margin: 0 5rem 5rem;
+}
+
+.skills h1 {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.skill-img {
+    aspect-ratio: 1;
+}
+
+.html {
+    background-image: url(assets/icons8-html-5-96.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.css {
+    background-image: url(assets/icons8-css3.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.js {
+    background-image: url(assets/icons8-javascript.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.java {
+    background-image: url(assets/icons8-java.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.sb {
+    background-image: url(assets/icons8-spring-boot.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.github {
+    background-image: url(assets/github.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 /*****Contact*****/
 
 .contact {
-    background-color: var(--primary-blue);
+    background-color: var(--color2);
     margin: 0;
     padding: 0;
-    display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    flex-direction: column;
 }
 
 .contact h1 {
-    position: absolute;
-    color: white;
-    top: 0;
-    right: auto;
-    left: auto;
-    margin: 2rem;
+    width: 100%;
+    margin: 0;
+    padding: 2.25rem;
+    justify-content: center;
+    align-items: center;
 }
 
 form {
     width: 75%;
-    margin: 15%;
+    margin: 0 5rem 5rem;
     padding: 0;
 }
 
@@ -395,9 +501,8 @@ form {
 input,
 textarea {
     width: 100%;
-    color: var(--white);
     background: transparent;
-    border: 1px solid white;
+    border: 1px solid var(--color4);
     border-radius: .25rem;
     padding: 0;
     margin: 0;
@@ -409,7 +514,6 @@ label {
     position: absolute;
     top: 0;
     left: 0.25rem;
-    color: white;
 }
 
 input:focus~label,
@@ -422,9 +526,16 @@ textarea:valid~label {
 .submit-button {
     width: 100%;
     background: transparent;
-    border: 1px solid white;
+    border: 1px solid var(--color4);
     border-radius: .25rem;
-    color: white;
+    color: var(--color4);
+}
+
+/*****Footer*****/
+
+footer {
+    height: 7rem;
+    background-color: var(--color1);
 }
 
 
@@ -439,9 +550,8 @@ textarea:valid~label {
         align-items: center;
         width: 100%;
         height: 2.5rem;
-        background-color: var(--super-darl-blue);
-        backdrop-filter: blur(1rem);
-        opacity: .9;
+        background-color: var(--color1);
+        opacity: .95;
         max-width: 100%;
         position: fixed;
         top: 0;
@@ -449,7 +559,6 @@ textarea:valid~label {
     }
 
     nav ul {
-        color:rgb(255, 255, 255);
         font-size: 16px;
         font-weight: bold;
         list-style: none;
@@ -465,7 +574,8 @@ textarea:valid~label {
         margin: initial;
         transform: initial;
         transition: initial;
-        width: 100%;
+        width: 40%;
+        max-width: 20rem;
     }
     
     nav ul li {
@@ -474,6 +584,54 @@ textarea:valid~label {
     
     .project-cards {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .link-icons {
+        position: absolute;
+        right: 2rem;
+        height: 55%;
+
+    }
+     
+    .link-icon {
+        color: var(--color4);
+        height: 100%;
+        aspect-ratio: 1;
+        margin: 0 .2rem;
+    }
+
+    /*****About*****/
+
+    .about {    
+        background-color: var(--color2);
+        height: auto;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+    }
+
+    .about h1 { 
+        padding: 1rem;
+        grid-column: 1 / 3;
+    }
+
+    .profile-pic-box {  
+        padding: 15%;
+        grid-column: 1 / 2;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .picture {
+        
+    }
+
+    .bio {
+        padding: 1rem;
+        grid-column: 2 / 3;
+    }
+
+    .bio p {
+        margin: 1rem;
     }
 }
 
