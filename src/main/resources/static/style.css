@@ -138,6 +138,10 @@ header {
     padding: 0;
 }
 
+.heading {
+    font-size: 1.5rem;
+}
+
 /*****Navigation*****/
 
 nav {
@@ -251,7 +255,6 @@ li a:hover {
 }
 
 .about h1 {
-    font-size: 2.5rem;
     margin: 2.25rem 0;
 }
 
@@ -282,7 +285,6 @@ li a:hover {
 }
 
 .projects-heading {
-    font-size: 2.5rem;
     width: 100%;
     text-align: center;
     margin: 0;
@@ -420,12 +422,11 @@ button svg {
 
 .skills-icons {
     grid-template-columns: 1fr 1fr 1fr;
-    gap:3rem;
-    margin: 0 5rem 5rem;
+    gap: 1.5rem;
+    margin: 0 3rem 3rem;
 }
 
 .skills h1 {
-    font-size: 2.5rem;
     text-align: center;
     padding: 2.25rem 0;
 }
@@ -488,7 +489,6 @@ button svg {
 }
 
 .contact h1 {
-    font-size: 2.5rem;
     width: 100%;
     margin: 0;
     padding: 2.25rem;
@@ -549,6 +549,10 @@ footer {
 
 
 @media (min-width: 33rem) {
+
+    .heading {
+        font-size: 2.5rem;
+    }
 
     .nav-button {
         display: none;
@@ -642,6 +646,22 @@ footer {
     .bio p {
         margin: 1rem;
     }
+
+    /*****Skills*****/
+
+    .skills {
+        background-color: var(--color3);
+    }
+    
+    .skills-icons {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .skills h1 {
+        text-align: center;
+        padding: 2.25rem 0;
+    }
+    
 }
 
 @media (min-width: 51rem) {
