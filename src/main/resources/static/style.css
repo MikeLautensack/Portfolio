@@ -202,7 +202,9 @@ li a:hover {
     border: none;
 }
 
-
+.link-icons {
+    display: none;
+}
 
 /*****Hero*****/
 
@@ -249,24 +251,29 @@ li a:hover {
 }
 
 .about h1 {
-    padding: 1rem;
+    font-size: 2.5rem;
+    margin: 2.25rem 0;
 }
 
 .profile-pic-box {
-    padding: 15%;
+    justify-content: center;
+    align-items: center;
 }
 
 .picture {
     align-items: center;
     justify-content: center;
+    width: 60%;
+    aspect-ratio: 1;
 }
 
 .bio {
-    padding: 1rem;
+    margin: 2rem;
+    align-items: center;
 }
 
-.bio p {
-    margin: 1rem;
+.text p {
+    padding: 1rem;
 }
 
 /*****Projects*****/
@@ -275,11 +282,11 @@ li a:hover {
 }
 
 .projects-heading {
-    font-size: 3rem;
+    font-size: 2.5rem;
     width: 100%;
     text-align: center;
     margin: 0;
-    padding: 2rem;
+    padding: 2.25rem;
     color: var(--color2);
 }
 
@@ -418,8 +425,9 @@ button svg {
 }
 
 .skills h1 {
+    font-size: 2.5rem;
     text-align: center;
-    padding: 2rem 0;
+    padding: 2.25rem 0;
 }
 
 .skill-img {
@@ -480,6 +488,7 @@ button svg {
 }
 
 .contact h1 {
+    font-size: 2.5rem;
     width: 100%;
     margin: 0;
     padding: 2.25rem;
@@ -574,7 +583,7 @@ footer {
         margin: initial;
         transform: initial;
         transition: initial;
-        width: 40%;
+        width: 55%;
         max-width: 20rem;
     }
     
@@ -590,7 +599,7 @@ footer {
         position: absolute;
         right: 2rem;
         height: 55%;
-
+        display: flex;
     }
      
     .link-icon {
