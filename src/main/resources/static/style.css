@@ -123,7 +123,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background-color: var(--color3);
+    background-color: var(--color2);
     color: var(--color4);
     margin: 0;
     padding: 0;
@@ -223,8 +223,9 @@ li a:hover {
 
 .hero h1,
 .hero h2,
-.hero h3 {
-    padding: .5rem 0;
+.hero h3,
+.hero a {
+    margin: 1rem;
 }
 
 .hero h1 {
@@ -240,9 +241,13 @@ li a:hover {
     font-size: 1rem;
 }
 
-.hero p {
-    padding: .25rem 0;
-    margin-top: 3rem;
+.hero a {
+    border: 1px solid #FF9900;
+    border-radius: .5rem;
+    padding: .25rem;
+    background-color: #FF9900;
+    color: var(--color5);
+    text-decoration: none;
 }
 
 /*****About*****/
@@ -430,10 +435,17 @@ li a:hover {
     background-position: center;
 }
 
+.card[data-display-coming-soon="true"] {
+    z-index: 10;
+    background-color: #52529e;
+    background-image: none;
+    background: #000040;
+}
+
 /*****Skills*****/
 
 .skills {
-    background-color: var(--color3);
+    background-color: var(--color2);
 }
 
 .skills-icons {
@@ -680,7 +692,7 @@ footer {
     /*****Skills*****/
 
     .skills {
-        background-color: var(--color3);
+        background-color: var(--color2);
     }
     
     .skills-icons {
