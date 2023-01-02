@@ -15,7 +15,7 @@ navButton.addEventListener("click", () => {
     }
 });
 
-/*launchButtons.forEach(button => {
+launchButtons.forEach(button => {
     button.addEventListener('click', () => {
         console.log('1')
         
@@ -28,5 +28,5 @@ navButton.addEventListener("click", () => {
             }
         });
     });
-});*/
+});
 

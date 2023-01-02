@@ -223,8 +223,7 @@ li a:hover {
 
 .hero h1,
 .hero h2,
-.hero h3,
-.hero a {
+.hero h3 {
     margin: 1rem;
 }
 
@@ -243,8 +242,9 @@ li a:hover {
 
 .hero a {
     border: 1px solid #FF9900;
-    border-radius: .5rem;
-    padding: .25rem;
+    border-radius: .4rem;
+    margin: 1rem .5rem;
+    padding: .25rem .60rem;
     background-color: #FF9900;
     color: var(--color5);
     text-decoration: none;
@@ -299,9 +299,9 @@ li a:hover {
 
 .project-cards {
     background-color: var(--color4);
-    gap: 1.25rem;
+    gap: 3.5rem;
     margin: 0 2rem;
-    padding: 2rem;
+    padding: 3.5rem;
     grid-template-columns: 1fr;
     border-radius: 1rem;
 }
@@ -437,9 +437,7 @@ li a:hover {
 
 .card[data-display-coming-soon="true"] {
     z-index: 10;
-    background-color: #52529e;
-    background-image: none;
-    background: #000040;
+    background: none;
 }
 
 /*****Skills*****/
@@ -575,7 +573,7 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active{
-    -webkit-box-shadow: 0 0 0 30px var(--color2) inset !important;
+    -webkit-box-shadow: 0 0 0 30px var(--color1) inset !important;
 }
 
 input:-webkit-autofill{
@@ -589,6 +587,12 @@ footer {
     background-color: var(--color1);
 }
 
+.break-line {
+    width: 97%;
+    height: 1px;
+    background-color: var(--color4);
+    margin: 0 auto;
+}
 
 @media (min-width: 33rem) {
 
