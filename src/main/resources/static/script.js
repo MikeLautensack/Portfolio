@@ -2,6 +2,9 @@ const nav = document.querySelector("nav ul");
 const navButton = document.querySelector(".nav-button");
 let launchButtons = document.querySelectorAll('.launch');
 let cards = document.querySelectorAll('.card');
+let calc = document.querySelector('#calculator');
+let chess = document.querySelector('#chess')
+let project3 = document.querySelector('#project3');
 
 navButton.addEventListener("click", () => {
     const vis = nav.getAttribute("data-visable");
@@ -17,14 +20,13 @@ navButton.addEventListener("click", () => {
 
 launchButtons.forEach(button => {
     button.addEventListener('click', () => {
-        console.log('1')
-        
+        let red = "red";
+        let btnsCardID = button.getAttribute('data-launch')
         cards.forEach(card => {
-            console.log('2')
             let isCardLive = card.getAttribute('data-is-project-live');
-            if(isCardLive == 'false') {
-                card.setAttribute('data-display-coming-soon', 'true');
-                console.log('3')
+            let img = card.querySelector('.project-img')
+            if(isCardLive == 'false' && card.id == btnsCardID) {
+                img.style.filter = "blur(8px)";
             }
         });
     });
