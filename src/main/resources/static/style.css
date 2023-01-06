@@ -290,18 +290,15 @@ li a:hover {
 }
 
 .projects-heading {
-    width: 100%;
     text-align: center;
-    margin: 0;
-    padding: 2.25rem;
+    margin: 2rem;
     color: var(--color4);
 }
 
 .project-cards {
-    background-color: var(--color4);
-    gap: 3.5rem;
-    margin: 0 2rem;
-    padding: 3.5rem;
+    background-color: var(--color2);
+    gap: 5vw;
+    margin: 0 10vw;
     grid-template-columns: 1fr;
     border-radius: 1rem;
 }
@@ -449,16 +446,14 @@ li a:hover {
 
 .skills-icons {
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-    margin: 0 2rem 2rem;
-    padding: 2rem;
-    background-color: var(--color4);
-    border-radius: 1rem;
+    gap: 5vw;
+    margin: 0 10vw 10vw;
 }
 
 .skills h1 {
     text-align: center;
-    padding: 2.25rem 0;
+    margin: 2rem;
+    padding: 0;
 }
 
 .skill-img {
@@ -702,11 +697,6 @@ footer {
     
     .skills-icons {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
-
-    .skills h1 {
-        text-align: center;
-        padding: 2.25rem 0;
     }
     
 }
