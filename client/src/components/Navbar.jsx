@@ -1,8 +1,7 @@
 import React, {useState} from 'react'
-import {FaBars, FaTimes, FaGithub, FaLinkedin, FaFacebook} from 'react-icons/fa'
-import {HiOutlineMail} from 'react-icons/hi'
+import {FaBars, FaTimes, FaGithub, FaLinkedin} from 'react-icons/fa'
 import {BsFillPersonLinesFill} from 'react-icons/bs'
-import Logo from '../assets/logo1.png'
+import Logo from '../assets/CustomLogo.png'
 import { Link } from 'react-scroll'
 
 
@@ -82,22 +81,17 @@ const Navbar = () => {
             <div className='hidden lg:flex flex-col fixed top-[35%] left-0'>
                 <ul>
                     <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
-                        <a className='flex justify-between items-center w-full text-gray-300' href='/'>
+                        <a className='flex justify-between items-center w-full text-gray-300' href='https://www.linkedin.com/in/mike-lautensack-266407171/'>
                             Linkedin <FaLinkedin size={30} />
                         </a>
                     </li>
                     <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
-                        <a className='flex justify-between items-center w-full text-gray-300' href='/'>
+                        <a className='flex justify-between items-center w-full text-gray-300' href='https://github.com/MikeLautensack'>
                             Github <FaGithub size={30} />
                         </a>
                     </li>
-                    <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
-                        <a className='flex justify-between items-center w-full text-gray-300' href='/'>
-                            Email <HiOutlineMail size={30} />
-                        </a>
-                    </li>
                     <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
-                        <a className='flex justify-between items-center w-full text-gray-300' href='/'>
+                        <a className='flex justify-between items-center w-full text-gray-300' href='https://docs.google.com/document/d/e/2PACX-1vTszZx36JYS0EDBLaL03NWc2msNfoIWrvToSlEqmxRjskujj15Z3yhMMBS_Dw2wZdrQzTInu-sDS710/pub'>
                             Resume <BsFillPersonLinesFill size={30} />
                         </a>
                     </li>
