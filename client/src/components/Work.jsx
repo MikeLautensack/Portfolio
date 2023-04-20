@@ -9,7 +9,7 @@ const Work = () => {
     {
         img: `url(${EstimateGeneratorIMG})`,
         name: 'Estimate Generator',
-        description: 'test',
+        description: 'A webapp for contractors to create and send estimates',
         liveLink: 'http://estimategeneratorapp.com/',
         githubLink: 'https://github.com/MikeLautensack/Estimate-Generator'
     }
