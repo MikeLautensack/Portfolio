@@ -32,10 +32,6 @@ const Skills = () => {
                     <p className='my-4'>CSS</p>
                 </div>
                 <div className='shadow-md shadow-[#040c16] hover:scale-110 hover:shadow-[#15F777] duration-300'>
-                    <img className='w-20 mx-auto mt-4' src={HTML} alt='html icon' />
-                    <p className='my-4'>HTML</p>
-                </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 hover:shadow-[#15F777] duration-300'>
                     <img className='w-20 mx-auto mt-4' src={JavaScript} alt='html icon' />
                     <p className='my-4'>JAVASCRIPT</p>
                 </div>
