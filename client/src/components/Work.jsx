@@ -23,10 +23,64 @@ const Work = () => {
                 <p className='py-6'>Check out my projects!</p>
             </div>
 
-            <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
-                {projects.map((project) => (
-                    <ProjectCard project={project} />
-                ))}
+            <div className='grid sm:grid-cols-2 gap-4 project-cards'>
+                <div className='project-card'>
+                  <div className='img eg'>
+                    
+                  </div>
+                  <div className='project-content'>
+                    <h1>Estimate Generator</h1>
+                    <p>Estimate Generator is a web app for contractors and smal business's to create, send and manage estimates.</p>
+                    <div className='tech'>
+                      <div className='skill react'>
+
+                      </div>
+                      <div className='skill node'>
+
+                      </div>
+                      <div className='skill express'>
+
+                      </div>
+                      <div className='skill mongo'>
+
+                      </div>
+                      <div className='skill docker'>
+
+                      </div>
+                    </div>
+                    <div className='project-content-buttons'>
+                      <button className='live-button'>Live Link</button>
+                      <button className='git-hub'>Git-Hub</button>
+                    </div>
+                  </div>
+                </div>
+                <div className='project-card'>
+                  <div className='img chess-api'>
+
+                  </div>
+                  <div className='project-content'>
+                    <h1>Chess API</h1>
+                    <p>Chess API generates legal moves for each piece in any position with simple JSON Object Input and Output</p>
+                    <div className='tech'>
+                      <div className='skill react'>
+
+                      </div>
+                      <div className='skill spring-boot'>
+
+                      </div>
+                      <div className='skill java'>
+
+                      </div>
+                      <div className='skill docker'>
+
+                      </div>
+                    </div>
+                    <div className='project-content-buttons'>
+                      <button className='live-button'>Live Link</button>
+                      <button className='git-hub'>Git-Hub</button>
+                    </div>
+                  </div>
+                </div>
             </div>
         </div>
     </div>

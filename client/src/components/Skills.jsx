@@ -23,55 +23,55 @@ const Skills = () => {
                 <p className='py-4 mt-1.5'>These are the technologies I am competent in.</p>
             </div>
             <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8'>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 hover:shadow-[#15F777] duration-300'>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-300 skill-card'>
                     <img className='w-20 mx-auto mt-4' src={HTML} alt='html icon' />
                     <p className='my-4'>HTML</p>
                 </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 hover:shadow-[#15F777] duration-300'>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-300 skill-card'>
                     <img className='w-20 mx-auto mt-4' src={CSS} alt='html icon' />
                     <p className='my-4'>CSS</p>
                 </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 hover:shadow-[#15F777] duration-300'>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-300 skill-card'>
                     <img className='w-20 mx-auto mt-4' src={JavaScript} alt='html icon' />
                     <p className='my-4'>JAVASCRIPT</p>
                 </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 hover:shadow-[#15F777] duration-300'>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-300 skill-card'>
                     <img className='w-20 mx-auto mt-4' src={Mongo} alt='html icon' />
                     <p className='mern'>M</p><p className='my-4'>MONGO</p>
                 </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 hover:shadow-[#15F777] duration-300'>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-300 skill-card'>
                     <img className='w-20 mx-auto mt-4' src={Express} alt='html icon' />
                     <p className='mern'>E</p><p className='my-4'>EXPRESS</p>
                 </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 hover:shadow-[#15F777] duration-300'>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-300 skill-card'>
                     <img className='w-20 mx-auto mt-4' src={ReactImg} alt='html icon' />
                     <p className='mern'>R</p><p className='my-4'>REACT</p>
                 </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 hover:shadow-[#15F777] duration-300'>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-300 skill-card'>
                     <img className='w-20 mx-auto mt-4' src={Node} alt='html icon' />
                     <p className='mern'>N</p><p className='my-4'>NODE</p>
                 </div>                
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 hover:shadow-[#15F777] duration-300'>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-300 skill-card'>
                     <img className='w-20 mx-auto mt-4' src={Java} alt='html icon' />
                     <p className='my-4'>Java</p>
                 </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 hover:shadow-[#15F777] duration-300'>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-300 skill-card'>
                     <img className='w-20 mx-auto mt-4' src={SpringBoot} alt='html icon' />
                     <p className='my-4'>Spring Boot</p>
                 </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 hover:shadow-[#15F777] duration-300'>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-300 skill-card'>
                     <img className='w-20 mx-auto mt-4' src={Postman} alt='html icon' />
                     <p className='my-4'>Postman</p>
                 </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 hover:shadow-[#15F777] duration-300'>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-300 skill-card'>
                     <img className='w-20 mx-auto mt-4' src={Docker} alt='html icon' />
                     <p className='my-4'>Docker</p>
                 </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 hover:shadow-[#15F777] duration-300'>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-300 skill-card'>
                     <img className='w-20 mx-auto mt-4' src={Github} alt='html icon' />
                     <p className='my-4'>Git & Github</p>
                 </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 hover:shadow-[#15F777] duration-300'>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-300 skill-card'>
                     <img className='w-20 mx-auto mt-4' src={Figma} alt='html icon' />
                     <p className='my-4'>Figma</p>
                 </div>
