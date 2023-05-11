@@ -23,7 +23,7 @@ const Work = () => {
                 <p className='py-6'>Check out my projects!</p>
             </div>
 
-            <div className='grid sm:grid-cols-2 gap-4 project-cards'>
+            <div className='grid gap-4 project-cards'>
                 <div className='project-card'>
                   <div className='img eg'>
                     

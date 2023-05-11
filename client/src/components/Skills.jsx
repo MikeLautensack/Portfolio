@@ -36,6 +36,10 @@ const Skills = () => {
                     <p className='my-4'>JAVASCRIPT</p>
                 </div>
                 <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-300 skill-card'>
+                    <img className='w-20 mx-auto mt-4' src={Java} alt='html icon' />
+                    <p className='my-4'>Java</p>
+                </div>
+                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-300 skill-card'>
                     <img className='w-20 mx-auto mt-4' src={Mongo} alt='html icon' />
                     <p className='mern'>M</p><p className='my-4'>MONGO</p>
                 </div>
@@ -51,10 +55,6 @@ const Skills = () => {
                     <img className='w-20 mx-auto mt-4' src={Node} alt='html icon' />
                     <p className='mern'>N</p><p className='my-4'>NODE</p>
                 </div>                
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-300 skill-card'>
-                    <img className='w-20 mx-auto mt-4' src={Java} alt='html icon' />
-                    <p className='my-4'>Java</p>
-                </div>
                 <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-300 skill-card'>
                     <img className='w-20 mx-auto mt-4' src={SpringBoot} alt='html icon' />
                     <p className='my-4'>Spring Boot</p>
