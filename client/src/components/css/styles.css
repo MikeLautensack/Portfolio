@@ -115,15 +115,16 @@
     bottom: 0;
 }
 
-.project-content-buttons button {
+.project-content-buttons a {
     width: 50%;
     background-color: #15F777;
     color: #0a192f;
     border-radius: 100vw;
     font-weight: 500;
+    text-align: center;
 }
 
-.project-content-buttons button:hover {
+.project-content-buttons a:hover {
     box-shadow: 0 0 .5rem #15F777;
 }
 
@@ -263,7 +264,7 @@
         margin: 1rem 0 0 0;
     }
 
-    .project-content-buttons button {
+    .project-content-buttons a {
         width: 100%;
         margin: 0;
     }

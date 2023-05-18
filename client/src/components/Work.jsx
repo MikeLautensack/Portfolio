@@ -49,8 +49,8 @@ const Work = () => {
                       </div>
                     </div>
                     <div className='project-content-buttons'>
-                      <button className='live-button'>Live Link</button>
-                      <button className='git-hub'>Git-Hub</button>
+                      <a href='http://estimategeneratorapp.com/' className='live-button'>Live Link</a>
+                      <a href='https://github.com/MikeLautensack/Estimate-Generator' className='git-hub'>Git-Hub</a>
                     </div>
                   </div>
                 </div>
@@ -76,8 +76,8 @@ const Work = () => {
                       </div>
                     </div>
                     <div className='project-content-buttons'>
-                      <button className='live-button'>Live Link</button>
-                      <button className='git-hub'>Git-Hub</button>
+                      <a href='http://chessmovesapi.com/' className='live-button'>Live Link</a>
+                      <a href='https://github.com/MikeLautensack/Chess-Game' className='git-hub'>Git-Hub</a>
                     </div>
                   </div>
                 </div>
