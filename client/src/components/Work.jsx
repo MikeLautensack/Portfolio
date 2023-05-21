@@ -77,7 +77,7 @@ const Work = () => {
                     </div>
                     <div className='project-content-buttons'>
                       <a href='http://chessmovesapi.com/' className='live-button'>Live Link</a>
-                      <a href='https://github.com/MikeLautensack/Chess-Game' className='git-hub'>Git-Hub</a>
+                      <a href='https://github.com/MikeLautensack/Chess' className='git-hub'>Git-Hub</a>
                     </div>
                   </div>
                 </div>
