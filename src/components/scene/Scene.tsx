@@ -6,7 +6,7 @@ import { useGLTF } from "@react-three/drei";
 import Experence from "./Experence";
 
 const Scene = () => {
-  const computer = useGLTF("/models/model.gltf");
+  const computer = useGLTF("/model.gltf");
   console.log("computer model", computer);
   return (
     <Canvas>

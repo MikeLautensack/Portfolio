@@ -44,16 +44,16 @@ const Experence = ({ computer }: ExperenceProps) => {
             rotation-x={0.13}
             rotation-y={-0.4}
           >
-            <Html
+            {/* <Html
               transform
               wrapperClass="htmlScreen"
               distanceFactor={1}
-              position={[0.15, 1.65, -1.4]}
+              position={[0, 2, -1.4]}
               rotation-x={-0.25}
-              scale={4}
+              // scale={4}
             >
               <iframe src="https://mikeswebdeveloperportfolio.com/copy" />
-            </Html>
+            </Html> */}
           </primitive>
         </Float>
       </PresentationControls>
