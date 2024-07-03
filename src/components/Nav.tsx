@@ -1,23 +1,21 @@
 "use client";
 
-import { Box, Button } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import Link from "next/link";
 import React from "react";
 
 const Nav = () => {
   return (
-    <Box
-      component="div"
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        gap: "1rem",
-      }}
-    >
+    <Box component="div" className="flex justify-center items-center gap-4">
       <Link href="/">
-        <Button variant="text" sx={{ color: "#FFFFFF" }}>
-          Home
+        <Button variant="text" className="text-white">
+          <Typography
+            variant="h6"
+            className="text-white normal-case"
+            fontFamily="lato"
+          >
+            Home
+          </Typography>
         </Button>
       </Link>
     </Box>

@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import { Box, Container } from "@mui/material";
+import ThemeProviderWrapper from "@/components/misc/ThemeProviderWrapper";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
+import InitColorSchemeScript from "@mui/material/InitColorSchemeScript";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,8 +21,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
-        {children}
+        <InitColorSchemeScript />
+        <AppRouterCacheProvider>
+          <ThemeProviderWrapper>
+            <Header />
+            {children}
+          </ThemeProviderWrapper>
+        </AppRouterCacheProvider>
       </body>
     </html>
   );
