@@ -13,14 +13,14 @@ const HeroContent = () => {
       <Typography color="#FFFFFF" variant="body1" fontFamily="lato">
         I am a full-stack web developer. I write clean and pixel perfect design.
       </Typography>
-      <div className="flex justify-center items-center gap-4">
-        <Button variant="contained">
-          <Typography variant="body1" className="text-white" fontFamily="lato">
+      <div className="flex justify-center items-center gap-4 w-full">
+        <Button variant="outlined" className="flex-grow">
+          <Typography variant="body1" fontFamily="lato">
             View Projects
           </Typography>
         </Button>
-        <Button variant="contained">
-          <Typography variant="body1" className="text-white" fontFamily="lato">
+        <Button variant="outlined" className="flex-grow">
+          <Typography variant="body1" fontFamily="lato">
             Contact Me!
           </Typography>
         </Button>

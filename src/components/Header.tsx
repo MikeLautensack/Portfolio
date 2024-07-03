@@ -15,7 +15,7 @@ const Header = () => {
         backgroundColor: "#001824",
       }}
     >
-      <Nav />
+      {/* <Nav /> */}
     </Box>
   );
 };
