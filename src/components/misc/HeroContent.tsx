@@ -4,7 +4,7 @@ import React from "react";
 
 const HeroContent = () => {
   return (
-    <div className="flex flex-col gap-4 justify-start items-start flex-grow md:w-2/4 z-10">
+    <div className="flex flex-col gap-4 justify-start items-start lg:w-full z-10">
       <Typography color="#FFFFFF" variant="h6" fontFamily="lato">
         Hi, I am Mike Lautensack
       </Typography>

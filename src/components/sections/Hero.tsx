@@ -15,7 +15,7 @@ const Hero = () => {
       <Box
         id="scene-container"
         component="div"
-        className="flex lg:flex-grow absolute lg:static h-2/3"
+        className="flex lg:flex-grow absolute lg:static lg:h-2/3 lg:w-full"
       >
         <Scene />
       </Box>
