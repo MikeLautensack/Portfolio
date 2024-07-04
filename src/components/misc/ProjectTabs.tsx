@@ -1,10 +1,11 @@
 "use client";
 
 import { Box, Tab, Tabs } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { CustomTabPanel } from "./CustomTabPanel";
 import TopThreeProjects from "./TopThreeProjects";
 import FullstackApps from "./FullstackApps";
+import { useSearchParams } from "next/navigation";
 
 function a11yProps(index: number) {
   return {
@@ -14,8 +15,29 @@ function a11yProps(index: number) {
 }
 
 const ProjectTabs = () => {
+  // Hooks
+  const searchParams = useSearchParams();
+
+  // get params
+  const tab = searchParams.get("tab");
+  console.log("tab test", tab);
+
   // State
   const [value, setValue] = useState<number>(0);
+
+  // Effects
+  useEffect(() => {
+    if (tab) {
+      if (tab === "top-three") {
+        setValue(0);
+      } else if (tab === "full-stack-apps") {
+        setValue(1);
+      } else if (tab === "course-projects") {
+        setValue(2);
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <Box component="div" className="w-full px-0">

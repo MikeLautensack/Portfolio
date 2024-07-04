@@ -92,17 +92,17 @@ export default function CustomizedMenus() {
           Projects Catagories
         </Typography>
 
-        <Link href="/projects">
+        <Link href="/projects?tab=top-three">
           <MenuItem onClick={handleClose} disableRipple>
             Top 3 Projects!
           </MenuItem>
         </Link>
-        <Link href="/projects">
+        <Link href="/projects?tab=full-stack-apps">
           <MenuItem onClick={handleClose} disableRipple>
             Full Stack Apps
           </MenuItem>
         </Link>
-        <Link href="/projects">
+        <Link href="/projects?tab=course-projects">
           <MenuItem onClick={handleClose} disableRipple>
             Course Projects
           </MenuItem>

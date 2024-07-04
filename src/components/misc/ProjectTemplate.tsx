@@ -1,7 +1,10 @@
+import { Box } from "@mui/material";
 import React from "react";
 
-const ProjectTemplate = () => {
-  return <div>ProjectTemplate</div>;
+type ProjectTemplateProps = {};
+
+const ProjectTemplate = ({}: ProjectTemplateProps) => {
+  return <Box component="div" className=""></Box>;
 };
 
 export default ProjectTemplate;
