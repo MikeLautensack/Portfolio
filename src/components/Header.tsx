@@ -6,16 +6,9 @@ const Header = () => {
   return (
     <Box
       component="header"
-      sx={{
-        width: "100%",
-        height: "64px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#001824",
-      }}
+      className="w-full h-14 flex justify-center items-center bg-[#001824]"
     >
-      {/* <Nav /> */}
+      <Nav />
     </Box>
   );
 };

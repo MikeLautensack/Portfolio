@@ -7,7 +7,7 @@ const page = () => {
   return (
     <Box
       component="section"
-      className="flex flex-col gap-8 justify-start items-start px-8 py-4 md:px-32 md:py-10 bg-[#001824] md:min-h-[calc(100vh-64px)]"
+      className="flex flex-col gap-8 justify-start items-start px-8 py-4 md:px-32 md:py-10 bg-[#001824] md:min-h-[calc(100vh-56px)]"
     >
       <Typography
         variant="h4"
