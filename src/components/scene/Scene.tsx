@@ -9,7 +9,7 @@ const Scene = () => {
   const computer = useGLTF("/model.gltf");
   console.log("computer model", computer);
   return (
-    <Canvas>
+    <Canvas className="">
       <Experence computer={computer} />
     </Canvas>
   );

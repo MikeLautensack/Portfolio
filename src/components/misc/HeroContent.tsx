@@ -1,9 +1,10 @@
 import { Button, Typography } from "@mui/material";
+import Link from "next/link";
 import React from "react";
 
 const HeroContent = () => {
   return (
-    <div className="flex flex-col gap-4 justify-start items-start w-full md:w-2/4">
+    <div className="flex flex-col gap-4 justify-start items-start flex-grow md:w-2/4 z-10">
       <Typography color="#FFFFFF" variant="h6" fontFamily="lato">
         Hi, I am Mike Lautensack
       </Typography>
@@ -14,16 +15,20 @@ const HeroContent = () => {
         I am a full-stack web developer. I write clean and pixel perfect design.
       </Typography>
       <div className="flex justify-center items-center gap-4 w-full">
-        <Button variant="outlined" className="flex-grow">
-          <Typography variant="body1" fontFamily="lato">
-            View Projects
-          </Typography>
-        </Button>
-        <Button variant="outlined" className="flex-grow">
-          <Typography variant="body1" fontFamily="lato">
-            Contact Me!
-          </Typography>
-        </Button>
+        <Link href="/projects" className="flex-grow">
+          <Button variant="outlined" className="w-full">
+            <Typography variant="body1" fontFamily="lato">
+              View Projects
+            </Typography>
+          </Button>
+        </Link>
+        <Link href="/contact-me" className="flex-grow">
+          <Button variant="outlined" className="w-full">
+            <Typography variant="body1" fontFamily="lato">
+              Contact Me!
+            </Typography>
+          </Button>
+        </Link>
       </div>
     </div>
   );
