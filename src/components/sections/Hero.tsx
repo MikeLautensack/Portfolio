@@ -9,10 +9,14 @@ const Hero = () => {
   return (
     <Box
       component="div"
-      className="h-[calc(100vh-64px)] flex items-center bg-[#001824] px-8 py-4 md:px-32 md:py-20"
+      className="h-[calc(100vh-64px)] flex items-center bg-[#001824] px-8 py-4 md:px-32 md:py-20 relative"
     >
       <HeroContent />
-      <Box component="div" className="w-[650px] h-[500px]">
+      <Box
+        id="scene-container"
+        component="div"
+        className="flex lg:flex-grow absolute lg:static lg:h-2/3 lg:w-full"
+      >
         <Scene />
       </Box>
     </Box>
