@@ -19,19 +19,19 @@ const Skills = () => {
         <SkillsItem
           num={1}
           skill="React.js / Next.js"
-          description="vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non"
+          description="Proficient in building dynamic, SEO-friendly web applications with React.js and Next.js, leveraging their powerful features for seamless user experiences."
           href=""
         />
         <SkillsItem
           num={2}
           skill="Node.js / Express.js"
-          description="vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non"
+          description="Skilled in developing robust server-side applications using Node.js and Express.js, focusing on performance, scalability, and efficient API design."
           href=""
         />
         <SkillsItem
           num={3}
           skill="Javascript / Typescript"
-          description="vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam non"
+          description="Experienced in JavaScript and TypeScript for creating clean, maintainable code with strong typing, enhancing reliability and reducing runtime errors."
           href=""
         />
       </Box>

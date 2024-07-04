@@ -20,13 +20,13 @@ const SkillsItem = ({ num, skill, description, href }: SkillsItemProps) => {
       component="div"
       className="flex flex-col md:flex-row md:items-center border-b-[3px] border-[#FF8D25] md:h-32 p-4 gap-4"
     >
-      <Box component="div" className="flex gap-4">
+      <Box component="div" className="flex gap-4 md:w-1/3">
         <Box component="div" className="flex justify-center items-center w-12">
           <Typography className="text-white" fontFamily="lato">
             {skillNumber}
           </Typography>
         </Box>
-        <Box component="div" className="">
+        <Box component="div" className="w-full">
           <Typography className="text-white" variant="h4" fontFamily="lato">
             {skill}
           </Typography>
@@ -37,11 +37,6 @@ const SkillsItem = ({ num, skill, description, href }: SkillsItemProps) => {
           <Typography variant="body2" className="text-white" fontFamily="lato">
             {description}
           </Typography>
-        </Box>
-        <Box component="div" className="">
-          <IconButton area-label="Go to skill page">
-            <NavigateNextIcon className="text-white" />
-          </IconButton>
         </Box>
       </Box>
     </Box>

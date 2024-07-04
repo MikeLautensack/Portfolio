@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import ProjectCard from "../misc/ProjectCard";
+import TopThreeProjects from "../misc/TopThreeProjects";
 
 const Projects = () => {
   return (
@@ -15,19 +16,7 @@ const Projects = () => {
       >
         Projects
       </Typography>
-      <ProjectCard
-        projectTitle="Estimate Generator"
-        bulletPoints={[
-          { id: 1, text: "• Next.js / React.js" },
-          { id: 2, text: "• Auth.js" },
-          { id: 3, text: "• Vercel Serverless" },
-          { id: 4, text: "• Drizzle ORM + Neon Serverless PostgreSQL" },
-        ]}
-        href=""
-        imgSrc="/estimate-generator-img.png"
-        imgAlt="Estimate Generator Hero Section"
-        contentOrder="textFirst"
-      />
+      <TopThreeProjects />
     </Box>
   );
 };
