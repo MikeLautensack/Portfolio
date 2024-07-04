@@ -1,16 +1,14 @@
-"use client";
-
 import { Canvas } from "@react-three/fiber";
 import React from "react";
 import { useGLTF } from "@react-three/drei";
-import Experence from "./Experence";
+import { Model } from "../../../Model";
 
 const Scene = () => {
-  const computer = useGLTF("model.gltf");
-  console.log("computer model", computer);
   return (
     <Canvas className="">
-      <Experence computer={computer} />
+      <ambientLight intensity={4.5} />
+      <directionalLight position={[-2, 5, 2]} intensity={1} />
+      <Model />
     </Canvas>
   );
 };
