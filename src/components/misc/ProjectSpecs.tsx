@@ -5,7 +5,7 @@ type ProjectSpecsProps = {};
 
 const ProjectSpecs = ({}: ProjectSpecsProps) => {
   return (
-    <Box component="" className="">
+    <Box component="div" className="">
       Coming Soon!
     </Box>
   );
