@@ -35,8 +35,7 @@ const ProjectTabs = () => {
         setValue(2);
       }
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [tab]);
 
   return (
     <Box component="div" className="w-full px-0">
