@@ -23,7 +23,9 @@ const ProjectSummaryCard = ({
         className="flex flex-col justify-start items-start gap-2 w-full"
       >
         {bullets.map((bullet) => (
-          <Typography key={Math.floor(Math.random())}>{bullet}</Typography>
+          <Typography key={Math.floor(Math.random())} className="text-white">
+            {bullet}
+          </Typography>
         ))}
       </Box>
       <Box component="div" className="relative w-full h-full">

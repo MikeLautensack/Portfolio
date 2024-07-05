@@ -11,8 +11,7 @@ type ThemeProviderWrapperProps = {
 
 const ThemeProviderWrapper = ({ children }: ThemeProviderWrapperProps) => {
   return (
-    <CssVarsProvider theme={theme}>
-      <CssBaseline />
+    <CssVarsProvider theme={theme} defaultMode="dark">
       <Paper square>{children}</Paper>
     </CssVarsProvider>
   );
