@@ -26,6 +26,8 @@ export default function RootLayout({
         <AppRouterCacheProvider>
           <ThemeProviderWrapper>{children}</ThemeProviderWrapper>
         </AppRouterCacheProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
