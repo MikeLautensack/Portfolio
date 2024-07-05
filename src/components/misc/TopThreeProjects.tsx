@@ -13,7 +13,7 @@ const TopThreeProjects = () => {
           { id: 3, text: "• Vercel Serverless" },
           { id: 4, text: "• Drizzle ORM + Neon Serverless PostgreSQL" },
         ]}
-        href=""
+        href="/projects/estimate-generator"
         imgSrc="/estimate-generator-img.png"
         imgAlt="Estimate Generator Hero Section"
         contentOrder="textFirst"

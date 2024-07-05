@@ -111,7 +111,7 @@ export default function CustomizedMenus() {
         <Typography variant="body1" className="pl-2">
           All Projects
         </Typography>
-        <Link href="/projects">
+        <Link href="/projects/estimate-generator">
           <MenuItem onClick={handleClose} disableRipple>
             Estimate Generator
           </MenuItem>

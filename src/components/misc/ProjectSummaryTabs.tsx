@@ -6,6 +6,9 @@ import { CustomTabPanel } from "./CustomTabPanel";
 import TopThreeProjects from "./TopThreeProjects";
 import FullstackApps from "./FullstackApps";
 import { useSearchParams } from "next/navigation";
+import ProjectSummary from "./ProjectSummary";
+import ProjectSpecs from "./ProjectSpecs";
+import ProjectGallary from "./ProjectGallary";
 
 function a11yProps(index: number) {
   return {
@@ -14,7 +17,21 @@ function a11yProps(index: number) {
   };
 }
 
-const ProjectTabs = () => {
+type ProjectSummaryTabsProps = {
+  summary: string;
+  description: string;
+  prod: string;
+  github: string;
+  docs: string;
+};
+
+const ProjectSummaryTabs = ({
+  summary,
+  description,
+  prod,
+  github,
+  docs,
+}: ProjectSummaryTabsProps) => {
   // Hooks
   const searchParams = useSearchParams();
 
@@ -23,20 +40,6 @@ const ProjectTabs = () => {
 
   // State
   const [value, setValue] = useState<number>(0);
-
-  // Effects
-  useEffect(() => {
-    if (tab) {
-      if (tab === "top-three") {
-        setValue(0);
-      } else if (tab === "full-stack-apps") {
-        setValue(1);
-      } else if (tab === "course-projects") {
-        setValue(2);
-      }
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   return (
     <Box component="div" className="w-full px-0">
@@ -52,22 +55,28 @@ const ProjectTabs = () => {
           }
           aria-label="basic tabs example"
         >
-          <Tab label="The Top 3!" {...a11yProps(0)} />
-          <Tab label="Full Stack Apps" {...a11yProps(1)} />
-          <Tab label="Course Projects" {...a11yProps(2)} />
+          <Tab label="Project Summary" {...a11yProps(0)} />
+          <Tab label="Technical Specs" {...a11yProps(1)} />
+          <Tab label="Galary" {...a11yProps(2)} />
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
-        <TopThreeProjects />
+        <ProjectSummary
+          summary={summary}
+          description={description}
+          prod={prod}
+          github={github}
+          docs={docs}
+        />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        <FullstackApps />
+        <ProjectSpecs />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-        3
+        <ProjectGallary />
       </CustomTabPanel>
     </Box>
   );
 };
 
-export default ProjectTabs;
+export default ProjectSummaryTabs;
