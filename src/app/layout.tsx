@@ -4,6 +4,8 @@ import "./globals.css";
 import ThemeProviderWrapper from "@/components/misc/ThemeProviderWrapper";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import InitColorSchemeScript from "@mui/material/InitColorSchemeScript";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
