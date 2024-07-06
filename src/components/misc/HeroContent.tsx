@@ -15,17 +15,17 @@ const HeroContent = () => {
         I am a full-stack web developer. I write clean and pixel perfect design.
       </Typography>
       <div className="flex justify-center items-center gap-4 w-full">
-        <Link href="/projects" className="flex-grow">
+        <Link href="/projects" className="w-full">
           <Button variant="outlined" className="w-full">
             <Typography variant="body1" fontFamily="lato">
               View Projects
             </Typography>
           </Button>
         </Link>
-        <Link href="/contact-me" className="flex-grow">
+        <Link href="/hire-me" className="w-full">
           <Button variant="outlined" className="w-full">
             <Typography variant="body1" fontFamily="lato">
-              Contact Me!
+              Hire Me!
             </Typography>
           </Button>
         </Link>

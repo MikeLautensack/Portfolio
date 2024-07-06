@@ -14,6 +14,16 @@ const Nav = () => {
         </Button>
       </Link>
       <ProjectsNavMenu />
+      <Link href="/hire-me">
+        <Button variant="text" className="text-white">
+          Hire Me
+        </Button>
+      </Link>
+      {/* <Link href="/resume">
+        <Button variant="text" className="text-white">
+          Resume
+        </Button>
+      </Link> */}
     </Box>
   );
 };

@@ -5,14 +5,14 @@ const page = () => {
   return (
     <Box
       component="section"
-      className="flex flex-col gap-8 justify-start items-start px-8 py-4 md:h-screen md:px-32 md:py-20 bg-[#002834]"
+      className="flex flex-col gap-8 justify-start items-start px-8 py-4 md:px-32 md:py-20 bg-[#001824] md:h-[calc(100vh-56px)]"
     >
       <Typography
         variant="h4"
         className="w-max border-b-[3px] border-[#FF8D25] text-white"
         fontFamily="lato"
       >
-        Contact Me
+        Resume
       </Typography>
     </Box>
   );
