@@ -7,7 +7,7 @@ import TopThreeProjects from "./TopThreeProjects";
 import FullstackApps from "./FullstackApps";
 import { useSearchParams } from "next/navigation";
 import ProjectSummary from "./ProjectSummary";
-import ProjectSpecs from "./ProjectSpecs";
+import ProjectSpecs, { Stack } from "./ProjectSpecs";
 import ProjectGallary from "./ProjectGallary";
 
 function a11yProps(index: number) {
@@ -23,6 +23,7 @@ type ProjectSummaryTabsProps = {
   prod: string;
   github: string;
   docs: string;
+  stack: Stack;
 };
 
 const ProjectSummaryTabs = ({
@@ -31,6 +32,7 @@ const ProjectSummaryTabs = ({
   prod,
   github,
   docs,
+  stack,
 }: ProjectSummaryTabsProps) => {
   // Hooks
   const searchParams = useSearchParams();
@@ -70,7 +72,7 @@ const ProjectSummaryTabs = ({
         />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        <ProjectSpecs />
+        <ProjectSpecs stack={stack} />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
         <ProjectGallary />

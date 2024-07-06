@@ -2,6 +2,7 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import ProjectHeaderCard from "./ProjectHeaderCard";
 import ProjectSummaryTabs from "./ProjectSummaryTabs";
+import { Stack } from "./ProjectSpecs";
 
 type GalaryItem = {
   img: any;
@@ -11,6 +12,7 @@ type GalaryItem = {
 type ProjectTemplateProps = {
   projectLabel: string;
   projectName: string;
+  projectType: string;
   imgSrc: string;
   imgAlt: string;
   prod: string;
@@ -21,6 +23,7 @@ type ProjectTemplateProps = {
   loom?: any;
   galary?: GalaryItem[];
   bullets: string[];
+  stack: Stack;
 };
 
 const ProjectTemplate = ({
@@ -36,6 +39,7 @@ const ProjectTemplate = ({
   loom,
   galary,
   bullets,
+  stack,
 }: ProjectTemplateProps) => {
   return (
     <Box
@@ -56,6 +60,7 @@ const ProjectTemplate = ({
         prod={prod}
         github={github}
         docs={docs!}
+        stack={stack}
       />
     </Box>
   );

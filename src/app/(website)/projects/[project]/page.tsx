@@ -25,6 +25,7 @@ const page = ({ params }: { params: { project: string } }) => {
       <ProjectTemplate
         projectLabel={proj.projectLabel}
         projectName={proj.projectName}
+        projectType={proj.projectType}
         imgSrc={proj.imgSrc}
         imgAlt={proj.imgAlt}
         prod={proj.prod}
@@ -35,6 +36,7 @@ const page = ({ params }: { params: { project: string } }) => {
         loom={proj.loom}
         galary={proj.galary}
         bullets={proj.bullets}
+        stack={proj.stack}
       />
     </Box>
   );
