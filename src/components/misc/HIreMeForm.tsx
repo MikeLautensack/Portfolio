@@ -35,7 +35,7 @@ const HireMeForm = () => {
     formData: HireMeFormValues
   ) => {
     console.log(formData);
-    const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/email`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}api/email`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
