@@ -1,7 +1,7 @@
 "use client";
 
-import React from "react";
-import { Button, Typography } from "@mui/material";
+import React, { useState } from "react";
+import { Button, CircularProgress, Typography } from "@mui/material";
 import { FormProvider, useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -18,7 +18,10 @@ const HireMeFormSchema = z.object({
 
 type HireMeFormValues = z.infer<typeof HireMeFormSchema>;
 
+type LoadingState = "" | "loading" | "sent" | "error";
+
 const HireMeForm = () => {
+  // Hooks
   const methods = useForm<HireMeFormValues>({
     resolver: zodResolver(HireMeFormSchema),
     defaultValues: {
@@ -31,10 +34,15 @@ const HireMeForm = () => {
 
   const { handleSubmit } = methods;
 
+  // State
+  const [loadingState, setLoadingState] = useState<LoadingState>("");
+
+  // Submit function
   const onSubmit: SubmitHandler<HireMeFormValues> = async (
     formData: HireMeFormValues
   ) => {
     console.log(formData);
+    setLoadingState("loading");
     const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}api/email`, {
       method: "POST",
       headers: {
@@ -48,8 +56,14 @@ const HireMeForm = () => {
       }),
     });
     console.log("Email endpoint res", res);
+    if (res.status === 200) {
+      setLoadingState("sent");
+    } else {
+      setLoadingState("error");
+    }
   };
 
+  // UI
   return (
     <FormProvider {...methods}>
       <form
@@ -60,8 +74,30 @@ const HireMeForm = () => {
         <TextInput name="email" label="Email" />
         <MVLAutocomplete name="catagory" label="Employment Catagory" />
         <TextAreaInput name="message" label="Message" />
-        <Button variant="contained" type="submit">
-          Send Message
+        <Button
+          variant="contained"
+          loading={loadingState === "loading" ? true : false}
+          error={loadingState === "error" ? true : false}
+          type="submit"
+          color={
+            loadingState === ""
+              ? "primary"
+              : loadingState === "loading"
+              ? "primary"
+              : loadingState === "error"
+              ? "error"
+              : "success"
+          }
+        >
+          {loadingState === "" ? (
+            <Typography>Send Message</Typography>
+          ) : loadingState === "loading" ? (
+            <CircularProgress sx={{ color: "#001824" }} />
+          ) : loadingState === "error" ? (
+            <Typography>Error</Typography>
+          ) : (
+            loadingState === "sent" && <Typography>Message Sent!</Typography>
+          )}
         </Button>
       </form>
     </FormProvider>
