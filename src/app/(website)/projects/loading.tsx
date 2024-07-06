@@ -3,7 +3,10 @@ import React from "react";
 
 const loading = () => {
   return (
-    <Box className="w-full flex justify-center items-center bg-[#001824] h-[calc(100vh-56px)]">
+    <Box
+      component="div"
+      className="w-full flex justify-center items-center bg-[#001824] h-[calc(100vh-56px)]"
+    >
       <CircularProgress />
     </Box>
   );

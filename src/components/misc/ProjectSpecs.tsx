@@ -17,7 +17,10 @@ type ProjectSpecsProps = {
 
 const ProjectSpecs = ({ stack }: ProjectSpecsProps) => {
   return (
-    <Box className="flex flex-col justify-start items-start gap-4">
+    <Box
+      component="div"
+      className="flex flex-col justify-start items-start gap-4"
+    >
       {stack.lang && (
         <SpecItem
           heading="Language"
