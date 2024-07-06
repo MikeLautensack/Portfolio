@@ -4,7 +4,7 @@ import SpecItem from "./SpecItem";
 
 export type Stack = {
   lang: { name: string; icon: React.ReactNode };
-  database: { name: string; icon: React.ReactNode };
+  database?: { name: string; icon: React.ReactNode };
   infrastructure: { name: string; icon: React.ReactNode };
   frontendFramework?: { name: string; icon: React.ReactNode };
   backendFramework?: { name: string; icon: React.ReactNode };

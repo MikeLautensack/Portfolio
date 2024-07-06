@@ -7,7 +7,7 @@ type CustomIconProps = {
 
 const CustomIcon = ({ svg }: CustomIconProps) => {
   return (
-    <Box className>
+    <Box component="div" className="">
       <SvgIcon>
         <svg
           xmlns={svg}
