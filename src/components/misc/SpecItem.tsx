@@ -10,7 +10,7 @@ type SpecItemProps = {
 
 const SpecItem = ({ heading, name, icon }: SpecItemProps) => {
   return (
-    <Box className="flex flex-col gap-3 w-full items-start">
+    <Box component="div" className="flex flex-col gap-3 w-full items-start">
       <Typography
         variant="h5"
         className="text-white border-b-[2px] border-white"
