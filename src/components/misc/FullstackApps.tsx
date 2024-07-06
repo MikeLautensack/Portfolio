@@ -16,7 +16,7 @@ const FullstackApps = () => {
         href=""
         imgSrc="/estimate-generator-img.png"
         imgAlt="Estimate Generator Hero Section"
-        contentOrder="imgFirst"
+        contentOrder="textFirst"
       />
     </Box>
   );

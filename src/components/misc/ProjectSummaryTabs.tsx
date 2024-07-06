@@ -24,6 +24,7 @@ type ProjectSummaryTabsProps = {
   github: string;
   docs: string;
   stack: Stack;
+  gallary?: any;
 };
 
 const ProjectSummaryTabs = ({
@@ -33,6 +34,7 @@ const ProjectSummaryTabs = ({
   github,
   docs,
   stack,
+  gallary,
 }: ProjectSummaryTabsProps) => {
   // Hooks
   const searchParams = useSearchParams();
@@ -58,8 +60,8 @@ const ProjectSummaryTabs = ({
           aria-label="basic tabs example"
         >
           <Tab label="Project Summary" {...a11yProps(0)} />
-          <Tab label="Technical Specs" {...a11yProps(1)} />
-          <Tab label="Galary" {...a11yProps(2)} />
+          {stack && <Tab label="Technical Specs" {...a11yProps(1)} />}
+          {gallary && <Tab label="Galary" {...a11yProps(2)} />}
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
@@ -71,12 +73,16 @@ const ProjectSummaryTabs = ({
           docs={docs}
         />
       </CustomTabPanel>
-      <CustomTabPanel value={value} index={1}>
-        <ProjectSpecs stack={stack} />
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={2}>
-        <ProjectGallary />
-      </CustomTabPanel>
+      {stack && (
+        <CustomTabPanel value={value} index={1}>
+          <ProjectSpecs stack={stack} />
+        </CustomTabPanel>
+      )}
+      {gallary && (
+        <CustomTabPanel value={value} index={2}>
+          <ProjectGallary />
+        </CustomTabPanel>
+      )}
     </Box>
   );
 };

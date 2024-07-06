@@ -1,4 +1,10 @@
 import CustomIcon from "./components/misc/CustomIcon";
+import { RiJavascriptFill } from "react-icons/ri";
+import { BiLogoTypescript } from "react-icons/bi";
+import { SiVercel } from "react-icons/si";
+import { SiNextdotjs } from "react-icons/si";
+import { SiVite } from "react-icons/si";
+import { FaDatabase } from "react-icons/fa";
 
 export const projects = [
   {
@@ -31,19 +37,19 @@ export const projects = [
     stack: {
       lang: {
         name: "TypeScript",
-        icon: <CustomIcon svg="/typescript.svg" />,
+        icon: <BiLogoTypescript className="text-white" />,
       },
       database: {
         name: "Neon Serverless Postgres",
-        icon: <CustomIcon />,
+        icon: <FaDatabase className="text-white" />,
       },
       infrastructure: {
         name: "Vercel",
-        icon: <CustomIcon />,
+        icon: <SiVercel className="text-white" />,
       },
       metaFramework: {
         name: "Next.js 14 App Router",
-        icon: <CustomIcon />,
+        icon: <SiNextdotjs className="text-white" />,
       },
     },
   },
@@ -57,7 +63,8 @@ export const projects = [
     github: "https://github.com/MikeLautensack/Galaxy-Generator",
     docs: "",
     href: "/projects/galaxy-generator",
-    summary: "",
+    summary:
+      'Galaxy Generator is a course project from "Three.js Journey", a course on three.js and react-three-fiber.  Tweak the values in the control panel on the top right of the browser and you can see your galaxy change in real time.  This project is build using Vite with Javascript, Three.js, and datgui.',
     description: "",
     loom: "",
     galary: [
@@ -75,15 +82,15 @@ export const projects = [
     stack: {
       lang: {
         name: "Javascript",
-        icon: <CustomIcon svg="/typescript.svg" />,
+        icon: <RiJavascriptFill className="text-white" />,
       },
       infrastructure: {
         name: "Vercel",
-        icon: <CustomIcon />,
+        icon: <SiVercel className="text-white" />,
       },
       frontendFramework: {
         name: "Vite & React.ts",
-        icon: <CustomIcon />,
+        icon: <SiVite className="text-white" />,
       },
     },
   },
@@ -97,7 +104,8 @@ export const projects = [
     github: "https://github.com/MikeLautensack/Raging-Sea",
     docs: "",
     href: "/projects/raging-sea",
-    summary: "",
+    summary:
+      'Raging Sea is a course project from "Three.js Journey", a course on three.js and react-three-fiber.  Tweak the values in the control panel on the top right of the browser and you can see the raging sea change in real time.  This project is build using Vite with Javascript, Three.js, datgui, and custom glsl shaders.',
     description: "",
     loom: "",
     galary: [
@@ -115,15 +123,15 @@ export const projects = [
     stack: {
       lang: {
         name: "Javascript",
-        icon: <CustomIcon svg="/typescript.svg" />,
+        icon: <RiJavascriptFill className="text-white" />,
       },
       infrastructure: {
         name: "Vercel",
-        icon: <CustomIcon />,
+        icon: <SiVercel className="text-white" />,
       },
       frontendFramework: {
         name: "Vite & React.ts",
-        icon: <CustomIcon />,
+        icon: <SiVite className="text-white" />,
       },
     },
   },

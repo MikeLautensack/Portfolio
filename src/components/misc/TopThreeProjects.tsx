@@ -31,7 +31,7 @@ const TopThreeProjects = () => {
         href={two?.href}
         imgSrc={two?.imgSrc}
         imgAlt={two?.imgAlt}
-        contentOrder="imgFirst"
+        contentOrder="textFirst"
       />
       <ProjectCard
         projectTitle={three?.projectName}
