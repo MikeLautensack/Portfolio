@@ -10,9 +10,9 @@ export async function POST(request: NextRequest) {
 
   try {
     await resend.emails.send({
-      from: "...<onboarding@resend.dev>",
+      from: `${bodyData.email} ...<onboarding@resend.dev>`,
       to: "mikelautensack100@gmail.com",
-      subject: `New hire me page message`,
+      subject: `New "Hire Me" email`,
       react: HireMeEmail({
         name: bodyData.name,
         email: bodyData.email,
