@@ -116,6 +116,16 @@ export default function CustomizedMenus() {
             Estimate Generator
           </MenuItem>
         </Link>
+        <Link href="/projects/galaxy-generator">
+          <MenuItem onClick={handleClose} disableRipple>
+            Galaxy Generator
+          </MenuItem>
+        </Link>
+        <Link href="/projects/raging-sea">
+          <MenuItem onClick={handleClose} disableRipple>
+            Raging Sea
+          </MenuItem>
+        </Link>
       </StyledMenu>
     </div>
   );

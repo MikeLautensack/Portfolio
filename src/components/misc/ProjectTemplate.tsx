@@ -3,6 +3,7 @@ import React from "react";
 import ProjectHeaderCard from "./ProjectHeaderCard";
 import ProjectSummaryTabs from "./ProjectSummaryTabs";
 import { Stack } from "./ProjectSpecs";
+import { BulletPointType } from "./ProjectCard";
 
 type GalaryItem = {
   img: any;
@@ -22,7 +23,7 @@ type ProjectTemplateProps = {
   description: string;
   loom?: any;
   galary?: GalaryItem[];
-  bullets: string[];
+  bullets: BulletPointType[];
   stack: Stack;
 };
 

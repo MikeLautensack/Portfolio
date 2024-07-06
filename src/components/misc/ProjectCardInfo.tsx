@@ -1,11 +1,11 @@
 import { Box, Button, List, ListItem, Typography } from "@mui/material";
 import React from "react";
-import { bulletPoint } from "./ProjectCard";
+import { BulletPointType } from "./ProjectCard";
 
 type ProjectCardInfoProps = {
-  projectTitle: string;
-  bulletPoints: bulletPoint[];
-  href: string;
+  projectTitle?: string;
+  bulletPoints: BulletPointType[];
+  href?: string;
 };
 
 const ProjectCardInfo = ({
@@ -19,7 +19,7 @@ const ProjectCardInfo = ({
         {projectTitle}
       </Typography>
       <List>
-        {bulletPoints.map((bullet: bulletPoint) => {
+        {bulletPoints.map((bullet: BulletPointType) => {
           return (
             <ListItem key={bullet.id}>
               <Typography

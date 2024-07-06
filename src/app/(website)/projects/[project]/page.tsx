@@ -16,7 +16,7 @@ const page = ({ params }: { params: { project: string } }) => {
   if (!proj) {
     return <div>No Project Data Found</div>;
   }
-
+  proj;
   return (
     <Box
       component="div"

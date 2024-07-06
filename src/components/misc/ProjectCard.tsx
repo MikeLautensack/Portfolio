@@ -3,14 +3,14 @@ import React from "react";
 import ProjectCardImg from "./ProjectCardImg";
 import ProjectCardInfo from "./ProjectCardInfo";
 
-export type bulletPoint = { id: number; text: string };
+export type BulletPointType = { id: number; text: string };
 
 type ProjectCardProps = {
-  projectTitle: string;
-  bulletPoints: bulletPoint[];
-  href: string;
-  imgSrc: string;
-  imgAlt: string;
+  projectTitle?: string;
+  bulletPoints?: BulletPointType[];
+  href?: string;
+  imgSrc?: string;
+  imgAlt?: string;
   contentOrder: "textFirst" | "imgFirst";
 };
 

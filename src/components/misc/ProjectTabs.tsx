@@ -6,6 +6,7 @@ import { CustomTabPanel } from "./CustomTabPanel";
 import TopThreeProjects from "./TopThreeProjects";
 import FullstackApps from "./FullstackApps";
 import { useSearchParams } from "next/navigation";
+import CourseProjects from "./CourseProjects";
 
 function a11yProps(index: number) {
   return {
@@ -63,7 +64,7 @@ const ProjectTabs = () => {
         <FullstackApps />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-        3
+        <CourseProjects />
       </CustomTabPanel>
     </Box>
   );

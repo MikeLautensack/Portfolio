@@ -10,7 +10,7 @@ type ProjectSummaryProps = {
   description: string;
   prod: string;
   github: string;
-  docs: string;
+  docs?: string;
 };
 
 const ProjectSummary = ({
@@ -54,17 +54,19 @@ const ProjectSummary = ({
             </Typography>
           </Button>
         </Link>
-        <Link href={docs} className="flex justify-center items-center gap-2">
-          <Button
-            variant="text"
-            className="flex gap-1 justify-center items-center"
-          >
-            <ArticleIcon className="text-[#FF8D25]" />
-            <Typography variant="body1" className="text-[#FF8D25]">
-              Project Documentation
-            </Typography>
-          </Button>
-        </Link>
+        {docs && (
+          <Link href={docs} className="flex justify-center items-center gap-2">
+            <Button
+              variant="text"
+              className="flex gap-1 justify-center items-center"
+            >
+              <ArticleIcon className="text-[#FF8D25]" />
+              <Typography variant="body1" className="text-[#FF8D25]">
+                Project Documentation
+              </Typography>
+            </Button>
+          </Link>
+        )}
       </Box>
     </Box>
   );
