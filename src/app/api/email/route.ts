@@ -3,6 +3,7 @@ import { Resend } from "resend";
 import HireMeEmail from "../../../components/misc/HireMeEmail";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
+console.log("env test", process.env.RESEND_API_KEY);
 
 export async function POST(request: NextRequest) {
   // Get request body data
