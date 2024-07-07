@@ -1,4 +1,4 @@
-import HireMeForm from "@/components/misc/HIreMeForm";
+import HireMeForm from "@/components/misc/HireMeForm";
 import { Box, Typography } from "@mui/material";
 import React from "react";
 

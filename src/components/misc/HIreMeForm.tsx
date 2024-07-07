@@ -76,8 +76,6 @@ const HireMeForm = () => {
         <TextAreaInput name="message" label="Message" />
         <Button
           variant="contained"
-          loading={loadingState === "loading" ? true : false}
-          error={loadingState === "error" ? true : false}
           type="submit"
           color={
             loadingState === ""
