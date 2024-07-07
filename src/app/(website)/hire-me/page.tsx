@@ -1,4 +1,4 @@
-import HireMeForm from "@/components/misc/HireMeForm";
+import HireMeEmailForm from "@/components/misc/HireMeEmailForm";
 import { Box, Typography } from "@mui/material";
 import React from "react";
 
@@ -16,7 +16,7 @@ const page = () => {
         Hire Me
       </Typography>
       <Box component="div" className="flex justify-center items-center w-full">
-        <HireMeForm />
+        <HireMeEmailForm />
       </Box>
     </Box>
   );

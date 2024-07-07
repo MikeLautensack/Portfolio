@@ -9,21 +9,21 @@ import TextInput from "./TextInput";
 import TextAreaInput from "./TextAreaInput";
 import MVLAutocomplete from "./MVLAutocomplete";
 
-const HireMeFormSchema = z.object({
+const HireMeEmailFormSchema = z.object({
   name: z.string(),
   email: z.string(),
   catagory: z.string(),
   message: z.string(),
 });
 
-type HireMeFormValues = z.infer<typeof HireMeFormSchema>;
+type HireMeEmailFormValues = z.infer<typeof HireMeEmailFormSchema>;
 
 type LoadingState = "" | "loading" | "sent" | "error";
 
-const HireMeForm = () => {
+const HireMeEmailForm = () => {
   // Hooks
-  const methods = useForm<HireMeFormValues>({
-    resolver: zodResolver(HireMeFormSchema),
+  const methods = useForm<HireMeEmailFormValues>({
+    resolver: zodResolver(HireMeEmailFormSchema),
     defaultValues: {
       name: "",
       email: "",
@@ -38,8 +38,8 @@ const HireMeForm = () => {
   const [loadingState, setLoadingState] = useState<LoadingState>("");
 
   // Submit function
-  const onSubmit: SubmitHandler<HireMeFormValues> = async (
-    formData: HireMeFormValues
+  const onSubmit: SubmitHandler<HireMeEmailFormValues> = async (
+    formData: HireMeEmailFormValues
   ) => {
     console.log(formData);
     setLoadingState("loading");
@@ -101,4 +101,4 @@ const HireMeForm = () => {
   );
 };
 
-export default HireMeForm;
+export default HireMeEmailForm;
