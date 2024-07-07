@@ -63,7 +63,6 @@ const HireMeForm = () => {
     }
   };
 
-  // UI
   return (
     <FormProvider {...methods}>
       <form
