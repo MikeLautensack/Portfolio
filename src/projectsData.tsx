@@ -13,7 +13,7 @@ export const projects = [
     projectType: "Fullstack Webapp",
     imgSrc: "/estimate-generator-img.png",
     imgAlt: "Estimate Generator",
-    prod: "",
+    prod: "https://estimategeneratorapp.com/",
     github: "https://github.com/MikeLautensack/Estimate-Generator",
     docs: "https://estimate-generator-docs.vercel.app/",
     href: "/projects/estimate-generator",
