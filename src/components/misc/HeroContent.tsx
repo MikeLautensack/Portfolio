@@ -9,10 +9,10 @@ const HeroContent = () => {
         Hi, I am Mike Lautensack
       </Typography>
       <Typography color="#FFFFFF" variant="h2" fontFamily="lato">
-        I am full-stack SaaS developer
+        I am a full-stack web developer
       </Typography>
       <Typography color="#FFFFFF" variant="body1" fontFamily="lato">
-        I am a full-stack web developer. I write clean and pixel perfect design.
+        I specilize in node.js, react.js, and next.js
       </Typography>
       <div className="flex justify-center items-center gap-4 w-full">
         <Link href="/projects" className="w-full">
