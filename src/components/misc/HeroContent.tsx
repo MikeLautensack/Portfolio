@@ -12,9 +12,32 @@ const HeroContent = () => {
         </Typography>{" "}
         Lautensack
       </Typography>
-      <Typography color="#FFFFFF" variant="h1">
+      <Typography
+        color="#FFFFFF"
+        variant="h1"
+        sx={{
+          typography: {
+            xs: "h4", // Small screens
+            sm: "h3", // Medium screens
+            md: "h2", // Large screens
+            lg: "h1", // Extra large screens
+          },
+        }}
+      >
         I am a{" "}
-        <Typography component="span" color="#FF8D25" variant="h1">
+        <Typography
+          component="span"
+          color="#FF8D25"
+          variant="h1"
+          sx={{
+            typography: {
+              xs: "h4", // Small screens
+              sm: "h3", // Medium screens
+              md: "h2", // Large screens
+              lg: "h1", // Extra large screens
+            },
+          }}
+        >
           Full-Stack
         </Typography>{" "}
         web developer
