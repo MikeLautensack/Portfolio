@@ -9,14 +9,18 @@ const Nav = () => {
   return (
     <Box component="div" className="flex justify-center items-center gap-4">
       <Link href="/">
-        <Button variant="text" className="text-white">
-          Home
+        <Button variant="text">
+          <Typography variant="button" className="text-white">
+            Home
+          </Typography>
         </Button>
       </Link>
       <ProjectsNavMenu />
       <Link href="/hire-me">
-        <Button variant="text" className="text-white">
-          Hire Me
+        <Button variant="text">
+          <Typography variant="button" className="text-white">
+            Hire Me
+          </Typography>
         </Button>
       </Link>
       {/* <Link href="/resume">

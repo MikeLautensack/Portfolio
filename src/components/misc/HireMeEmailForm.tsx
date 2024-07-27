@@ -87,13 +87,15 @@ const HireMeEmailForm = () => {
           }
         >
           {loadingState === "" ? (
-            <Typography>Send Message</Typography>
+            <Typography variant="button">Send Message</Typography>
           ) : loadingState === "loading" ? (
             <CircularProgress sx={{ color: "#001824" }} />
           ) : loadingState === "error" ? (
-            <Typography>Error</Typography>
+            <Typography variant="button">Error</Typography>
           ) : (
-            loadingState === "sent" && <Typography>Message Sent!</Typography>
+            loadingState === "sent" && (
+              <Typography variant="button">Message Sent!</Typography>
+            )
           )}
         </Button>
       </form>

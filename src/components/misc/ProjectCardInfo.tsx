@@ -15,18 +15,14 @@ const ProjectCardInfo = ({
 }: ProjectCardInfoProps) => {
   return (
     <Box component="div" className="w-full">
-      <Typography variant="h4" className="text-white" fontFamily="lato">
+      <Typography variant="h4" className="text-white">
         {projectTitle}
       </Typography>
       <List>
         {bulletPoints.map((bullet: BulletPointType) => {
           return (
             <ListItem key={bullet.id}>
-              <Typography
-                variant="body2"
-                className="text-white"
-                fontFamily="lato"
-              >
+              <Typography variant="body2" className="text-white">
                 {bullet.text}
               </Typography>
             </ListItem>
@@ -34,7 +30,7 @@ const ProjectCardInfo = ({
         })}
       </List>
       <Button variant="text" href={href}>
-        <Typography variant="h6" className="text-[#FF8D25]" fontFamily="lato">
+        <Typography variant="button" className="text-[#FF8D25]">
           Learn More!
         </Typography>
       </Button>

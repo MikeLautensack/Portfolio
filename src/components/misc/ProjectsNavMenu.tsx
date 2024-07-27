@@ -75,9 +75,11 @@ export default function CustomizedMenus() {
         variant="text"
         disableElevation
         onClick={handleClick}
-        endIcon={<KeyboardArrowDownIcon />}
+        endIcon={<KeyboardArrowDownIcon className="text-white" />}
       >
-        Projects
+        <Typography variant="button" className="text-white">
+          Projects
+        </Typography>
       </Button>
       <StyledMenu
         id="demo-customized-menu"
