@@ -12,10 +12,10 @@ const Writer = ({ writer, company, initial }: WriterProps) => {
     <Box component="div" className="flex gap-2 justify-center items-center">
       <Avatar className="bg-[#002834]">{initial}</Avatar>
       <Box component="div" className="flex flex-col">
-        <Typography variant="body1" className="text-white" fontFamily="lato">
+        <Typography variant="body1" className="text-white">
           {writer}
         </Typography>
-        <Typography variant="body2" className="text-white" fontFamily="lato">
+        <Typography variant="body2" className="text-white">
           {company}
         </Typography>
       </Box>

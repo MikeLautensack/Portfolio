@@ -1,5 +1,5 @@
 import { extendTheme } from "@mui/material/styles";
-import { Lato, Playfair_Display } from "next/font/google";
+import { Lato, Playfair_Display, Source_Code_Pro } from "next/font/google";
 
 declare module "@mui/material/styles" {
   interface PaletteOptions {
@@ -94,13 +94,7 @@ declare module "@mui/material/styles" {
   }
 }
 
-const lato = Lato({
-  weight: "400",
-  style: "normal",
-  subsets: ["latin"],
-});
-
-const playfair_display = Playfair_Display({
+const source_code_pro = Source_Code_Pro({
   weight: "400",
   style: "normal",
   subsets: ["latin"],
@@ -109,7 +103,7 @@ const playfair_display = Playfair_Display({
 // `extendTheme` is a new API
 const theme = extendTheme({
   typography: {
-    fontFamily: lato.style.fontFamily,
+    fontFamily: source_code_pro.style.fontFamily,
   },
   colorSchemes: {
     light: {

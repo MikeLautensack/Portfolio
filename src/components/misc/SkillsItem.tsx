@@ -22,19 +22,17 @@ const SkillsItem = ({ num, skill, description, href }: SkillsItemProps) => {
     >
       <Box component="div" className="flex gap-4 md:w-1/3">
         <Box component="div" className="flex justify-center items-center w-12">
-          <Typography className="text-white" fontFamily="lato">
-            {skillNumber}
-          </Typography>
+          <Typography className="text-white">{skillNumber}</Typography>
         </Box>
         <Box component="div" className="w-full">
-          <Typography className="text-white" variant="h4" fontFamily="lato">
+          <Typography className="text-white" variant="h4">
             {skill}
           </Typography>
         </Box>
       </Box>
       <Box component="div" className="flex gap-4">
         <Box component="div" className="flex-1">
-          <Typography variant="body2" className="text-white" fontFamily="lato">
+          <Typography variant="body2" className="text-white">
             {description}
           </Typography>
         </Box>

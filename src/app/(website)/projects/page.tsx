@@ -12,7 +12,6 @@ const page = () => {
       <Typography
         variant="h4"
         className="w-max border-b-[3px] border-[#FF8D25] text-white"
-        fontFamily="lato"
       >
         Projects
       </Typography>

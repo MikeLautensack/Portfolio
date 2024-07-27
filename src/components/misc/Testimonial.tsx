@@ -23,7 +23,7 @@ const Testimonial = ({
       className="bg-[#0b2a39] w-full flex flex-col gap-4 justify-start items-start p-4"
     >
       <Rating value={rating} readOnly />
-      <Typography variant="body2" className="text-white" fontFamily="lato">
+      <Typography variant="body1" className="text-white">
         {testimonial}
       </Typography>
       <Writer writer={writer} company={company} initial={initial} />

@@ -16,43 +16,37 @@ const ExperenceItem = ({ num, job, company, date }: ExperenceItemProps) => {
       className="flex flex-col gap-2 justify-start items-start border-b-[3px] border-[#FF8D25]"
     >
       <Box component="div" className="flex gap-2">
-        <Typography className="text-[#FF8D25]" fontFamily="lato">
-          {num}
-        </Typography>
-        <Typography className="text-white" fontFamily="lato">
-          {job}
-        </Typography>
-        <Typography className="text-[#FF8D25]" fontFamily="lato">
-          {company}
-        </Typography>
+        <Typography className="text-[#FF8D25]">{num}</Typography>
+        <Typography className="text-white">{job}</Typography>
+        <Typography className="text-[#FF8D25]">{company}</Typography>
       </Box>
-      <Typography variant="body2" className="text-white" fontFamily="lato">
+      <Typography variant="body2" className="text-white">
         {date}
       </Typography>
       <List>
         <ListItem>
-          <Typography variant="body2" className="text-white" fontFamily="lato">
+          <Typography variant="body2" className="text-white">
             • Upgraded the application from create-react-app, React 16, and
             JavaScript to Vite, React 18, and TypeScript, significantly reducing
             the dev server start time from 8-10 minutes to 3-4 seconds.
           </Typography>
         </ListItem>
         <ListItem>
-          <Typography variant="body2" className="text-white" fontFamily="lato">
+          <Typography variant="body2" className="text-white">
             • Developed a comprehensive React component library for the company
             and authored detailed documentation to facilitate its usage and
             integration.
           </Typography>
         </ListItem>
         <ListItem>
-          <Typography variant="body2" className="text-white" fontFamily="lato">
+          <Typography variant="body2" className="text-white">
             {`
             • Created a VS Code snippets extension tailored to the company's
             development needs, enhancing coding efficiency and consistency.`}
           </Typography>
         </ListItem>
         <ListItem>
-          <Typography variant="body2" className="text-white" fontFamily="lato">
+          <Typography variant="body2" className="text-white">
             • Wrote extensive documentation on React and TypeScript best
             practices, providing valuable guidelines and improving code quality
             across the project.

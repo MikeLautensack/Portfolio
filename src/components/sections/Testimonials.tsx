@@ -6,12 +6,11 @@ const Testimonials = () => {
   return (
     <Box
       component="div"
-      className="lex flex-col gap-8 justify-start items-start px-8 py-4 md:min-h-screen md:px-32 md:py-20 bg-[#002834]"
+      className="flex flex-col gap-8 justify-start items-start px-8 py-4 md:min-h-screen md:px-32 md:py-20 bg-[#002834]"
     >
       <Typography
         variant="h4"
         className="w-max border-b-[3px] border-[#FF8D25] text-white"
-        fontFamily="lato"
       >
         Testimonials
       </Typography>
