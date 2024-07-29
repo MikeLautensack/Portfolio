@@ -104,6 +104,12 @@ const source_code_pro = Source_Code_Pro({
 const theme = extendTheme({
   typography: {
     fontFamily: source_code_pro.style.fontFamily,
+    body1: {
+      lineHeight: 2, // Set your desired line height here
+    },
+    body2: {
+      lineHeight: 1.6, // Set your desired line height here
+    },
   },
   colorSchemes: {
     light: {
