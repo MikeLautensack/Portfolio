@@ -5,7 +5,7 @@ const AboutMe = () => {
   return (
     <Box
       component="section"
-      className="flex flex-col gap-8 justify-start items-start px-8 py-4 md:h-screen md:px-32 md:py-20 bg-[#002834]"
+      className="flex flex-col gap-8 justify-start items-start px-8 py-4 md:min-h-screen md:px-32 md:py-20 bg-[#002834]"
     >
       <Typography
         variant="h4"
