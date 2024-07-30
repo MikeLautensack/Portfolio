@@ -11,6 +11,7 @@ import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { Typography } from "@mui/material";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const StyledMenu = styled((props: MenuProps) => (
   <Menu
@@ -56,6 +57,9 @@ const StyledMenu = styled((props: MenuProps) => (
 }));
 
 export default function CustomizedMenus() {
+  // Hooks
+  const pathname = usePathname();
+
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -64,6 +68,8 @@ export default function CustomizedMenus() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const isProjectsRoute = /^\/projects/.test(pathname);
 
   return (
     <div>
@@ -75,9 +81,16 @@ export default function CustomizedMenus() {
         variant="text"
         disableElevation
         onClick={handleClick}
-        endIcon={<KeyboardArrowDownIcon className="text-white" />}
+        endIcon={
+          <KeyboardArrowDownIcon
+            className={`${isProjectsRoute ? "text-[#FF8D25]" : "text-white"}`}
+          />
+        }
       >
-        <Typography variant="button" className="text-white">
+        <Typography
+          variant="button"
+          className={`${isProjectsRoute ? "text-[#FF8D25]" : "text-white"}`}
+        >
           Projects
         </Typography>
       </Button>

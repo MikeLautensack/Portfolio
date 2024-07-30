@@ -59,8 +59,13 @@ const HeroContent = () => {
       </Typography>
       <div className="flex justify-center lg:justify-start items-center gap-4">
         <Link href="/projects" className="w-full flex-grow">
-          <Button variant="contained" className="w-full">
-            <Typography variant="h6" noWrap>
+          <Button variant="contained" color="secondary" className="w-full">
+            <Typography
+              variant="h6"
+              color="primary"
+              noWrap
+              sx={{ fontWeight: "600" }}
+            >
               View Projects!
             </Typography>
           </Button>

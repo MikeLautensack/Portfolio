@@ -52,9 +52,36 @@ const ProjectTabs = () => {
           }
           aria-label="basic tabs example"
         >
-          <Tab label="The Top 3!" {...a11yProps(0)} />
-          <Tab label="Full Stack Apps" {...a11yProps(1)} />
-          <Tab label="Course Projects" {...a11yProps(2)} />
+          <Tab
+            sx={{
+              color: "#FFFFFF",
+              "&.Mui-selected": {
+                color: "#FF8D25", // replace 'yourActiveColor' with your desired color
+              },
+            }}
+            label="The Top 3!"
+            {...a11yProps(0)}
+          />
+          <Tab
+            sx={{
+              color: "#FFFFFF",
+              "&.Mui-selected": {
+                color: "#FF8D25", // replace 'yourActiveColor' with your desired color
+              },
+            }}
+            label="Full Stack Apps"
+            {...a11yProps(1)}
+          />
+          <Tab
+            sx={{
+              color: "#FFFFFF",
+              "&.Mui-selected": {
+                color: "#FF8D25", // replace 'yourActiveColor' with your desired color
+              },
+            }}
+            label="Course Projects"
+            {...a11yProps(2)}
+          />
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
