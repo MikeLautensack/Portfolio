@@ -78,23 +78,33 @@ const HireMeEmailForm = () => {
           type="submit"
           color={
             loadingState === ""
-              ? "primary"
+              ? "secondary"
               : loadingState === "loading"
-              ? "primary"
+              ? "secondary"
               : loadingState === "error"
               ? "error"
               : "success"
           }
         >
           {loadingState === "" ? (
-            <Typography variant="button">Send Message</Typography>
+            <Typography color="#001824" variant="h6" sx={{ fontWeight: "600" }}>
+              Send Message
+            </Typography>
           ) : loadingState === "loading" ? (
             <CircularProgress sx={{ color: "#001824" }} />
           ) : loadingState === "error" ? (
-            <Typography variant="button">Error</Typography>
+            <Typography color="#001824" variant="h6" sx={{ fontWeight: "600" }}>
+              Error
+            </Typography>
           ) : (
             loadingState === "sent" && (
-              <Typography variant="button">Message Sent!</Typography>
+              <Typography
+                color="#001824"
+                variant="h6"
+                sx={{ fontWeight: "600" }}
+              >
+                Message Sent!
+              </Typography>
             )
           )}
         </Button>

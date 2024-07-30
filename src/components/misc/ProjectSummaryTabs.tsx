@@ -59,9 +59,40 @@ const ProjectSummaryTabs = ({
           }
           aria-label="basic tabs example"
         >
-          <Tab label="Project Summary" {...a11yProps(0)} />
-          {stack && <Tab label="Technical Specs" {...a11yProps(1)} />}
-          {gallary && <Tab label="Galary" {...a11yProps(2)} />}
+          <Tab
+            sx={{
+              color: "#FFFFFF",
+              "&.Mui-selected": {
+                color: "#FF8D25", // replace 'yourActiveColor' with your desired color
+              },
+            }}
+            label="Project Summary"
+            {...a11yProps(0)}
+          />
+          {stack && (
+            <Tab
+              sx={{
+                color: "#FFFFFF",
+                "&.Mui-selected": {
+                  color: "#FF8D25", // replace 'yourActiveColor' with your desired color
+                },
+              }}
+              label="Technical Specs"
+              {...a11yProps(1)}
+            />
+          )}
+          {gallary && (
+            <Tab
+              sx={{
+                color: "#FFFFFF",
+                "&.Mui-selected": {
+                  color: "#FF8D25", // replace 'yourActiveColor' with your desired color
+                },
+              }}
+              label="Galary"
+              {...a11yProps(2)}
+            />
+          )}
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>

@@ -23,7 +23,7 @@ const ProjectCard = ({
   contentOrder,
 }: ProjectCardProps) => {
   return (
-    <Box component="div" className="bg-[#002834] w-full flex p-4 rounded-sm">
+    <Box component="div" className="bg-[#0b2a39] w-full flex p-4 rounded-sm">
       {contentOrder === "textFirst" ? (
         <Box
           component="div"

@@ -20,7 +20,7 @@ const Testimonial = ({
   return (
     <Box
       component="div"
-      className="bg-[#0b2a39] w-full flex flex-col gap-4 justify-start items-start p-4"
+      className="bg-[#0b2a39] w-full flex flex-col gap-4 justify-start items-start p-4 rounded-sm"
     >
       <Rating value={rating} readOnly />
       <Typography variant="body1" className="text-white">
