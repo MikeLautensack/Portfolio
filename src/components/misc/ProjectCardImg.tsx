@@ -9,7 +9,7 @@ type ProjectCardImgProps = {
 
 const ProjectCardImg = ({ imgSrc, imgAlt }: ProjectCardImgProps) => {
   return (
-    <Box component="div" className="relative h-80 md:h-full w-full">
+    <Box component="div" className="relative h-full w-full aspect-video">
       <Image
         src={imgSrc!}
         alt={imgAlt!}
