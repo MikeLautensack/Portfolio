@@ -5,7 +5,7 @@ import { Typography } from "@mui/material";
 
 const HighlightsSection = () => {
   return (
-    <section className="flex flex-col md:flex-row justify-center items-center gap-12 px-8 lg:px-32 py-16 bg-[#001824]">
+    <section className="flex flex-col md:flex-row justify-center items-center gap-12 px-8 lg:px-32 py-8 bg-[#001824]">
       <HighlightCard
         heading="10K Earnings on Upwork!"
         body="I have made over $10,000 on Upwork working on React.js and Three.js projects."

@@ -17,11 +17,11 @@ const ProjectSummaryCard = ({
   return (
     <Box
       component="div"
-      className="w-full flex flex-col md:flex-row justify-center items-center gap-4 p-4 h-72"
+      className="w-full h-full flex flex-col md:flex-row justify-start items-center gap-4 p-4"
     >
       <Box
         component="div"
-        className="flex flex-col justify-start items-start gap-2 w-full"
+        className="flex flex-col justify-start items-start gap-2 w-full h-full"
       >
         {bullets.map((bullet: BulletPointType) => (
           <Typography key={bullet.id} className="text-white">
@@ -29,7 +29,7 @@ const ProjectSummaryCard = ({
           </Typography>
         ))}
       </Box>
-      <Box component="div" className="relative w-full h-full">
+      <Box component="div" className="relative w-full h-full aspect-video">
         <Image
           src={imgSrc}
           alt={imgAlt}

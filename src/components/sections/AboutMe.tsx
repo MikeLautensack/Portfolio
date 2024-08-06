@@ -5,7 +5,7 @@ const AboutMe = () => {
   return (
     <Box
       component="section"
-      className="flex flex-col gap-8 justify-start items-start px-8 py-4 md:min-h-screen md:px-32 md:py-20 bg-[#001824]"
+      className="flex flex-col gap-8 justify-start items-start px-8 py-4 md:px-32 md:py-20 bg-[#001824]"
     >
       <Typography
         variant="h4"
@@ -18,39 +18,31 @@ const AboutMe = () => {
         className="flex flex-col gap-8 border-b-[3px] border-[#FF8D25] pb-10"
       >
         <Typography variant="body1" className="text-white">
-          As a full-stack web developer, I am driven by a passion for creating
-          innovative and user-friendly web applications. With a solid foundation
-          in JavaScript, TypeScript, and Java, I specialize in building dynamic
-          and responsive interfaces using cutting-edge technologies such as
-          React.js and Next.js.
+          As a full-stack web developer, I specialize in creating performant and
+          reliable SaaS applications for businesses using cutting-edge
+          technologies. My expertise lies in building dynamic and responsive
+          interfaces with React and Next.js 14 (App Router), complemented by
+          robust Node.js and Express.js backend systems. This combination allows
+          me to deliver seamless, end-to-end solutions that prioritize user
+          experience and functionality.
         </Typography>
         <Typography variant="body1" className="text-white">
-          My expertise lies in developing robust and scalable web applications,
-          from designing intuitive user interfaces to implementing efficient
-          backend systems. I am well-versed in building RESTful APIs using
-          Node.js, Express.js, and SpringBoot, ensuring seamless data flow and
-          communication between the client and server.
+          {`One of my flagship projects, "Estimate Generator" showcases my ability
+          to transform business needs into practical web applications. This
+          tool, designed for contractors to create, send, and manage work
+          estimates, leverages the power of Next.js, Vercel, and Neon DB. By
+          incorporating Material-UI (MUI) and adhering to Material Design
+          principles, I ensure that the user interface is not only functional
+          but also aesthetically pleasing and intuitive.`}
         </Typography>
         <Typography variant="body1" className="text-white">
-          Throughout my professional journey, I have honed my skills in crafting
-          feature-rich and visually appealing web applications. One of my
-          notable projects is the Estimate Generator, a user-friendly web app
-          that empowers contractors and small business owners to streamline
-          their estimation process and deliver professional quotes to customers
-          with ease.
-        </Typography>
-        <Typography variant="body1" className="text-white">
-          In addition to my technical skills, I possess a strong understanding
-          of modern web development practices, including version control with
-          Git and GitHub, containerization with Docker, and API testing with
-          Postman. I am also well-versed in database management systems such as
-          MySQL, PostgreSQL, and MongoDB.
-        </Typography>
-        <Typography variant="body1" className="text-white">
-          If you are looking for a dedicated and forward-thinking web developer
-          to bring your ideas to life, I would love to connect and explore how I
-          can contribute to your next project. Feel free to browse my portfolio
-          and reach out to me through LinkedIn or GitHub.
+          {`In my current role, I'm expanding my skillset by developing a React
+          component library using Vite in library mode. This project, which is
+          published on npm, demonstrates my adaptability and commitment to
+          staying at the forefront of web development technologies. Whether it's
+          crafting comprehensive SaaS solutions or building reusable component
+          libraries, I'm driven by the challenge of creating innovative web
+          applications that solve real-world problems.`}
         </Typography>
       </Box>
     </Box>

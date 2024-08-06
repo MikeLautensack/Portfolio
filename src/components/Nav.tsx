@@ -9,7 +9,6 @@ import { usePathname } from "next/navigation";
 const Nav = () => {
   // Hooks
   const pathname = usePathname();
-  console.log("pathname", pathname);
 
   return (
     <Box component="div" className="flex justify-center items-center gap-4">

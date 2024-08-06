@@ -45,7 +45,7 @@ const ProjectTemplate = ({
   return (
     <Box
       component="div"
-      className="flex flex-col gap-4 justify-start items-start w-full"
+      className="flex flex-col gap-4 justify-start items-start w-full h-full"
     >
       <Typography
         variant="h4"
