@@ -6,7 +6,7 @@ const Skills = () => {
   return (
     <Box
       component="section"
-      className="flex flex-col justify-start items-start md:h-screen px-8 py-4 md:px-32 md:py-20 bg-[#001824]"
+      className="flex flex-col justify-start items-start px-8 py-4 md:px-32 md:py-20 bg-[#001824]"
     >
       <Typography
         variant="h4"

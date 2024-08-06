@@ -42,17 +42,32 @@ const HeroContent = () => {
         </Typography>{" "}
         web developer
       </Typography>
-      <Typography color="#FFFFFF" variant="body1">
+      <Typography color="#FFFFFF" variant="h6">
         I specilize in{" "}
-        <Typography component="span" color="#FF8D25" variant="body1">
+        <Typography
+          component="span"
+          color="#FF8D25"
+          variant="h6"
+          sx={{ fontWeight: "600" }}
+        >
           N
         </Typography>
         ode.js,{" "}
-        <Typography component="span" color="#FF8D25" variant="body1">
+        <Typography
+          component="span"
+          color="#FF8D25"
+          variant="h6"
+          sx={{ fontWeight: "600" }}
+        >
           R
         </Typography>
         eact.js, and{" "}
-        <Typography component="span" color="#FF8D25" variant="body1">
+        <Typography
+          component="span"
+          color="#FF8D25"
+          variant="h6"
+          sx={{ fontWeight: "600" }}
+        >
           N
         </Typography>
         ext.js

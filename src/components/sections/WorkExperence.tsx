@@ -6,7 +6,7 @@ const WorkExperence = () => {
   return (
     <Box
       component="div"
-      className="bg-[#001824] md:h-screen px-8 py-4 md:px-32 md:py-20 flex flex-col justify-start items-start gap-8"
+      className="bg-[#001824] px-8 py-4 md:px-32 md:py-20 flex flex-col justify-start items-start gap-8"
     >
       <Typography
         variant="h4"

@@ -5,12 +5,13 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import Link from "next/link";
 import { SiUpwork } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
+import IconButton from "@mui/material/IconButton";
 
 const Header = () => {
   return (
     <Box
       component="header"
-      className="w-full h-14 flex justify-center items-center bg-[#001824] sticky top-0 z-20"
+      className="w-full h-14 flex justify-center items-center top-0 z-20"
     >
       <Box
         component="div"
@@ -38,22 +39,22 @@ const Header = () => {
             md: "flex", // Visible as flex on medium screens and above
           },
         }}
-        className="flex justify-center items-center gap-4 absolute right-0 md:mr-32"
+        className="flex justify-center items-center gap-2 absolute right-0 md:mr-32"
       >
         <Link href="https://github.com/MikeLautensack">
-          <div className="flex justify-center items-center">
+          <IconButton color="primary">
             <GitHubIcon className="text-[#E6EDF3] h-6 w-6" />
-          </div>
+          </IconButton>
         </Link>
         <Link href="https://www.upwork.com/freelancers/~01089f119f9eb6cd61">
-          <div className="flex justify-center items-center">
+          <IconButton color="primary">
             <SiUpwork className="text-[#13A800] h-6 w-6" />
-          </div>
+          </IconButton>
         </Link>
         <Link href="https://www.linkedin.com/in/mike-lautensack/">
-          <div className="flex justify-center items-center">
+          <IconButton color="primary">
             <FaLinkedin className="text-[#0966C2] h-6 w-6" />
-          </div>
+          </IconButton>
         </Link>
       </Box>
     </Box>
