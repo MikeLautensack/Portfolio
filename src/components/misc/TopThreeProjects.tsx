@@ -19,6 +19,7 @@ const TopThreeProjects = () => {
     <Box component="div" className="w-full flex flex-col gap-8">
       <ProjectCard
         projectTitle={one?.projectName}
+        description={one?.cardDescription}
         bulletPoints={one?.bullets}
         href={one?.href}
         imgSrc={one?.imgSrc}
@@ -27,6 +28,7 @@ const TopThreeProjects = () => {
       />
       <ProjectCard
         projectTitle={two?.projectName}
+        description={two?.cardDescription}
         bulletPoints={two?.bullets}
         href={two?.href}
         imgSrc={two?.imgSrc}
@@ -35,6 +37,7 @@ const TopThreeProjects = () => {
       />
       <ProjectCard
         projectTitle={three?.projectName}
+        description={three?.cardDescription}
         bulletPoints={three?.bullets}
         href={three?.href}
         imgSrc={three?.imgSrc}

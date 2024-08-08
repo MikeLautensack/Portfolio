@@ -7,6 +7,7 @@ export type BulletPointType = { id: number; text: string };
 
 type ProjectCardProps = {
   projectTitle?: string;
+  description?: string;
   bulletPoints?: BulletPointType[];
   href?: string;
   imgSrc?: string;
@@ -16,6 +17,7 @@ type ProjectCardProps = {
 
 const ProjectCard = ({
   projectTitle,
+  description,
   bulletPoints = [],
   href,
   imgSrc,
@@ -23,7 +25,11 @@ const ProjectCard = ({
   contentOrder,
 }: ProjectCardProps) => {
   return (
-    <Box component="div" className="bg-[#0b2a39] w-full flex p-4 rounded-sm">
+    <Card
+      component="div"
+      className="w-full flex p-4 rounded-sm"
+      sx={{ backgroundColor: "#0b2a39" }}
+    >
       {contentOrder === "textFirst" ? (
         <Box
           component="div"
@@ -31,6 +37,7 @@ const ProjectCard = ({
         >
           <ProjectCardInfo
             projectTitle={projectTitle}
+            description={description}
             bulletPoints={bulletPoints}
             href={href}
           />
@@ -49,7 +56,7 @@ const ProjectCard = ({
           />
         </Box>
       )}
-    </Box>
+    </Card>
   );
 };
 

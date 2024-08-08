@@ -1,4 +1,4 @@
-import { Box, Rating, Typography } from "@mui/material";
+import { Box, Card, Rating, Typography } from "@mui/material";
 import React from "react";
 import Writer from "./Writer";
 
@@ -18,16 +18,17 @@ const Testimonial = ({
   initial,
 }: TestimonialProps) => {
   return (
-    <Box
+    <Card
       component="div"
-      className="bg-[#0b2a39] w-full flex flex-col gap-4 justify-start items-start p-4 rounded-sm"
+      className="w-full flex flex-col gap-4 justify-start items-start p-4 rounded-sm"
+      sx={{ backgroundColor: "#0b2a39" }}
     >
       <Rating value={rating} readOnly />
       <Typography variant="body1" className="text-white">
         {testimonial}
       </Typography>
       <Writer writer={writer} company={company} initial={initial} />
-    </Box>
+    </Card>
   );
 };
 
