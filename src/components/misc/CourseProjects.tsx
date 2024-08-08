@@ -23,6 +23,7 @@ const CourseProjects = () => {
       {courseProjects.map((proj: any) => (
         <ProjectCard
           projectTitle={proj?.projectName}
+          description={proj?.cardDescription}
           bulletPoints={proj?.bullets}
           href={proj?.href}
           imgSrc={proj?.imgSrc}

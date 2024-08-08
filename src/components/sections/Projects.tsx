@@ -7,7 +7,7 @@ const Projects = () => {
   return (
     <Box
       component="section"
-      className="flex flex-col gap-8 justify-start items-start px-8 py-4 md:min-h-screen md:px-32 md:py-20 bg-[#001824]"
+      className="flex flex-col gap-8 justify-start items-start px-8 pb-4 md:min-h-screen md:px-32 md:pb-32 bg-[#001824]"
     >
       <Typography
         variant="h4"

@@ -4,12 +4,14 @@ import { BulletPointType } from "./ProjectCard";
 
 type ProjectCardInfoProps = {
   projectTitle?: string;
+  description?: string;
   bulletPoints: BulletPointType[];
   href?: string;
 };
 
 const ProjectCardInfo = ({
   projectTitle,
+  description,
   bulletPoints,
   href,
 }: ProjectCardInfoProps) => {
@@ -21,6 +23,9 @@ const ProjectCardInfo = ({
       <div className="flex flex-col gap-4 justify-start items-start">
         <Typography variant="h4" className="text-white">
           {projectTitle}
+        </Typography>
+        <Typography variant="body1" className="text-white">
+          {description}
         </Typography>
         <List>
           {bulletPoints.map((bullet: BulletPointType) => {

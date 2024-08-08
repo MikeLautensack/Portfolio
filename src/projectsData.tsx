@@ -1,4 +1,3 @@
-import CustomIcon from "./components/misc/CustomIcon";
 import { RiJavascriptFill } from "react-icons/ri";
 import { BiLogoTypescript } from "react-icons/bi";
 import { SiVercel } from "react-icons/si";
@@ -17,6 +16,8 @@ export const projects = [
     github: "https://github.com/MikeLautensack/Estimate-Generator",
     docs: "https://estimate-generator-docs.vercel.app/",
     href: "/projects/estimate-generator",
+    cardDescription:
+      "A fullstack webapp for contractors to create and send work estimates to customers.",
     summary:
       "Estimate Generator is webapp to help contractors and small business's create and manage work estimates and change orders.  Contractors can create work estimates for their customers and benefit from Estimate Generator's automated email systems that sends emails to customers every time a contractor creates and estimate, edits an estimate, or creates a change order.  Customers of contractors can use the account automatically created for them to view estimates or request a change order and can login to their accout by using the \"magic link\" in the emails.",
     description:
@@ -63,6 +64,7 @@ export const projects = [
     github: "https://github.com/MikeLautensack/Galaxy-Generator",
     docs: "",
     href: "/projects/galaxy-generator",
+    cardDescription: "A 3D galaxy you can customize with a controls menu",
     summary:
       'Galaxy Generator is a course project from "Three.js Journey", a course on three.js and react-three-fiber.  Tweak the values in the control panel on the top right of the browser and you can see your galaxy change in real time.  This project is build using Vite with Javascript, Three.js, and datgui.',
     description: "",
@@ -104,6 +106,8 @@ export const projects = [
     github: "https://github.com/MikeLautensack/Raging-Sea",
     docs: "",
     href: "/projects/raging-sea",
+    cardDescription:
+      "A raging sea you can customize with a controls menu, built with custom shaders and rendered with three.js",
     summary:
       'Raging Sea is a course project from "Three.js Journey", a course on three.js and react-three-fiber.  Tweak the values in the control panel on the top right of the browser and you can see the raging sea change in real time.  This project is build using Vite with Javascript, Three.js, datgui, and custom glsl shaders.',
     description: "",

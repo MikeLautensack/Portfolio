@@ -6,7 +6,7 @@ const Skills = () => {
   return (
     <Box
       component="section"
-      className="flex flex-col justify-start items-start px-8 py-4 md:px-32 md:py-20 bg-[#001824]"
+      className="flex flex-col gap-4 justify-start items-start px-8 pb-4 md:px-32 md:pb-32 bg-[#001824]"
     >
       <Typography
         variant="h4"
@@ -14,7 +14,7 @@ const Skills = () => {
       >
         Skills
       </Typography>
-      <Box component="div" className="flex flex-col w-full">
+      <Box component="div" className="flex flex-col w-full gap-4">
         <SkillsItem
           num={1}
           skill="React.js / Next.js"

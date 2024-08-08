@@ -13,7 +13,7 @@ const ExperenceItem = ({ num, job, company, date }: ExperenceItemProps) => {
   return (
     <Box
       component="div"
-      className="flex flex-col gap-2 justify-start items-start border-b-[3px] border-[#FF8D25]"
+      className="flex flex-col gap-2 justify-start items-start"
     >
       <Box component="div" className="flex gap-2">
         <Typography className="text-[#FF8D25]">{num}</Typography>

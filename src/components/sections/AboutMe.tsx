@@ -5,7 +5,7 @@ const AboutMe = () => {
   return (
     <Box
       component="section"
-      className="flex flex-col gap-8 justify-start items-start px-8 py-4 md:px-32 md:py-20 bg-[#001824]"
+      className="flex flex-col gap-8 justify-start items-start px-8 pb-4 md:px-32 md:pb-32 bg-[#001824]"
     >
       <Typography
         variant="h4"
@@ -13,10 +13,7 @@ const AboutMe = () => {
       >
         About Me
       </Typography>
-      <Box
-        component="div"
-        className="flex flex-col gap-8 border-b-[3px] border-[#FF8D25] pb-10"
-      >
+      <Box component="div" className="flex flex-col gap-8 pb-10">
         <Typography variant="body1" className="text-white">
           As a full-stack web developer, I specialize in creating performant and
           reliable SaaS applications for businesses using cutting-edge

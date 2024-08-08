@@ -7,6 +7,7 @@ const FullstackApps = () => {
     <Box component="div" className="w-full flex flex-col gap-8">
       <ProjectCard
         projectTitle="Estimate Generator"
+        // description={proj?.description}
         bulletPoints={[
           { id: 1, text: "• Next.js / React.js" },
           { id: 2, text: "• Auth.js" },
