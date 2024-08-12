@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import { CustomTabPanel } from "./CustomTabPanel";
 import TopThreeProjects from "./TopThreeProjects";
 import FullstackApps from "./FullstackApps";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import CourseProjects from "./CourseProjects";
 
 function a11yProps(index: number) {
@@ -18,6 +18,7 @@ function a11yProps(index: number) {
 const ProjectTabs = () => {
   // Hooks
   const searchParams = useSearchParams();
+  const router = useRouter();
 
   // get params
   const tab = searchParams.get("tab");
@@ -47,9 +48,20 @@ const ProjectTabs = () => {
       >
         <Tabs
           value={value}
-          onChange={(event: React.SyntheticEvent, newValue: number) =>
-            setValue(newValue)
-          }
+          onChange={(event: React.SyntheticEvent, newValue: number) => {
+            setValue(newValue);
+            router.push(
+              `/projects?tab=${
+                newValue === 0
+                  ? "top-three"
+                  : newValue === 1
+                  ? "full-stack-apps"
+                  : newValue === 2
+                  ? "course-projects"
+                  : ""
+              }`
+            );
+          }}
           aria-label="basic tabs example"
         >
           <Tab
