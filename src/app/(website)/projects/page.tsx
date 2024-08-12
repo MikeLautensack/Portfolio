@@ -3,7 +3,7 @@ import ProjectTabs from "@/components/misc/ProjectTabs";
 import { Box, Typography } from "@mui/material";
 import React from "react";
 
-const page = () => {
+const page = ({ params }: { params: { tab: string } }) => {
   return (
     <Box
       component="section"
