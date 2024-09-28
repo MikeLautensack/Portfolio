@@ -139,4 +139,47 @@ export const projects = [
       },
     },
   },
+  {
+    projectLabel: "simple-chat",
+    projectName: "Simple Chat",
+    projectType: "Fullstack Webapp",
+    imgSrc: "/chatappchat1.png",
+    imgAlt: "Simple Chat",
+    prod: "https://socket-io-chat-app-client.vercel.app/",
+    github: "https://github.com/MikeLautensack/Socket-IO-Chat-App-Client",
+    docs: "",
+    href: "/projects/simple-chat",
+    cardDescription: "A simple realtime chat app.",
+    summary:
+      "Simple Chat is a real time chat app built with a node/express socket.io server deployed on Azure app service and a Next.js client deployed on Vercel.  Login with google o-auth and create a chat room to begin chatting.",
+    description: "",
+    loom: "",
+    galary: [
+      {
+        img: "",
+        heading: "",
+      },
+    ],
+    bullets: [
+      { id: 1, text: "• TypeScript" },
+      { id: 2, text: "• Next.js" },
+      { id: 3, text: "• Express.js" },
+      { id: 4, text: "• Socket.io" },
+      { id: 5, text: "• Azure App Service" },
+    ],
+    stack: {
+      lang: {
+        name: "TypeScript",
+        icon: <RiJavascriptFill className="text-white" />,
+      },
+      infrastructure: {
+        name: "Vercel",
+        icon: <SiVercel className="text-white" />,
+      },
+      frontendFramework: {
+        name: "Next.js",
+        icon: <SiVite className="text-white" />,
+      },
+    },
+  },
 ];

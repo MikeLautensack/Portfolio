@@ -18,7 +18,7 @@ const WorkExperence = () => {
         num="01."
         job="React / Front End Development"
         company="@ Software Harmonics"
-        date="Feb 2024 - Present"
+        date="Feb 2024 - Aug 2024"
       />
     </Box>
   );

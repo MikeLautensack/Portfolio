@@ -13,7 +13,7 @@ const getProject = (project: string) => {
 
 const TopThreeProjects = () => {
   const one = getProject("estimate-generator");
-  const two = getProject("galaxy-generator");
+  const two = getProject("simple-chat");
   const three = getProject("raging-sea");
   return (
     <Box component="div" className="w-full flex flex-col gap-8">
