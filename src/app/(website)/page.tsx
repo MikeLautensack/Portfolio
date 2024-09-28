@@ -1,4 +1,5 @@
 import AboutMe from "@/components/sections/AboutMe";
+import Certs from "@/components/sections/Certs";
 import Hero from "@/components/sections/Hero";
 import HighlightsSection from "@/components/sections/HighlightsSection";
 import Projects from "@/components/sections/Projects";
@@ -19,6 +20,7 @@ export default function Home() {
       <Skills />
       <Projects />
       <Testimonials />
+      <Certs />
     </Box>
   );
 }
