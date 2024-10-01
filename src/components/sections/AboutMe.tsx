@@ -15,31 +15,20 @@ const AboutMe = () => {
       </Typography>
       <Box component="div" className="flex flex-col gap-8 pb-10">
         <Typography variant="body1" className="text-white">
-          As a full-stack web developer, I specialize in creating performant and
-          reliable SaaS applications for businesses using cutting-edge
-          technologies. My expertise lies in building dynamic and responsive
-          interfaces with React and Next.js 14 (App Router), complemented by
-          robust Node.js and Express.js backend systems. This combination allows
-          me to deliver seamless, end-to-end solutions that prioritize user
-          experience and functionality.
+          {`As a self-taught Full Stack Web Developer with 2.25 years of focused
+          experience, I specialize in creating robust and scalable web
+          applications using cutting-edge technologies. My expertise spans
+          across TypeScript, React, Next.js, and Vite for comprehensive
+          frontend, backend, and fullstack development. With a proven track
+          record of success on Upwork, including a Top Rated status and 100% Job
+          Success Score, I've delivered high-quality React applications and
+          custom component libraries that meet and exceed client expectations.`}
         </Typography>
         <Typography variant="body1" className="text-white">
-          {`One of my flagship projects, "Estimate Generator" showcases my ability
-          to transform business needs into practical web applications. This
-          tool, designed for contractors to create, send, and manage work
-          estimates, leverages the power of Next.js, Vercel, and Neon DB. By
-          incorporating Material-UI (MUI) and adhering to Material Design
-          principles, I ensure that the user interface is not only functional
-          but also aesthetically pleasing and intuitive.`}
+          {`My technical proficiency extends to cloud solutions, where I excel in deploying Next.js applications on Vercel and RESTful APIs to Azure. This comprehensive skill set allows me to create end-to-end solutions that prioritize performance, user experience, and functionality. Notable projects include the Estimate Generator, a web app for contractors to manage work estimates and invoices, and a real-time Socket.io Chat App, showcasing my ability to implement complex features and integrate various technologies seamlessly.`}
         </Typography>
         <Typography variant="body1" className="text-white">
-          {`In my current role, I'm expanding my skillset by developing a React
-          component library using Vite in library mode. This project, which is
-          published on npm, demonstrates my adaptability and commitment to
-          staying at the forefront of web development technologies. Whether it's
-          crafting comprehensive SaaS solutions or building reusable component
-          libraries, I'm driven by the challenge of creating innovative web
-          applications that solve real-world problems.`}
+          {`What sets me apart is my unique blend of technical expertise and business acumen, stemming from prior entrepreneurial experience. This background enables me to not only build technically sound solutions but also to align them closely with small business needs, particularly in developing SaaS products for contractors and small businesses. My approach is characterized by meticulous attention to detail, unwavering commitment to best practices, and a forward-thinking mindset in web development. Whether it's crafting custom React component libraries, implementing real-time features, or developing full-stack applications, I'm driven by the challenge of creating innovative web solutions that solve real-world problems efficiently and effectively.`}
         </Typography>
       </Box>
     </Box>
