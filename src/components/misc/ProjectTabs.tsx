@@ -7,6 +7,8 @@ import TopThreeProjects from "./TopThreeProjects";
 import FullstackApps from "./FullstackApps";
 import { useRouter, useSearchParams } from "next/navigation";
 import CourseProjects from "./CourseProjects";
+import MicroserviceProjects from "./MicroserviceProjects";
+import AllProjects from "./AllProjects";
 
 function a11yProps(index: number) {
   return {
@@ -33,8 +35,12 @@ const ProjectTabs = () => {
         setValue(0);
       } else if (tab === "full-stack-apps") {
         setValue(1);
-      } else if (tab === "course-projects") {
+      } else if (tab === "microservices") {
         setValue(2);
+      } else if (tab === "course-projects") {
+        setValue(3);
+      } else if (tab === "all-projects") {
+        setValue(4);
       }
     }
   }, [tab]);
@@ -57,7 +63,11 @@ const ProjectTabs = () => {
                   : newValue === 1
                   ? "full-stack-apps"
                   : newValue === 2
+                  ? "microservices"
+                  : newValue === 3
                   ? "course-projects"
+                  : newValue === 4
+                  ? "all-projects"
                   : ""
               }`
             );
@@ -91,8 +101,28 @@ const ProjectTabs = () => {
                 color: "#FF8D25", // replace 'yourActiveColor' with your desired color
               },
             }}
-            label="Course Projects"
+            label="Microservice APIs"
             {...a11yProps(2)}
+          />
+          <Tab
+            sx={{
+              color: "#FFFFFF",
+              "&.Mui-selected": {
+                color: "#FF8D25", // replace 'yourActiveColor' with your desired color
+              },
+            }}
+            label="Course Projects"
+            {...a11yProps(3)}
+          />
+          <Tab
+            sx={{
+              color: "#FFFFFF",
+              "&.Mui-selected": {
+                color: "#FF8D25", // replace 'yourActiveColor' with your desired color
+              },
+            }}
+            label="All Projects"
+            {...a11yProps(4)}
           />
         </Tabs>
       </Box>
@@ -103,7 +133,13 @@ const ProjectTabs = () => {
         <FullstackApps />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
+        <MicroserviceProjects />
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={3}>
         <CourseProjects />
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={4}>
+        <AllProjects />
       </CustomTabPanel>
     </Box>
   );

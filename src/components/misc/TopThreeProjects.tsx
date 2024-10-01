@@ -14,7 +14,7 @@ const getProject = (project: string) => {
 const TopThreeProjects = () => {
   const one = getProject("estimate-generator");
   const two = getProject("simple-chat");
-  const three = getProject("raging-sea");
+  const three = getProject("html-to-pdf");
   return (
     <Box component="div" className="w-full flex flex-col gap-8">
       <ProjectCard

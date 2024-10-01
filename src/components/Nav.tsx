@@ -2,7 +2,7 @@
 
 import { Box, Button, Typography } from "@mui/material";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ProjectsNavMenu from "./misc/ProjectsNavMenu";
 import { usePathname } from "next/navigation";
 

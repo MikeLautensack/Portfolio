@@ -1,7 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import ProjectCard from "../misc/ProjectCard";
-import TopThreeProjects from "../misc/TopThreeProjects";
+import AllProjects from "../misc/AllProjects";
 
 const Projects = () => {
   return (
@@ -15,7 +14,7 @@ const Projects = () => {
       >
         Projects
       </Typography>
-      <TopThreeProjects />
+      <AllProjects />
     </Box>
   );
 };

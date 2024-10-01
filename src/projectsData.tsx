@@ -55,6 +55,89 @@ export const projects = [
     },
   },
   {
+    projectLabel: "simple-chat",
+    projectName: "Simple Chat",
+    projectType: "Fullstack Webapp",
+    imgSrc: "/chatappchat1.png",
+    imgAlt: "Simple Chat",
+    prod: "https://socket-io-chat-app-client.vercel.app/",
+    github: "https://github.com/MikeLautensack/Socket-IO-Chat-App-Client",
+    docs: "",
+    href: "/projects/simple-chat",
+    cardDescription: "A simple realtime chat app.",
+    summary:
+      "Simple Chat is a real time chat app built with a node/express socket.io server deployed on Azure app service and a Next.js client deployed on Vercel.  Login with google o-auth and create a chat room to begin chatting.",
+    description: "",
+    loom: "",
+    galary: [
+      {
+        img: "",
+        heading: "",
+      },
+    ],
+    bullets: [
+      { id: 1, text: "• TypeScript" },
+      { id: 2, text: "• Next.js" },
+      { id: 3, text: "• Express.js" },
+      { id: 4, text: "• Socket.io" },
+      { id: 5, text: "• Azure App Service" },
+    ],
+    stack: {
+      lang: {
+        name: "TypeScript",
+        icon: <RiJavascriptFill className="text-white" />,
+      },
+      infrastructure: {
+        name: "Vercel",
+        icon: <SiVercel className="text-white" />,
+      },
+      frontendFramework: {
+        name: "Next.js",
+        icon: <SiVite className="text-white" />,
+      },
+    },
+  },
+  {
+    projectLabel: "html-to-pdf",
+    projectName: "HTML to PDF",
+    projectType: "Microservice",
+    imgSrc: "/htmltopdf.png",
+    imgAlt: "Swagger UI for html to pdf",
+    prod: "https://html-to-pdf-brf6achxccgteehq.eastus-01.azurewebsites.net/swagger/index.html",
+    github: "https://github.com/MikeLautensack/Socket-IO-Chat-App-Client",
+    docs: "",
+    href: "/projects/html-to-pdf",
+    cardDescription:
+      "A C# .NET Minimal API microservice that converts HTML to PDF documents.",
+    summary:
+      "HTML to PDF is a C# .NET microservice build using minimal api and Playwright to convert HTML to PDF documents and is deployed on Azure app service.",
+    description: "",
+    loom: "",
+    galary: [
+      {
+        img: "",
+        heading: "",
+      },
+    ],
+    bullets: [
+      { id: 1, text: "• C#" },
+      { id: 2, text: "• .NET" },
+      { id: 3, text: "• Azure App Services" },
+      { id: 4, text: "• Docker" },
+      { id: 5, text: "• Playwright" },
+    ],
+    stack: {
+      lang: {
+        name: "C#",
+        icon: <RiJavascriptFill className="text-white" />,
+      },
+      infrastructure: {
+        name: "Azure App Service",
+        icon: <SiVercel className="text-white" />,
+      },
+    },
+  },
+  {
     projectLabel: "galaxy-generator",
     projectName: "Galaxy Generator",
     projectType: "Course Project",
@@ -135,49 +218,6 @@ export const projects = [
       },
       frontendFramework: {
         name: "Vite & React.ts",
-        icon: <SiVite className="text-white" />,
-      },
-    },
-  },
-  {
-    projectLabel: "simple-chat",
-    projectName: "Simple Chat",
-    projectType: "Fullstack Webapp",
-    imgSrc: "/chatappchat1.png",
-    imgAlt: "Simple Chat",
-    prod: "https://socket-io-chat-app-client.vercel.app/",
-    github: "https://github.com/MikeLautensack/Socket-IO-Chat-App-Client",
-    docs: "",
-    href: "/projects/simple-chat",
-    cardDescription: "A simple realtime chat app.",
-    summary:
-      "Simple Chat is a real time chat app built with a node/express socket.io server deployed on Azure app service and a Next.js client deployed on Vercel.  Login with google o-auth and create a chat room to begin chatting.",
-    description: "",
-    loom: "",
-    galary: [
-      {
-        img: "",
-        heading: "",
-      },
-    ],
-    bullets: [
-      { id: 1, text: "• TypeScript" },
-      { id: 2, text: "• Next.js" },
-      { id: 3, text: "• Express.js" },
-      { id: 4, text: "• Socket.io" },
-      { id: 5, text: "• Azure App Service" },
-    ],
-    stack: {
-      lang: {
-        name: "TypeScript",
-        icon: <RiJavascriptFill className="text-white" />,
-      },
-      infrastructure: {
-        name: "Vercel",
-        icon: <SiVercel className="text-white" />,
-      },
-      frontendFramework: {
-        name: "Next.js",
         icon: <SiVite className="text-white" />,
       },
     },

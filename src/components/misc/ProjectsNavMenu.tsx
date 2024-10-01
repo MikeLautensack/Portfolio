@@ -117,9 +117,19 @@ export default function CustomizedMenus() {
             Full Stack Apps
           </MenuItem>
         </Link>
+        <Link href="/projects?tab=microservices">
+          <MenuItem onClick={handleClose} disableRipple>
+            Microservice APIs
+          </MenuItem>
+        </Link>
         <Link href="/projects?tab=course-projects">
           <MenuItem onClick={handleClose} disableRipple>
             Course Projects
+          </MenuItem>
+        </Link>
+        <Link href="/projects?tab=all-projects">
+          <MenuItem onClick={handleClose} disableRipple>
+            All Projects
           </MenuItem>
         </Link>
         <Divider sx={{ my: 0.5 }} />
@@ -129,6 +139,16 @@ export default function CustomizedMenus() {
         <Link href="/projects/estimate-generator">
           <MenuItem onClick={handleClose} disableRipple>
             Estimate Generator
+          </MenuItem>
+        </Link>
+        <Link href="/projects/simple-chat">
+          <MenuItem onClick={handleClose} disableRipple>
+            Simple Chat
+          </MenuItem>
+        </Link>
+        <Link href="/projects/html-to-pdf">
+          <MenuItem onClick={handleClose} disableRipple>
+            HTML to PDF
           </MenuItem>
         </Link>
         <Link href="/projects/galaxy-generator">
