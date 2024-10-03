@@ -1,7 +1,7 @@
 import { Button, Typography } from "@mui/material";
 import Link from "next/link";
 import React from "react";
-import { motion } from "framer-motion";
+import * as motion from "framer-motion/client";
 
 const HeroContent = () => {
   return (

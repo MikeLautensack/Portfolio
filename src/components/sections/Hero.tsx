@@ -4,7 +4,7 @@ import React from "react";
 import HeroContent from "../misc/HeroContent";
 import Scene from "../scene/Scene";
 import { FaAnglesDown } from "react-icons/fa6";
-import { motion } from "framer-motion";
+import * as motion from "framer-motion/client";
 
 const Hero = () => {
   return (
