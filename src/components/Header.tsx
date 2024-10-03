@@ -7,11 +7,22 @@ import { SiUpwork } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
 import IconButton from "@mui/material/IconButton";
 import SideBar from "./misc/SideBar";
+import * as motion from "framer-motion/client";
 
 const Header = () => {
   return (
-    <header className="w-full h-14 flex justify-center items-center top-0 z-20">
-      <div className="hidden lg:flex">
+    <header
+      className="w-full h-14 flex justify-center items-center top-0 z-20"
+      // initial={{ opacity: 0 }}
+      // animate={{ opacity: 1 }}
+      // transition={{ duration: 0.5 }}
+    >
+      <motion.div
+        className="hidden lg:flex"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
         <Box
           component="div"
           className="absolute left-0 md:ml-32 flex gap-2"
@@ -58,7 +69,7 @@ const Header = () => {
             </IconButton>
           </Link>
         </Box>
-      </div>
+      </motion.div>
       <div className="lg:hidden w-full flex justify-end items-center">
         <SideBar />
       </div>

@@ -1,4 +1,3 @@
-import { Box, Button, Card, List, ListItem, Typography } from "@mui/material";
 import React from "react";
 import ProjectCardImg from "./ProjectCardImg";
 import ProjectCardInfo from "./ProjectCardInfo";
@@ -25,27 +24,14 @@ const ProjectCard = ({
   contentOrder,
 }: ProjectCardProps) => {
   return (
-    <div className="w-full flex bg-[#1b2b5e]">
-      {contentOrder === "textFirst" ? (
-        <div className="flex flex-col md:flex-row justify-center items-center gap-4 w-full">
-          <ProjectCardInfo
-            projectTitle={projectTitle}
-            description={description}
-            bulletPoints={bulletPoints}
-            href={href}
-          />
-          <ProjectCardImg imgSrc={imgSrc} imgAlt={imgAlt} />
-        </div>
-      ) : (
-        <div className="flex flex-col md:flex-row justify-center items-center gap-4 w-full">
-          <ProjectCardImg imgSrc={imgSrc} imgAlt={imgAlt} />
-          <ProjectCardInfo
-            projectTitle={projectTitle}
-            bulletPoints={bulletPoints}
-            href={href}
-          />
-        </div>
-      )}
+    <div className="w-full flex gap-4 flex-col-reverse sm:flex-row justify-start items-start bg-[#1b2b5e] border-b border-[#9A4F96]">
+      <ProjectCardInfo
+        projectTitle={projectTitle}
+        description={description}
+        bulletPoints={bulletPoints}
+        href={href}
+      />
+      <ProjectCardImg imgSrc={imgSrc} imgAlt={imgAlt} />
     </div>
   );
 };

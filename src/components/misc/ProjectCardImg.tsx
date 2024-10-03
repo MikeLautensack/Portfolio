@@ -8,8 +8,8 @@ type ProjectCardImgProps = {
 
 const ProjectCardImg = ({ imgSrc, imgAlt }: ProjectCardImgProps) => {
   return (
-    <div className="relative h-full">
-      <div className="w-full">
+    <div className="w-full aspect-video">
+      <div className="w-full h-full relative">
         <Image
           src={imgSrc!}
           alt={imgAlt!}

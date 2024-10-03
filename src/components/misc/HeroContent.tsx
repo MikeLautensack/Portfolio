@@ -1,10 +1,16 @@
 import { Button, Typography } from "@mui/material";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 const HeroContent = () => {
   return (
-    <div className="flex flex-col gap-6 justify-start items-start w-full lg:w-10/12 z-10">
+    <motion.div
+      className="flex flex-col gap-6 justify-start items-start w-full lg:w-10/12 z-10"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <Typography
         color="#FFFFFF"
         sx={{
@@ -115,7 +121,7 @@ const HeroContent = () => {
           </Button>
         </Link> */}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,11 +1,16 @@
 import React from "react";
 import HighlightCard from "../misc/HighlightCard";
-import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import { Typography } from "@mui/material";
+import * as motion from "framer-motion/client";
 
 const HighlightsSection = () => {
   return (
-    <section className="flex flex-col md:flex-row justify-center items-center gap-12 px-8 lg:px-32 py-16">
+    <motion.section
+      className="flex flex-col md:flex-row justify-center items-center gap-12 px-8 lg:px-32 py-16"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 2 }}
+    >
       <HighlightCard
         heading="Top Rated on Upwork!"
         body="I am a top rated freelanced on upwork"
@@ -25,7 +30,7 @@ const HighlightsSection = () => {
         <Typography variant="h3">💯</Typography>
       </HighlightCard>
       {/* <HighlightCard heading="Test 2" body="test 1" /> */}
-    </section>
+    </motion.section>
   );
 };
 

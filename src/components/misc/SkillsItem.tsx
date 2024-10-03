@@ -19,11 +19,11 @@ const SkillsItem = ({
   return (
     <Card
       component="div"
-      className="flex flex-col md:flex-row md:items-center md:h-32 p-4 gap-4"
+      className="flex flex-col md:items-center p-4 gap-4"
       sx={{ backgroundColor: "#243B80" }}
     >
-      <div className="flex gap-4 w-full h-full">
-        <div className="hidden md:flex relative aspect-square">
+      <div className="flex gap-4 w-full justify-start items-center">
+        <div className="relative w-6 h-6 lg:w-8 lg:h-8">
           <Image
             src={imgSrc!}
             alt={imgAlt!}
@@ -32,29 +32,25 @@ const SkillsItem = ({
             //   placeholder="blur" // Optional blur-up while loading
           />
         </div>
-        <div className="w-full">
-          <Typography className="text-white" variant="h4">
-            {skill}
-          </Typography>
-        </div>
+        <Typography
+          className="text-white"
+          sx={{
+            typography: {
+              xs: "h6", // Small screens
+              sm: "h6", // Medium screens
+              md: "h5", // Large screens
+              lg: "h5", // Extra large screens
+            },
+          }}
+        >
+          {skill}
+        </Typography>
       </div>
-      <div className="flex md:hidden w-full justify-center items-center">
-        <div className="w-16 aspect-square relative">
-          <Image
-            src={imgSrc!}
-            alt={imgAlt!}
-            fill={true}
-            //   blurDataURL="data:..." // automatically provided
-            //   placeholder="blur" // Optional blur-up while loading
-          />
-        </div>
-      </div>
+      <div className="flex w-full justify-center items-center"></div>
       <div className="flex gap-4">
-        <div className="flex-1">
-          <Typography variant="body2" className="text-white">
-            {description}
-          </Typography>
-        </div>
+        <Typography variant="body2" className="text-white">
+          {description}
+        </Typography>
       </div>
     </Card>
   );

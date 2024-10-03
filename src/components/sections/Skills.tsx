@@ -14,7 +14,10 @@ const Skills = () => {
       >
         Skills
       </Typography>
-      <Box component="div" className="grid w-full gap-4">
+      <Box
+        component="div"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4"
+      >
         <SkillsItem
           skill="JavaScript"
           description="Core programming language for web development, enabling interactive and dynamic website functionality"
