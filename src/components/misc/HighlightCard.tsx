@@ -23,7 +23,7 @@ const HighlightCard = ({
         justifyContent: "space-between",
         alignItems: "center",
         padding: "1rem",
-        backgroundColor: "#803789",
+        backgroundColor: "#243B80",
         width: "20rem",
         height: "16rem",
       }}
