@@ -6,11 +6,11 @@ const page = () => {
   return (
     <Box
       component="section"
-      className="min-h-screen flex flex-col gap-8 justify-start items-start px-8 py-4 md:px-32 md:py-10 bg-[#001824] md:h-[calc(100vh-56px)]"
+      className="min-h-screen flex flex-col gap-8 justify-start items-start px-8 py-4 md:px-32 md:py-10 md:h-[calc(100vh-56px)]"
     >
       <Typography
         variant="h4"
-        className="w-max border-b-[3px] border-[#FF8D25] text-white"
+        className="w-max border-b-[3px] border-[#9A4F96] text-white"
       >
         Hire Me
       </Typography>

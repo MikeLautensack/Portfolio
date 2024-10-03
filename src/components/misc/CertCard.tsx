@@ -28,10 +28,7 @@ const CertCard = ({
   imgAlt,
 }: CertCardProps) => {
   return (
-    <Card
-      className="flex p-4 w-full justify-start items-center gap-4"
-      sx={{ backgroundColor: "#0b2a39" }}
-    >
+    <div className="flex w-full justify-start items-center gap-4 bg-[#1b2b5e]">
       <div className="relative h-full w-64 aspect-square rounded-full">
         <Image
           src={img}
@@ -63,10 +60,12 @@ const CertCard = ({
           variant="body1"
         >{`Certification ID: ${certID}`}</Typography>
         <Link href={certURL!}>
-          <Button variant="contained">View Certification</Button>
+          <Button variant="contained" color="secondary">
+            View Certification
+          </Button>
         </Link>
       </div>
-    </Card>
+    </div>
   );
 };
 

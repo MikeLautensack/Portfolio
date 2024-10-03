@@ -25,16 +25,9 @@ const ProjectCard = ({
   contentOrder,
 }: ProjectCardProps) => {
   return (
-    <Card
-      component="div"
-      className="w-full flex p-4 rounded-sm"
-      sx={{ backgroundColor: "#0b2a39" }}
-    >
+    <div className="w-full flex bg-[#1b2b5e]">
       {contentOrder === "textFirst" ? (
-        <Box
-          component="div"
-          className="flex flex-col md:flex-row justify-center items-center gap-4 w-full"
-        >
+        <div className="flex flex-col md:flex-row justify-center items-center gap-4 w-full">
           <ProjectCardInfo
             projectTitle={projectTitle}
             description={description}
@@ -42,21 +35,18 @@ const ProjectCard = ({
             href={href}
           />
           <ProjectCardImg imgSrc={imgSrc} imgAlt={imgAlt} />
-        </Box>
+        </div>
       ) : (
-        <Box
-          component="div"
-          className="flex flex-col md:flex-row justify-center items-center gap-4 w-full"
-        >
+        <div className="flex flex-col md:flex-row justify-center items-center gap-4 w-full">
           <ProjectCardImg imgSrc={imgSrc} imgAlt={imgAlt} />
           <ProjectCardInfo
             projectTitle={projectTitle}
             bulletPoints={bulletPoints}
             href={href}
           />
-        </Box>
+        </div>
       )}
-    </Card>
+    </div>
   );
 };
 

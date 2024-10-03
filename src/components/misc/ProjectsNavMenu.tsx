@@ -83,13 +83,13 @@ export default function CustomizedMenus() {
         onClick={handleClick}
         endIcon={
           <KeyboardArrowDownIcon
-            className={`${isProjectsRoute ? "text-[#FF8D25]" : "text-white"}`}
+            className={`${isProjectsRoute ? "text-[#9A4F96]" : "text-white"}`}
           />
         }
       >
         <Typography
-          variant="button"
-          className={`${isProjectsRoute ? "text-[#FF8D25]" : "text-white"}`}
+          variant="h6"
+          className={`${isProjectsRoute ? "text-[#9A4F96]" : "text-white"}`}
         >
           Projects
         </Typography>
@@ -102,6 +102,7 @@ export default function CustomizedMenus() {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
+        color="#243680"
       >
         <Typography variant="body1" className="pl-2">
           Projects Catagories

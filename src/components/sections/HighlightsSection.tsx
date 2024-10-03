@@ -5,7 +5,7 @@ import { Typography } from "@mui/material";
 
 const HighlightsSection = () => {
   return (
-    <section className="flex flex-col md:flex-row justify-center items-center gap-12 px-8 lg:px-32 py-16 bg-[#001824]">
+    <section className="flex flex-col md:flex-row justify-center items-center gap-12 px-8 lg:px-32 py-16">
       <HighlightCard
         heading="Top Rated on Upwork!"
         body="I am a top rated freelanced on upwork"

@@ -9,12 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
     "@hookform/resolvers": "^3.9.0",
-    "@mui/icons-material": "^6.0.0-alpha.13",
-    "@mui/material": "^6.0.0-alpha.13",
-    "@mui/material-nextjs": "^6.0.0-alpha.13",
+    "@mui/icons-material": "^6.1.1",
+    "@mui/material": "^6.1.1",
+    "@mui/material-nextjs": "^6.1.1",
+    "@mui/x-tree-view": "^7.18.0",
     "@react-email/components": "^0.0.21",
     "@react-three/drei": "^9.108.1",
     "@react-three/fiber": "^8.16.8",

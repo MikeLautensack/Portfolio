@@ -1,4 +1,4 @@
-import { extendTheme } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 import { Lato, Playfair_Display, Source_Code_Pro } from "next/font/google";
 
 declare module "@mui/material/styles" {
@@ -101,7 +101,8 @@ const source_code_pro = Source_Code_Pro({
 });
 
 // `extendTheme` is a new API
-const theme = extendTheme({
+const theme = createTheme({
+  cssVariables: true,
   typography: {
     fontFamily: source_code_pro.style.fontFamily,
     body1: {
@@ -115,62 +116,6 @@ const theme = extendTheme({
     light: {
       palette: {
         primary: {
-          main: "#1C6586",
-        },
-        surfaceTint: "#1C6586",
-        onPrimary: "#FFFFFF",
-        primaryContainer: "#C4E7FF",
-        onPrimaryContainer: "#001E2C",
-        secondary: {
-          main: "#8A5021",
-        },
-        onSecondary: "#FFFFFF",
-        secondaryContainer: "#FFDCC5",
-        onSecondaryContainer: "#301400",
-        tertiary: "#615A7D",
-        onTertiary: "#FFFFFF",
-        tertiaryContainer: "#E6DEFF",
-        onTertiaryContainer: "#1D1736",
-        error: {
-          main: "#BA1A1A",
-        },
-        onError: "#FFFFFF",
-        errorContainer: "#FFDAD6",
-        onErrorContainer: "#410002",
-        onBackground: "#181C1F",
-        surface: "#F6FAFE",
-        onSurface: "#181C1F",
-        surfaceVariant: "#DCE3E9",
-        onSurfaceVariant: "#41484D",
-        outline: "#71787D",
-        outlineVariant: "#C0C7CD",
-        inverseSurface: "#2C3134",
-        inverseOnSurface: "#EDF1F5",
-        inversePrimary: "#90CEF3",
-        primaryFixed: "#C4E7FF",
-        onPrimaryFixed: "#001E2C",
-        primaryFixedDim: "#90CEF3",
-        onPrimaryFixedVariant: "#004C69",
-        secondaryFixed: "#FFDCC5",
-        onSecondaryFixed: "#301400",
-        secondaryFixedDim: "#FFB782",
-        onSecondaryFixedVariant: "#6D390A",
-        tertiaryFixed: "#E6DEFF",
-        onTertiaryFixed: "#1D1736",
-        tertiaryFixedDim: "#CAC1E9",
-        onTertiaryFixedVariant: "#494264",
-        surfaceDim: "#D6DADF",
-        surfaceBright: "#F6FAFE",
-        surfaceContainerLowest: "#FFFFFF",
-        surfaceContainerLow: "#F0F4F8",
-        surfaceContainer: "#EAEEF3",
-        surfaceContainerHigh: "#E5E8ED",
-        surfaceContainerHighest: "#DFE3E7",
-      },
-    },
-    dark: {
-      palette: {
-        primary: {
           main: "#001824",
         },
         surfaceTint: "#90CEF3",
@@ -178,7 +123,7 @@ const theme = extendTheme({
         primaryContainer: "#004C69",
         onPrimaryContainer: "#C4E7FF",
         secondary: {
-          main: "#FF8D25",
+          main: "#9A4F96",
         },
         onSecondary: "#4F2500",
         secondaryContainer: "#6D390A",
