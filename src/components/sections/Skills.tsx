@@ -1,12 +1,52 @@
+"use client";
+
 import { Box, Typography } from "@mui/material";
-import React from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import SkillsItem from "../misc/SkillsItem";
+import { motion, useAnimate, useInView } from "framer-motion";
+import { skillsData } from "@/skillsData";
 
 const Skills = () => {
+  // Hooks
+  const [scope, animate] = useAnimate();
+  const isInView = useInView(scope, { once: false, amount: 0.1 });
+
+  const onAnimate = useCallback(() => {
+    refs.current.forEach((ref, index) => {
+      if (ref) {
+        animate(
+          ref,
+          { opacity: 1, y: 0 },
+          { duration: 0.5, delay: index * 0.075 }
+        );
+      }
+    });
+  }, [animate]);
+
+  const resetAnimation = useCallback(() => {
+    refs.current.forEach((ref) => {
+      if (ref) {
+        animate(ref, { opacity: 0, y: 20 }, { duration: 0.075 });
+      }
+    });
+  }, [animate]);
+
+  // Effects
+  useEffect(() => {
+    if (isInView) {
+      onAnimate();
+    } else {
+      resetAnimation();
+    }
+  }, [isInView, onAnimate, resetAnimation]);
+
+  // Refs
+  const refs = useRef<(HTMLDivElement | null)[]>([]);
+
   return (
-    <Box
-      component="section"
+    <section
       className="flex flex-col gap-4 justify-start items-start px-8 pb-4 md:px-32 md:pb-32"
+      ref={scope}
     >
       <Typography
         variant="h4"
@@ -14,125 +54,26 @@ const Skills = () => {
       >
         Skills
       </Typography>
-      <Box
-        component="div"
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4"
-      >
-        <SkillsItem
-          skill="JavaScript"
-          description="Core programming language for web development, enabling interactive and dynamic website functionality"
-          imgSrc="/jslogo.png"
-          imgAlt="jslogo"
-        />
-        <SkillsItem
-          skill="TypeScript"
-          description="Advanced JavaScript with static typing for building scalable and maintainable applications"
-          imgSrc="/tslogo.png"
-          imgAlt="tslogo"
-        />
-        <SkillsItem
-          skill="React.js"
-          description="Library for building dynamic and responsive user interfaces with a component-based architecture"
-          imgSrc="/reactlogo.png"
-          imgAlt="reactlogo.png"
-        />
-        <SkillsItem
-          skill="Next.js"
-          description="React framework for server-side rendering, static site generation, and building production-ready applications"
-          imgSrc="/nextjslogo.png"
-          imgAlt="nextjslogo.png"
-        />
-        <SkillsItem
-          skill="Vite"
-          description="Modern build tool for faster development and optimized production builds, with expertise in library mode for component libraries"
-          imgSrc="/vitelogo.png"
-        />
-        <SkillsItem
-          skill="Node.js"
-          description="JavaScript runtime for building scalable server-side applications and APIs"
-          imgSrc="/nodejsStackedLight.svg"
-          imgAlt="nodelogo"
-        />
-        <SkillsItem
-          skill="Express.js"
-          description="Web application framework for Node.js, used for building robust and flexible backend services"
-          imgSrc="/express-js.png"
-          imgAlt="expresslogo"
-        />
-        <SkillsItem
-          skill="C#"
-          description="Versatile, object-oriented programming language for developing a wide range of applications"
-          imgSrc="/csharp.png"
-          imgAlt="c#logo"
-        />
-        <SkillsItem
-          skill=".NET"
-          description="Free, cross-platform, open-source developer platform for building many different types of applications"
-          imgSrc="/dotnetcore.png"
-          imgAlt="dotnetlogo.png"
-        />
-        <SkillsItem
-          skill="Azure"
-          description="Cloud platform for deploying, managing, and scaling web applications and services"
-          imgSrc="/azurelogo.png"
-          imgAlt="azurelogo"
-        />
-        <SkillsItem
-          skill="Vercel"
-          description="Platform for deploying and hosting Next.js and other frontend applications with ease"
-          imgSrc="/vercellogo.svg"
-          imgAlt="vercellogo"
-        />
-        <SkillsItem
-          skill="Git"
-          description="Distributed version control system for tracking changes in source code during software development"
-          imgSrc="/gitlogo.png"
-          imgAlt="gitlogo"
-        />
-        <SkillsItem
-          skill="GitHub"
-          description="Web-based platform for version control and collaboration using Git"
-          imgSrc="/githublogo.png"
-          imgAlt="githublogo"
-        />
-        <SkillsItem
-          skill="Docker"
-          description="Containerization technology for consistent development, shipping, and deployment of applications"
-          imgSrc="/dockerlogo.png"
-          imgAlt="dockerlogo"
-        />
-        <SkillsItem
-          skill="PostgreSQL"
-          description="Open-source relational database management system for storing and managing application data"
-          imgSrc="/postgresqllogo2.png"
-          imgAlt="postgresqllogo"
-        />
-        <SkillsItem
-          skill="MySQL"
-          description="Popular open-source relational database management system for web applications"
-          imgSrc="/mysqllogo.png"
-          imgAlt="mysqllogo"
-        />
-        <SkillsItem
-          skill="REST API Design"
-          description="Principles and best practices for designing scalable and efficient web APIs"
-          imgSrc="/restlogo.png"
-          imgAlt="restlogo"
-        />
-        <SkillsItem
-          skill="Socket.io"
-          description="Library for building real-time, bidirectional communication between web clients and servers"
-          imgSrc="/socketiologo.png"
-          imgAlt="sockeriologo"
-        />
-        <SkillsItem
-          skill="Three.js"
-          description="JavaScript library for creating 3D graphics and animations in the browser"
-          imgSrc="/threejslogo.png"
-          imgAlt="threejslogo"
-        />
-      </Box>
-    </Box>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4">
+        {skillsData.map((skill, index) => (
+          <motion.div
+            key={skill.skill}
+            ref={(el) => {
+              refs.current[index] = el;
+            }}
+            initial={{ opacity: 0, y: 20 }}
+            className="w-full h-full"
+          >
+            <SkillsItem
+              skill={skill.skill}
+              description={skill.description}
+              imgSrc={skill.imgSrc}
+              imgAlt={skill.imgAlt}
+            />
+          </motion.div>
+        ))}
+      </div>
+    </section>
   );
 };
 

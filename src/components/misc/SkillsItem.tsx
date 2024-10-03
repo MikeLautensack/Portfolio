@@ -19,7 +19,7 @@ const SkillsItem = ({
   return (
     <Card
       component="div"
-      className="flex flex-col md:items-center p-4 gap-4"
+      className="flex flex-col md:items-center p-4 gap-4 h-full"
       sx={{ backgroundColor: "#243B80" }}
     >
       <div className="flex gap-4 w-full justify-start items-center">

@@ -1,10 +1,24 @@
+"use client";
+
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import Testimonial from "../misc/Testimonial";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Testimonials = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.2, // Trigger animation when 10% of the element is visible
+    triggerOnce: true, // Only animate once when the element enters view
+  });
   return (
-    <div className="flex flex-col gap-8 justify-start items-start px-8 pb-4 md:px-32 md:pb-32">
+    <motion.div
+      className="flex flex-col gap-8 justify-start items-start px-8 pb-4 md:px-32 md:pb-32"
+      ref={ref} // Attach the ref to the motion div
+      initial={{ opacity: 0 }} // Initial state: invisible and 50px down
+      animate={inView ? { opacity: 1 } : {}} // Animate when in view
+      transition={{ duration: 1, ease: "easeOut" }}
+    >
       <Typography
         variant="h4"
         className="w-max border-b-[3px] border-[#9A4F96] text-white"
@@ -23,7 +37,7 @@ const Testimonials = () => {
           initial="L"
         />
       </Box>
-    </div>
+    </motion.div>
   );
 };
 
