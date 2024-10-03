@@ -10,12 +10,12 @@ import React from "react";
 const page = () => {
   return (
     <Box component="main">
-      <HeroCopy />
+      {/* <HeroCopy />
       <AboutMe />
       <WorkExperence />
       <Skills />
       <Projects />
-      <Testimonials />
+      <Testimonials /> */}
     </Box>
   );
 };

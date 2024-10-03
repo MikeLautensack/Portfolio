@@ -1,6 +1,5 @@
 import ProjectTemplate from "@/components/misc/ProjectTemplate";
 import { projects } from "@/projectsData";
-import { Box } from "@mui/material";
 import React from "react";
 
 const getProject = (project: string) => {
@@ -18,10 +17,7 @@ const page = ({ params }: { params: { project: string } }) => {
   }
   proj;
   return (
-    <Box
-      component="div"
-      className="px-8 md:px-16 lg:px-32 min-h-[calc(100vh-56px)] bg-[#001824]"
-    >
+    <div className="px-8 md:px-16 lg:px-32 min-h-[calc(100vh-56px)]">
       <ProjectTemplate
         projectLabel={proj.projectLabel}
         projectName={proj.projectName}
@@ -38,7 +34,7 @@ const page = ({ params }: { params: { project: string } }) => {
         bullets={proj.bullets}
         stack={proj.stack}
       />
-    </Box>
+    </div>
   );
 };
 

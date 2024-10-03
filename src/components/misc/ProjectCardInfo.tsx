@@ -18,7 +18,7 @@ const ProjectCardInfo = ({
   return (
     <Box
       component="div"
-      className="flex flex-col gap-4 justify-between items-start w-full h-full"
+      className="flex flex-col gap-4 justify-between items-start h-full w-full flex-grow"
     >
       <div className="flex flex-col gap-4 justify-start items-start">
         <Typography variant="h4" className="text-white">
@@ -40,7 +40,7 @@ const ProjectCardInfo = ({
         </List>
       </div>
       <Button variant="text" href={href}>
-        <Typography variant="button" className="text-[#FF8D25]">
+        <Typography variant="button" className="text-[#9A4F96]">
           Learn More!
         </Typography>
       </Button>

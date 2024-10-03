@@ -5,7 +5,7 @@ const loading = () => {
   return (
     <Box
       component="div"
-      className="w-full flex justify-center items-center bg-[#001824] h-[calc(100vh-56px)]"
+      className="w-full flex justify-center items-center h-[calc(100vh-56px)]"
     >
       <CircularProgress />
     </Box>

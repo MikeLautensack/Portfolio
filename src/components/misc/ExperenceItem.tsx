@@ -1,6 +1,5 @@
 import { Box, List, Typography, ListItem } from "@mui/material";
 import React from "react";
-import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 
 type ExperenceItemProps = {
   num: string;
@@ -16,9 +15,45 @@ const ExperenceItem = ({ num, job, company, date }: ExperenceItemProps) => {
       className="flex flex-col gap-2 justify-start items-start"
     >
       <Box component="div" className="flex gap-2">
-        <Typography className="text-[#FF8D25]">{num}</Typography>
-        <Typography className="text-white">{job}</Typography>
-        <Typography className="text-[#FF8D25]">{company}</Typography>
+        <Typography
+          className="text-[#9A4F96]"
+          sx={{
+            typography: {
+              xs: "body2", // Small screens
+              sm: "body2", // Medium screens
+              md: "body1", // Large screens
+              lg: "body1", // Extra large screens
+            },
+          }}
+        >
+          {num}
+        </Typography>
+        <Typography
+          className="text-white"
+          sx={{
+            typography: {
+              xs: "body2", // Small screens
+              sm: "body2", // Medium screens
+              md: "body1", // Large screens
+              lg: "body1", // Extra large screens
+            },
+          }}
+        >
+          {job}
+        </Typography>
+        <Typography
+          className="text-[#9A4F96]"
+          sx={{
+            typography: {
+              xs: "body2", // Small screens
+              sm: "body2", // Medium screens
+              md: "body1", // Large screens
+              lg: "body1", // Extra large screens
+            },
+          }}
+        >
+          {company}
+        </Typography>
       </Box>
       <Typography variant="body2" className="text-white">
         {date}

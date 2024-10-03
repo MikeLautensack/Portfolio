@@ -43,13 +43,10 @@ const ProjectTemplate = ({
   stack,
 }: ProjectTemplateProps) => {
   return (
-    <Box
-      component="div"
-      className="flex flex-col gap-4 justify-start items-start w-full h-full"
-    >
+    <div className="flex flex-col gap-4 justify-start items-start w-full h-full">
       <Typography
         variant="h4"
-        className="w-max border-b-[3px] border-[#FF8D25] text-white"
+        className="w-max border-b-[3px] border-[#9A4F96] text-white"
       >
         {projectName}
       </Typography>
@@ -62,7 +59,7 @@ const ProjectTemplate = ({
         docs={docs!}
         stack={stack}
       />
-    </Box>
+    </div>
   );
 };
 

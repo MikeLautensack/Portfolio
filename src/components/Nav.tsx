@@ -15,8 +15,8 @@ const Nav = () => {
       <Link href="/">
         <Button variant="text">
           <Typography
-            variant="button"
-            className={`${pathname === "/" ? "text-[#FF8D25]" : "text-white"}`}
+            variant="h6"
+            className={`${pathname === "/" ? "text-[#9A4F96]" : "text-white"}`}
           >
             Home
           </Typography>
@@ -26,9 +26,9 @@ const Nav = () => {
       <Link href="/hire-me">
         <Button variant="text">
           <Typography
-            variant="button"
+            variant="h6"
             className={`${
-              pathname === "/hire-me" ? "text-[#FF8D25]" : "text-white"
+              pathname === "/hire-me" ? "text-[#9A4F96]" : "text-white"
             }`}
           >
             Hire Me

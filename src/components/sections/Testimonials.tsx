@@ -4,13 +4,10 @@ import Testimonial from "../misc/Testimonial";
 
 const Testimonials = () => {
   return (
-    <Box
-      component="div"
-      className="flex flex-col gap-8 justify-start items-start px-8 pb-4 md:px-32 md:pb-32 bg-[#001824]"
-    >
+    <div className="flex flex-col gap-8 justify-start items-start px-8 pb-4 md:px-32 md:pb-32">
       <Typography
         variant="h4"
-        className="w-max border-b-[3px] border-[#FF8D25] text-white"
+        className="w-max border-b-[3px] border-[#9A4F96] text-white"
       >
         Testimonials
       </Typography>
@@ -26,7 +23,7 @@ const Testimonials = () => {
           initial="L"
         />
       </Box>
-    </Box>
+    </div>
   );
 };
 
