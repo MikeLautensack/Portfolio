@@ -37,8 +37,8 @@ const ProjectSummary = ({
             variant="text"
             className="flex gap-1 justify-center items-center"
           >
-            <OpenInBrowserIcon className="text-[#9A4F96]" />
-            <Typography variant="body1" className="text-[#9A4F96]">
+            <OpenInBrowserIcon className="text-[#31B0E9]" />
+            <Typography variant="body1" className="text-[#31B0E9]">
               Live Link
             </Typography>
           </Button>
@@ -48,8 +48,8 @@ const ProjectSummary = ({
             variant="text"
             className="flex gap-1 justify-center items-center"
           >
-            <GitHubIcon className="text-[#9A4F96]" />
-            <Typography variant="body1" className="text-[#9A4F96]">
+            <GitHubIcon className="text-[#31B0E9]" />
+            <Typography variant="body1" className="text-[#31B0E9]">
               Github
             </Typography>
           </Button>
@@ -60,8 +60,8 @@ const ProjectSummary = ({
               variant="text"
               className="flex gap-1 justify-center items-center"
             >
-              <ArticleIcon className="text-[#9A4F96]" />
-              <Typography variant="body1" className="text-[#9A4F96]">
+              <ArticleIcon className="text-[#31B0E9]" />
+              <Typography variant="body1" className="text-[#31B0E9]">
                 Project Documentation
               </Typography>
             </Button>

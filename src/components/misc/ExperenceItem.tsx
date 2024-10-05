@@ -16,7 +16,7 @@ const ExperenceItem = ({ num, job, company, date }: ExperenceItemProps) => {
     >
       <Box component="div" className="flex gap-2">
         <Typography
-          className="text-[#9A4F96]"
+          className="text-[#31B0E9]"
           sx={{
             typography: {
               xs: "body2", // Small screens
@@ -42,7 +42,7 @@ const ExperenceItem = ({ num, job, company, date }: ExperenceItemProps) => {
           {job}
         </Typography>
         <Typography
-          className="text-[#9A4F96]"
+          className="text-[#31B0E9]"
           sx={{
             typography: {
               xs: "body2", // Small screens

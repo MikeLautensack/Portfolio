@@ -17,8 +17,20 @@ const SideBarDropDown = () => {
       </button>
       {open && (
         <div className="">
-          <Link href={""}>
+          <Link href={"/projects?tab=top-three"}>
             <Button variant="text">Top Three!</Button>
+          </Link>
+          <Link href={"/projects?tab=full-stack-apps"}>
+            <Button variant="text">Full Stack Apps</Button>
+          </Link>
+          <Link href={"/projects?tab=microservices"}>
+            <Button variant="text">Microservice APIs</Button>
+          </Link>
+          <Link href={"/projects?tab=course-projects"}>
+            <Button variant="text">Course Projects</Button>
+          </Link>
+          <Link href={"/projects?tab=all-projects"}>
+            <Button variant="text">All Projects</Button>
           </Link>
         </div>
       )}

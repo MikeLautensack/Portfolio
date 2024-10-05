@@ -15,6 +15,7 @@ type CertCardProps = {
   certURL?: string;
   img: string;
   imgAlt: string;
+  buttonColor?: string;
 };
 
 const CertCard = ({
@@ -26,6 +27,7 @@ const CertCard = ({
   certURL,
   img,
   imgAlt,
+  buttonColor,
 }: CertCardProps) => {
   return (
     <div className="flex w-full justify-start items-center gap-4 bg-[#1b2b5e]">
@@ -60,7 +62,13 @@ const CertCard = ({
           variant="body1"
         >{`Certification ID: ${certID}`}</Typography>
         <Link href={certURL!}>
-          <Button variant="contained" color="secondary">
+          <Button
+            variant="contained"
+            sx={{
+              backgroundColor: buttonColor ? buttonColor : "secondary",
+              color: "white",
+            }}
+          >
             View Certification
           </Button>
         </Link>

@@ -40,7 +40,7 @@ const ProjectCardInfo = ({
         </List>
       </div>
       <Button variant="text" href={href}>
-        <Typography variant="button" className="text-[#9A4F96]">
+        <Typography variant="button" className="text-[#31B0E9]">
           Learn More!
         </Typography>
       </Button>

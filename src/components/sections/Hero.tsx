@@ -28,7 +28,7 @@ const Hero = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <FaAnglesDown className="text-[#9A4F96]" />
+          <FaAnglesDown className="text-[#31B0E9]" />
         </motion.div>
       </div>
     </div>

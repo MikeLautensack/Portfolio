@@ -49,7 +49,7 @@ const ProjectSummaryTabs = ({
     <Box component="div" className="w-full px-0">
       <Box
         component="div"
-        sx={{ borderBottom: 1, borderColor: "#9A4F96" }}
+        sx={{ borderBottom: 1, borderColor: "#31B0E9" }}
         className="border-b-[1px] border-divider]"
       >
         <Tabs
@@ -63,7 +63,7 @@ const ProjectSummaryTabs = ({
             sx={{
               color: "#FFFFFF",
               "&.Mui-selected": {
-                color: "#9A4F96", // replace 'yourActiveColor' with your desired color
+                color: "#31B0E9", // replace 'yourActiveColor' with your desired color
               },
             }}
             label="Project Summary"
@@ -74,7 +74,7 @@ const ProjectSummaryTabs = ({
               sx={{
                 color: "#FFFFFF",
                 "&.Mui-selected": {
-                  color: "#9A4F96", // replace 'yourActiveColor' with your desired color
+                  color: "#31B0E9", // replace 'yourActiveColor' with your desired color
                 },
               }}
               label="Technical Specs"
@@ -86,7 +86,7 @@ const ProjectSummaryTabs = ({
               sx={{
                 color: "#FFFFFF",
                 "&.Mui-selected": {
-                  color: "#9A4F96", // replace 'yourActiveColor' with your desired color
+                  color: "#31B0E9", // replace 'yourActiveColor' with your desired color
                 },
               }}
               label="Galary"

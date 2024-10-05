@@ -123,7 +123,7 @@ const theme = createTheme({
         primaryContainer: "#004C69",
         onPrimaryContainer: "#C4E7FF",
         secondary: {
-          main: "#9A4F96",
+          main: "#31B0E9",
         },
         onSecondary: "#4F2500",
         secondaryContainer: "#6D390A",

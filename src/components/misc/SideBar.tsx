@@ -10,7 +10,7 @@ import Link from "next/link";
 import { TreeItem } from "@mui/x-tree-view/TreeItem";
 import SideBarDropDown from "./SideBarDropDown";
 
-export default function AnchorTemporaryDrawer() {
+export default function SideBar() {
   const [state, setState] = useState(false);
 
   const toggleDrawer =
@@ -33,11 +33,11 @@ export default function AnchorTemporaryDrawer() {
       </Button>
       <Drawer anchor={"right"} open={state} onClose={toggleDrawer(false)}>
         <div className="w-52 h-full p-4 flex flex-col justify-start items-start bg-slate-500">
-          <Link href={""}>
+          <Link href={"/"}>
             <Button variant="text">Home</Button>
           </Link>
           <SideBarDropDown />
-          <Link href={""}>
+          <Link href={"hire-me"}>
             <Button variant="text">Hire Me</Button>
           </Link>
         </div>

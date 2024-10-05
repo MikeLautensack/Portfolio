@@ -16,7 +16,7 @@ const Nav = () => {
         <Button variant="text">
           <Typography
             variant="h6"
-            className={`${pathname === "/" ? "text-[#9A4F96]" : "text-white"}`}
+            className={`${pathname === "/" ? "text-[#31B0E9]" : "text-white"}`}
           >
             Home
           </Typography>
@@ -28,7 +28,7 @@ const Nav = () => {
           <Typography
             variant="h6"
             className={`${
-              pathname === "/hire-me" ? "text-[#9A4F96]" : "text-white"
+              pathname === "/hire-me" ? "text-[#31B0E9]" : "text-white"
             }`}
           >
             Hire Me

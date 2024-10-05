@@ -46,7 +46,7 @@ const ProjectTemplate = ({
     <div className="flex flex-col gap-4 justify-start items-start w-full h-full">
       <Typography
         variant="h4"
-        className="w-max border-b-[3px] border-[#9A4F96] text-white"
+        className="w-max border-b-[3px] border-[#31B0E9] text-white"
       >
         {projectName}
       </Typography>

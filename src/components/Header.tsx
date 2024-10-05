@@ -34,7 +34,7 @@ const Header = () => {
             },
           }}
         >
-          <Typography variant="h5" color="#9A4F96">
+          <Typography variant="h5" color="#31B0E9">
             Mike
           </Typography>
           <Typography variant="h5" color="#ffffff">

@@ -83,13 +83,13 @@ export default function CustomizedMenus() {
         onClick={handleClick}
         endIcon={
           <KeyboardArrowDownIcon
-            className={`${isProjectsRoute ? "text-[#9A4F96]" : "text-white"}`}
+            className={`${isProjectsRoute ? "text-[#31B0E9]" : "text-white"}`}
           />
         }
       >
         <Typography
           variant="h6"
-          className={`${isProjectsRoute ? "text-[#9A4F96]" : "text-white"}`}
+          className={`${isProjectsRoute ? "text-[#31B0E9]" : "text-white"}`}
         >
           Projects
         </Typography>
@@ -131,35 +131,6 @@ export default function CustomizedMenus() {
         <Link href="/projects?tab=all-projects">
           <MenuItem onClick={handleClose} disableRipple>
             All Projects
-          </MenuItem>
-        </Link>
-        <Divider sx={{ my: 0.5 }} />
-        <Typography variant="body1" className="pl-2">
-          All Projects
-        </Typography>
-        <Link href="/projects/estimate-generator">
-          <MenuItem onClick={handleClose} disableRipple>
-            Estimate Generator
-          </MenuItem>
-        </Link>
-        <Link href="/projects/simple-chat">
-          <MenuItem onClick={handleClose} disableRipple>
-            Simple Chat
-          </MenuItem>
-        </Link>
-        <Link href="/projects/html-to-pdf">
-          <MenuItem onClick={handleClose} disableRipple>
-            HTML to PDF
-          </MenuItem>
-        </Link>
-        <Link href="/projects/galaxy-generator">
-          <MenuItem onClick={handleClose} disableRipple>
-            Galaxy Generator
-          </MenuItem>
-        </Link>
-        <Link href="/projects/raging-sea">
-          <MenuItem onClick={handleClose} disableRipple>
-            Raging Sea
           </MenuItem>
         </Link>
       </StyledMenu>

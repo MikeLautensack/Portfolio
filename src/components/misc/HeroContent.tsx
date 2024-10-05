@@ -26,7 +26,7 @@ const HeroContent = () => {
         Hi, I am{" "}
         <Typography
           component="span"
-          color="#9A4F96"
+          color="#31B0E9"
           sx={{
             typography: {
               xs: "body1", // Small screens
@@ -55,7 +55,7 @@ const HeroContent = () => {
         I am a{" "}
         <Typography
           component="span"
-          color="#9A4F96"
+          color="#31B0E9"
           variant="h1"
           sx={{
             typography: {
@@ -74,7 +74,7 @@ const HeroContent = () => {
         I specilize in{" "}
         <Typography
           component="span"
-          color="#9A4F96"
+          color="#31B0E9"
           variant="h6"
           sx={{ fontWeight: "600" }}
         >
@@ -83,7 +83,7 @@ const HeroContent = () => {
         ode.js,{" "}
         <Typography
           component="span"
-          color="#9A4F96"
+          color="#31B0E9"
           variant="h6"
           sx={{ fontWeight: "600" }}
         >
@@ -92,7 +92,7 @@ const HeroContent = () => {
         eact.js, and{" "}
         <Typography
           component="span"
-          color="#9A4F96"
+          color="#31B0E9"
           variant="h6"
           sx={{ fontWeight: "600" }}
         >

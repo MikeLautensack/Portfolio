@@ -10,7 +10,7 @@ const Projects = () => {
     >
       <Typography
         variant="h4"
-        className="w-max border-b-[3px] border-[#9A4F96] text-white"
+        className="w-max border-b-[3px] border-[#31B0E9] text-white"
       >
         Projects
       </Typography>

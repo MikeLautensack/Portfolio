@@ -21,7 +21,7 @@ const Certs = () => {
     >
       <Typography
         variant="h4"
-        className="w-max border-b-[3px] border-[#9A4F96] text-white"
+        className="w-max border-b-[3px] border-[#31B0E9] text-white"
       >
         Certifications
       </Typography>
@@ -34,6 +34,7 @@ const Certs = () => {
         certURL="https://www.freecodecamp.org/certification/fcc7ca55ec2-de04-4ccf-8dc1-7c111f5d352a/foundational-c-sharp-with-microsoft"
         img={"/csharp.png"}
         imgAlt={"C#"}
+        buttonColor="#66217B"
       />
     </motion.section>
   );
