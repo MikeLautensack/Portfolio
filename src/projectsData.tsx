@@ -138,6 +138,90 @@ export const projects = [
     },
   },
   {
+    projectLabel: "dotnet-contollers-todo-api",
+    projectName: ".NET 8 Todo API with Conrollers",
+    projectType: "api",
+    imgSrc: "/dotnet8-controllers-todo-api.png",
+    imgAlt: "Todo API swagger ui",
+    prod: "https://dotnet-controllers-todo-api-hkcrbuhgb5ckgpe2.eastus2-01.azurewebsites.net/swagger/index.html",
+    github: "https://github.com/MikeLautensack/.NET-controllers-Todo-API",
+    docs: "",
+    href: "/projects/dotnet-contollers-todo-api",
+    cardDescription: "A todo api built with .NET 8 controllers",
+    summary:
+      "This project is a todo api built with .NET 8 controllers and using ef-core with an in-memory database",
+    description: "",
+    loom: "",
+    galary: [
+      {
+        img: "",
+        heading: "",
+      },
+    ],
+    bullets: [
+      { id: 1, text: "• C#" },
+      { id: 2, text: "• .NET 8" },
+      { id: 3, text: "• EF Core" },
+      { id: 4, text: "• Azure" },
+    ],
+    // stack: {
+    //   lang: {
+    //     name: "Javascript",
+    //     icon: <RiJavascriptFill className="text-white" />,
+    //   },
+    //   infrastructure: {
+    //     name: "Vercel",
+    //     icon: <SiVercel className="text-white" />,
+    //   },
+    //   frontendFramework: {
+    //     name: "Vite & React.ts",
+    //     icon: <SiVite className="text-white" />,
+    //   },
+    // },
+  },
+  {
+    projectLabel: "dotnet-minimalapi-todo-api",
+    projectName: ".NET 8 Todo API with minimal api",
+    projectType: "api",
+    imgSrc: "/dotnet-minimal-todo-api.png",
+    imgAlt: "Todo API swagger ui",
+    prod: "https://dotnet-minimal-todo-api-c9cdanhhf5a3fyfa.eastus2-01.azurewebsites.net/swagger/index.html",
+    github: "https://github.com/MikeLautensack/.NET-minimal-Todo-API",
+    docs: "",
+    href: "/projects/dotnet-minimalapi-todo-api",
+    cardDescription: "A todo api built with .NET 8 minimal",
+    summary:
+      "This project is a todo api built with .NET 8 minimal api and using ef-core with an in-memory database",
+    description: "",
+    loom: "",
+    galary: [
+      {
+        img: "",
+        heading: "",
+      },
+    ],
+    bullets: [
+      { id: 1, text: "• C#" },
+      { id: 2, text: "• .NET 8" },
+      { id: 3, text: "• EF Core" },
+      { id: 4, text: "• Azure" },
+    ],
+    // stack: {
+    //   lang: {
+    //     name: "Javascript",
+    //     icon: <RiJavascriptFill className="text-white" />,
+    //   },
+    //   infrastructure: {
+    //     name: "Vercel",
+    //     icon: <SiVercel className="text-white" />,
+    //   },
+    //   frontendFramework: {
+    //     name: "Vite & React.ts",
+    //     icon: <SiVite className="text-white" />,
+    //   },
+    // },
+  },
+  {
     projectLabel: "galaxy-generator",
     projectName: "Galaxy Generator",
     projectType: "Course Project",
