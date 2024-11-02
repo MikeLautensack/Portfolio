@@ -13,7 +13,7 @@ const HighlightsSection = () => {
   });
   return (
     <motion.section
-      className="flex flex-col md:flex-row justify-center items-center gap-12 px-8 lg:px-32 py-16 lg:py-28"
+      className="flex flex-col md:flex-row justify-center items-center gap-12 px-8 lg:px-32 py-16"
       ref={ref} // Attach the ref to the motion div
       initial={{ opacity: 0 }} // Initial state: invisible and 50px down
       animate={inView ? { opacity: 1 } : {}} // Animate when in view

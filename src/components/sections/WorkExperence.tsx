@@ -13,7 +13,7 @@ const WorkExperence = () => {
   });
   return (
     <motion.section
-      className="px-8 pb-4 md:px-32 md:pb-32 flex flex-col justify-start items-start gap-8"
+      className="px-8 py-4 md:px-32 md:py-16 flex flex-col justify-start items-start gap-4"
       ref={ref} // Attach the ref to the motion div
       initial={{ opacity: 0 }} // Initial state: invisible and 50px down
       animate={inView ? { opacity: 1 } : {}} // Animate when in view

@@ -45,7 +45,7 @@ const HeroContent = () => {
         variant="h1"
         sx={{
           typography: {
-            xs: "h4", // Small screens
+            xs: "h5", // Small screens
             sm: "h3", // Medium screens
             md: "h2", // Large screens
             lg: "h1", // Extra large screens
@@ -59,7 +59,7 @@ const HeroContent = () => {
           variant="h1"
           sx={{
             typography: {
-              xs: "h4", // Small screens
+              xs: "h5", // Small screens
               sm: "h3", // Medium screens
               md: "h2", // Large screens
               lg: "h1", // Extra large screens
@@ -70,7 +70,17 @@ const HeroContent = () => {
         </Typography>{" "}
         web developer
       </Typography>
-      <Typography color="#FFFFFF" variant="h6">
+      <Typography
+        color="#FFFFFF"
+        sx={{
+          typography: {
+            xs: "body2", // Small screens
+            sm: "h6", // Medium screens
+            md: "h6", // Large screens
+            lg: "h6", // Extra large screens
+          },
+        }}
+      >
         I specilize in{" "}
         <Typography
           component="span"

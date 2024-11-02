@@ -9,7 +9,10 @@ import * as motion from "framer-motion/client";
 const Hero = () => {
   return (
     <div className="h-[calc(100vh-56px)] flex flex-col items-center px-8 md:px-32 relative">
-      <div className="flex flex-col md:flex-row justify-start items-center h-full w-full">
+      <div
+        id="content-and-scene"
+        className="flex flex-col md:flex-row justify-center lg:justify-start items-center h-full w-full"
+      >
         <HeroContent />
         <motion.div
           id="scene-container"

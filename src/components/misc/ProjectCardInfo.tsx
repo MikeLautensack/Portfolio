@@ -20,14 +20,14 @@ const ProjectCardInfo = ({
       component="div"
       className="flex flex-col gap-4 justify-between items-start h-full w-full flex-grow"
     >
-      <div className="flex flex-col gap-4 justify-start items-start">
+      <div className="flex flex-col justify-start items-start">
         <Typography variant="h4" className="text-white">
           {projectTitle}
         </Typography>
         <Typography variant="body1" className="text-white">
           {description}
         </Typography>
-        <List>
+        <List dense>
           {bulletPoints.map((bullet: BulletPointType) => {
             return (
               <ListItem key={bullet.id}>
@@ -39,8 +39,8 @@ const ProjectCardInfo = ({
           })}
         </List>
       </div>
-      <Button variant="text" href={href}>
-        <Typography variant="button" className="text-[#31B0E9]">
+      <Button variant="contained" color="secondary" href={href}>
+        <Typography variant="button" color="white">
           Learn More!
         </Typography>
       </Button>

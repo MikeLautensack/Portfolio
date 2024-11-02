@@ -12,20 +12,20 @@ import * as motion from "framer-motion/client";
 const Header = () => {
   return (
     <header
-      className="w-full h-14 flex justify-center items-center top-0 z-20"
+      className="w-full h-14 flex justify-center items-center top-0 z-20 relative"
       // initial={{ opacity: 0 }}
       // animate={{ opacity: 1 }}
       // transition={{ duration: 0.5 }}
     >
       <motion.div
-        className="hidden lg:flex"
+        className="hidden lg:flex items-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
         <Box
           component="div"
-          className="absolute left-0 md:ml-32 flex gap-2"
+          className="absolute left-0 md:ml-32 flex gap-2 h-full items-center"
           sx={{
             display: {
               xs: "none", // Hidden on extra small screens

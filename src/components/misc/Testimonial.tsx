@@ -18,7 +18,7 @@ const Testimonial = ({
   initial,
 }: TestimonialProps) => {
   return (
-    <div className="w-full flex flex-col gap-4 justify-start items-start bg-[#1b2b5e]">
+    <div className="w-full flex flex-col gap-2 justify-start items-start">
       <Rating value={rating} readOnly />
       <Typography variant="body1" className="text-white">
         {testimonial}

@@ -12,7 +12,7 @@ const AboutMe = () => {
   });
   return (
     <motion.section
-      className="flex flex-col gap-8 justify-start items-start px-8 pb-4 md:px-32 md:pb-32"
+      className="flex flex-col gap-8 justify-start items-start px-8 py-4 md:px-32 md:py-16"
       ref={ref} // Attach the ref to the motion div
       initial={{ opacity: 0 }} // Initial state: invisible and 50px down
       animate={inView ? { opacity: 1 } : {}} // Animate when in view

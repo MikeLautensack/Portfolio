@@ -10,10 +10,7 @@ type ExperenceItemProps = {
 
 const ExperenceItem = ({ num, job, company, date }: ExperenceItemProps) => {
   return (
-    <Box
-      component="div"
-      className="flex flex-col gap-2 justify-start items-start"
-    >
+    <div className="flex flex-col justify-start items-start">
       <Box component="div" className="flex gap-2">
         <Typography
           className="text-[#31B0E9]"
@@ -58,7 +55,7 @@ const ExperenceItem = ({ num, job, company, date }: ExperenceItemProps) => {
       <Typography variant="body2" className="text-white">
         {date}
       </Typography>
-      <List>
+      <List dense>
         <ListItem>
           <Typography variant="body2" className="text-white">
             • Upgraded the application from create-react-app, React 16, and
@@ -88,7 +85,7 @@ const ExperenceItem = ({ num, job, company, date }: ExperenceItemProps) => {
           </Typography>
         </ListItem>
       </List>
-    </Box>
+    </div>
   );
 };
 
