@@ -4,9 +4,14 @@ import { Box, Typography } from "@mui/material";
 import React, { useCallback, useEffect, useRef } from "react";
 import SkillsItem from "../misc/SkillsItem";
 import { motion, useAnimate, useInView } from "framer-motion";
-import { skillsData } from "@/skillsData";
+import { type SanityDocument } from "next-sanity";
+import { urlFor } from "@/sanity/lib/image";
 
-const Skills = () => {
+type SkillsType = {
+  skills: SanityDocument[];
+};
+
+const Skills = ({ skills }: SkillsType) => {
   // Hooks
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope, { once: false, amount: 0.1 });
@@ -55,9 +60,9 @@ const Skills = () => {
         Skills
       </Typography>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4">
-        {skillsData.map((skill, index) => (
+        {skills.map((skill, index) => (
           <motion.div
-            key={skill.skill}
+            key={skill._id}
             ref={(el) => {
               refs.current[index] = el;
             }}
@@ -65,10 +70,10 @@ const Skills = () => {
             className="w-full h-full"
           >
             <SkillsItem
-              skill={skill.skill}
-              description={skill.description}
-              imgSrc={skill.imgSrc}
-              imgAlt={skill.imgAlt}
+              skill={skill.skillName}
+              description={skill.skillDescription}
+              imgSrc={urlFor(skill.skillImg).url()}
+              imgAlt={skill.skillName}
             />
           </motion.div>
         ))}

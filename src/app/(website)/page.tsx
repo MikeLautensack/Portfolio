@@ -8,16 +8,31 @@ import Testimonials from "@/components/sections/Testimonials";
 import WorkExperence from "@/components/sections/WorkExperence";
 import { Box } from "@mui/material";
 import { headers } from "next/headers";
+import { type SanityDocument } from "next-sanity";
+import { client } from "@/sanity/lib/client";
 
-export default function Home() {
+const SKILLS_QUERY = `*[
+  _type == "skill"
+]{_id, skillName, skillDescription, skillImg}`;
+
+const options = { next: { revalidate: 30 } };
+
+const getSkills = async () => {
+  const query = client.fetch<SanityDocument[]>(SKILLS_QUERY, {}, options);
+  return await query;
+};
+
+export default async function Home() {
+  const skills = await getSkills();
   headers();
+  console.log(skills);
   return (
     <Box component="main">
       <Hero />
       <HighlightsSection />
       <AboutMe />
       <WorkExperence />
-      <Skills />
+      <Skills skills={skills} />
       <Projects />
       <Testimonials />
       <Certs />
