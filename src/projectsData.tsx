@@ -164,20 +164,20 @@ export const projects = [
       { id: 3, text: "• EF Core" },
       { id: 4, text: "• Azure" },
     ],
-    // stack: {
-    //   lang: {
-    //     name: "Javascript",
-    //     icon: <RiJavascriptFill className="text-white" />,
-    //   },
-    //   infrastructure: {
-    //     name: "Vercel",
-    //     icon: <SiVercel className="text-white" />,
-    //   },
-    //   frontendFramework: {
-    //     name: "Vite & React.ts",
-    //     icon: <SiVite className="text-white" />,
-    //   },
-    // },
+    stack: {
+      lang: {
+        name: "Javascript",
+        icon: <RiJavascriptFill className="text-white" />,
+      },
+      infrastructure: {
+        name: "Vercel",
+        icon: <SiVercel className="text-white" />,
+      },
+      frontendFramework: {
+        name: "Vite & React.ts",
+        icon: <SiVite className="text-white" />,
+      },
+    },
   },
   {
     projectLabel: "dotnet-minimalapi-todo-api",
@@ -206,20 +206,20 @@ export const projects = [
       { id: 3, text: "• EF Core" },
       { id: 4, text: "• Azure" },
     ],
-    // stack: {
-    //   lang: {
-    //     name: "Javascript",
-    //     icon: <RiJavascriptFill className="text-white" />,
-    //   },
-    //   infrastructure: {
-    //     name: "Vercel",
-    //     icon: <SiVercel className="text-white" />,
-    //   },
-    //   frontendFramework: {
-    //     name: "Vite & React.ts",
-    //     icon: <SiVite className="text-white" />,
-    //   },
-    // },
+    stack: {
+      lang: {
+        name: "Javascript",
+        icon: <RiJavascriptFill className="text-white" />,
+      },
+      infrastructure: {
+        name: "Vercel",
+        icon: <SiVercel className="text-white" />,
+      },
+      frontendFramework: {
+        name: "Vite & React.ts",
+        icon: <SiVite className="text-white" />,
+      },
+    },
   },
   {
     projectLabel: "galaxy-generator",
