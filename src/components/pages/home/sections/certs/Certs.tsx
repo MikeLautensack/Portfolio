@@ -5,12 +5,18 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import CertCard from "@/components/pages/home/sections/certs/CertCard";
+import { type SanityDocument } from "next-sanity";
 
-const Certs = () => {
+type CertsProps = {
+  certs: SanityDocument[];
+};
+
+const Certs = ({ certs }: CertsProps) => {
   const { ref, inView } = useInView({
     threshold: 0.2, // Trigger animation when 10% of the element is visible
     triggerOnce: true, // Only animate once when the element enters view
   });
+  console.log(certs);
   return (
     <motion.section
       className="flex flex-col gap-4 justify-start items-start px-8 py-4 md:px-32 md:py-16"
@@ -25,17 +31,9 @@ const Certs = () => {
       >
         Certifications
       </Typography>
-      <CertCard
-        name={"Foundational C# with Microsoft"}
-        description={"Fundamentals of the C# programming language and .NET"}
-        issuedBy={"Free Code Camp/Microsoft Learn"}
-        issuedOn={new Date(2024, 8)}
-        certID="fcc7ca55ec2-de04-4ccf-8dc1-7c111f5d352a-fcswm"
-        certURL="https://www.freecodecamp.org/certification/fcc7ca55ec2-de04-4ccf-8dc1-7c111f5d352a/foundational-c-sharp-with-microsoft"
-        img={"/csharp.png"}
-        imgAlt={"C#"}
-        buttonColor="#66217B"
-      />
+      {certs.map((cert) => (
+        <CertCard key={cert._id} cert={certs[0]} buttonColor="#66217B" />
+      ))}
     </motion.section>
   );
 };

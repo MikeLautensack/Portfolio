@@ -15,6 +15,20 @@ const SKILLS_QUERY = `*[
   _type == "skill"
 ]{_id, skillName, skillDescription, skillImg}`;
 
+const CERTS_QUERY = `*[
+  _type == "certification"
+] | order(index asc) {
+  _id,
+  certName,
+  certDescription,
+  issuedBy,
+  issuedOn,
+  certId,
+  certURL,
+  certImg,
+  index
+}`;
+
 const options = { next: { revalidate: 30 } };
 
 const getSkills = async () => {
@@ -22,8 +36,14 @@ const getSkills = async () => {
   return await query;
 };
 
+const getCerts = async () => {
+  const query = client.fetch<SanityDocument[]>(CERTS_QUERY, {}, options);
+  return await query;
+};
+
 export default async function Home() {
   const skills = await getSkills();
+  const certs = await getCerts();
   headers();
   return (
     <Box component="main">
@@ -34,7 +54,7 @@ export default async function Home() {
       <Skills skills={skills} />
       <Projects />
       <Testimonials />
-      <Certs />
+      <Certs certs={certs} />
     </Box>
   );
 }

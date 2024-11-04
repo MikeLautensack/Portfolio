@@ -17,7 +17,7 @@ const PROJECTS_QUERY = `*[
   github, 
   projectImg, 
   galary, 
-  features, 
+  features,
   technology, 
   index
 }`;
@@ -29,7 +29,7 @@ const getProjects = async () => {
   return await query;
 };
 
-const page = async ({ params }: { params: { tab: string } }) => {
+const page = async () => {
   const projects = await getProjects();
   return (
     <Box
