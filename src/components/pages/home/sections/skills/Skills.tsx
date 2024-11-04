@@ -5,7 +5,7 @@ import React, { useCallback, useEffect, useRef } from "react";
 import { motion, useAnimate, useInView } from "framer-motion";
 import { type SanityDocument } from "next-sanity";
 import { urlFor } from "@/sanity/lib/image";
-import SkillsItem from "@/components/misc/SkillsItem";
+import SkillsItem from "@/components/pages/home/sections/skills/SkillsItem";
 
 type SkillsType = {
   skills: SanityDocument[];

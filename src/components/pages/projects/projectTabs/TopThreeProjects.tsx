@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import React from "react";
 import { type SanityDocument } from "next-sanity";
-import ProjectCard from "@/components/misc/ProjectCard";
+import ProjectCard from "../project/ProjectCard";
 
 type TopThreeProjectsProps = {
   projects: SanityDocument[];

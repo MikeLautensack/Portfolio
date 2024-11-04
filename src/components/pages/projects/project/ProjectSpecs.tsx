@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import React from "react";
-import SpecItem from "./SpecItem";
+import SpecItem from "../../../misc/SpecItem";
 
 export type Stack = {
   lang: { name: string; icon: React.ReactNode };

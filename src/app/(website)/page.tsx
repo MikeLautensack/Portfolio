@@ -1,15 +1,15 @@
 import AboutMe from "@/components/pages/home/sections/AboutMe";
-import HighlightsSection from "@/components/pages/home/sections/HighlightsSection";
+import HighlightsSection from "@/components/pages/home/sections/highlights/HighlightsSection";
 import Projects from "@/components/pages/home/sections/Projects";
 import { Box } from "@mui/material";
 import { headers } from "next/headers";
 import { type SanityDocument } from "next-sanity";
 import { client } from "@/sanity/lib/client";
-import Certs from "@/components/pages/home/sections/Certs";
-import Hero from "@/components/pages/home/sections/Hero";
-import Skills from "@/components/pages/home/sections/Skills";
-import Testimonials from "@/components/pages/home/sections/Testimonials";
-import WorkExperence from "@/components/pages/home/sections/WorkExperence";
+import Certs from "@/components/pages/home/sections/certs/Certs";
+import Hero from "@/components/pages/home/sections/hero/Hero";
+import Skills from "@/components/pages/home/sections/skills/Skills";
+import Testimonials from "@/components/pages/home/sections/testimonials/Testimonials";
+import WorkExperence from "@/components/pages/home/sections/workExperence/WorkExperence";
 
 const SKILLS_QUERY = `*[
   _type == "skill"

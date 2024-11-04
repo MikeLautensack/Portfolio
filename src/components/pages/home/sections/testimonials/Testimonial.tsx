@@ -1,6 +1,6 @@
-import { Box, Card, Rating, Typography } from "@mui/material";
+import Writer from "@/components/misc/Writer";
+import { Rating, Typography } from "@mui/material";
 import React from "react";
-import Writer from "./Writer";
 
 type TestimonialProps = {
   rating: number;

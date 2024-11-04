@@ -2,8 +2,8 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import ProjectHeaderCard from "./ProjectHeaderCard";
 import ProjectSummaryTabs from "./ProjectSummaryTabs";
-import { Stack } from "../../../misc/ProjectSpecs";
-import { BulletPointType } from "../../../misc/ProjectCard";
+import { Stack } from "./ProjectSpecs";
+import { BulletPointType } from "./ProjectCard";
 
 type GalaryItem = {
   img: any;

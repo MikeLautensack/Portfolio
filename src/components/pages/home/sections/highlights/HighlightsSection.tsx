@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import HighlightCard from "../../../misc/HighlightCard";
+import HighlightCard from "./HighlightCard";
 import { Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";

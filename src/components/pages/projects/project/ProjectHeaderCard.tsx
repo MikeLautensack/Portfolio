@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import Image from "next/image";
-import { BulletPointType } from "../../../misc/ProjectCard";
+import { BulletPointType } from "./ProjectCard";
 
 type ProjectSummaryCardProps = {
   imgSrc: string;

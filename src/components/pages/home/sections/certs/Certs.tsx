@@ -4,7 +4,7 @@ import { Typography } from "@mui/material";
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import CertCard from "@/components/misc/CertCard";
+import CertCard from "@/components/pages/home/sections/certs/CertCard";
 
 const Certs = () => {
   const { ref, inView } = useInView({

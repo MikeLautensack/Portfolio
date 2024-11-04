@@ -4,9 +4,9 @@ import { Box, Tab, Tabs } from "@mui/material";
 import React, { useState } from "react";
 import { CustomTabPanel } from "../../../misc/CustomTabPanel";
 import { useSearchParams } from "next/navigation";
-import ProjectSummary from "../../../misc/ProjectSummary";
-import ProjectSpecs, { Stack } from "../../../misc/ProjectSpecs";
-import ProjectGallary from "../../../misc/ProjectGallary";
+import ProjectSummary from "./ProjectSummary";
+import ProjectSpecs, { Stack } from "./ProjectSpecs";
+import ProjectGallary from "./ProjectGallary";
 
 function a11yProps(index: number) {
   return {
