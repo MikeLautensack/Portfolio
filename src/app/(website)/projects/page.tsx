@@ -1,9 +1,22 @@
-import { CustomTabPanel } from "@/components/misc/CustomTabPanel";
 import ProjectTabs from "@/components/misc/ProjectTabs";
 import { Box, Typography } from "@mui/material";
 import React from "react";
+import { type SanityDocument } from "next-sanity";
+import { client } from "@/sanity/lib/client";
 
-const page = ({ params }: { params: { tab: string } }) => {
+const PROJECTS_QUERY = `*[
+  _type == "project"
+]{_id, projectName, projectType, projectSummary, projectDescription, pathVar, prod, github, projectImg, galary, features, technology, index}`;
+
+const options = { next: { revalidate: 30 } };
+
+const getProjects = async () => {
+  const query = client.fetch<SanityDocument[]>(PROJECTS_QUERY, {}, options);
+  return await query;
+};
+
+const page = async ({ params }: { params: { tab: string } }) => {
+  const projects = await getProjects();
   return (
     <Box
       component="section"
@@ -15,7 +28,7 @@ const page = ({ params }: { params: { tab: string } }) => {
       >
         Projects
       </Typography>
-      <ProjectTabs />
+      <ProjectTabs projects={projects} />
     </Box>
   );
 };

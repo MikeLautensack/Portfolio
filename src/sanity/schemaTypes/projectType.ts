@@ -55,5 +55,9 @@ export const projectType = defineType({
       type: "array",
       of: [{ type: "string" }],
     }),
+    defineField({
+      name: "index",
+      type: "number",
+    }),
   ],
 });

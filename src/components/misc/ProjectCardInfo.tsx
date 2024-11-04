@@ -5,14 +5,14 @@ import { BulletPointType } from "./ProjectCard";
 type ProjectCardInfoProps = {
   projectTitle?: string;
   description?: string;
-  bulletPoints: BulletPointType[];
+  bulletPoints?: BulletPointType[];
   href?: string;
 };
 
 const ProjectCardInfo = ({
   projectTitle,
   description,
-  bulletPoints,
+  bulletPoints = [],
   href,
 }: ProjectCardInfoProps) => {
   return (

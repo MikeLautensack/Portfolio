@@ -1,28 +1,17 @@
 import React from "react";
-import { projects } from "@/projectsData";
 import ProjectCard from "./ProjectCard";
+import { type SanityDocument } from "next-sanity";
 
-const getProject = (project: string) => {
-  for (let i = 0; i < projects.length; i++) {
-    if (projects[i].projectLabel === project) {
-      return projects[i];
-    }
-  }
+type MicroserviceProjectsProps = {
+  projects: SanityDocument[];
 };
 
-const MicroserviceProjects = () => {
-  const proj = getProject("html-to-pdf");
+const MicroserviceProjects = ({ projects }: MicroserviceProjectsProps) => {
   return (
     <div>
-      <ProjectCard
-        projectTitle={proj?.projectName}
-        description={proj?.cardDescription}
-        bulletPoints={proj?.bullets}
-        href={proj?.href}
-        imgSrc={proj?.imgSrc}
-        imgAlt={proj?.imgAlt}
-        contentOrder="textFirst"
-      />
+      {projects.map((project) => (
+        <ProjectCard key={project._id} project={project} />
+      ))}
     </div>
   );
 };

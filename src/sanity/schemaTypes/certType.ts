@@ -37,5 +37,9 @@ export const certType = defineType({
       name: "certImg",
       type: "image",
     }),
+    defineField({
+      name: "index",
+      type: "number",
+    }),
   ],
 });

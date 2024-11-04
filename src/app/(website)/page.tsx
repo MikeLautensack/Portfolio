@@ -25,7 +25,6 @@ const getSkills = async () => {
 export default async function Home() {
   const skills = await getSkills();
   headers();
-  console.log(skills);
   return (
     <Box component="main">
       <Hero />

@@ -1,37 +1,27 @@
 import React from "react";
 import ProjectCardImg from "./ProjectCardImg";
 import ProjectCardInfo from "./ProjectCardInfo";
+import { type SanityDocument } from "next-sanity";
+import { urlFor } from "@/sanity/lib/image";
 
 export type BulletPointType = { id: number; text: string };
 
 type ProjectCardProps = {
-  projectTitle?: string;
-  description?: string;
-  bulletPoints?: BulletPointType[];
-  href?: string;
-  imgSrc?: string;
-  imgAlt?: string;
-  contentOrder: "textFirst" | "imgFirst";
+  project: SanityDocument;
 };
 
-const ProjectCard = ({
-  projectTitle,
-  description,
-  bulletPoints = [],
-  href,
-  imgSrc,
-  imgAlt,
-  contentOrder,
-}: ProjectCardProps) => {
+const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <div className="w-full flex gap-4 flex-col-reverse sm:flex-row justify-start items-start bg-[#1b2b5e] border-b border-[#31B0E9] pb-4">
       <ProjectCardInfo
-        projectTitle={projectTitle}
-        description={description}
-        bulletPoints={bulletPoints}
-        href={href}
+        projectTitle={project.projectName}
+        description={project.projectDescription}
+        href={project.prod}
       />
-      <ProjectCardImg imgSrc={imgSrc} imgAlt={imgAlt} />
+      <ProjectCardImg
+        imgSrc={urlFor(project.projectImg).url()}
+        imgAlt={project.projectName}
+      />
     </div>
   );
 };

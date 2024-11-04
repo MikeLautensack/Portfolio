@@ -1,36 +1,20 @@
-import { projects } from "@/projectsData";
 import { Box } from "@mui/material";
 import React from "react";
 import ProjectCard from "./ProjectCard";
+import { type SanityDocument } from "next-sanity";
 
-const getProjectsByType = (projecttype: string) => {
-  let projectsByType = [];
-  for (let i = 0; i < projects.length; i++) {
-    if (projects[i].projectType === projecttype) {
-      projectsByType.push(projects[i]);
-    }
-  }
-  return projectsByType;
+type CourseProjectsProps = {
+  projects: SanityDocument[];
 };
 
-const CourseProjects = () => {
-  const courseProjects = getProjectsByType("Course Project");
+const CourseProjects = ({ projects }: CourseProjectsProps) => {
   return (
     <Box
       component="div"
       className="flex flex-col gap-4 justify-start items-starts"
     >
-      {courseProjects.map((proj: any) => (
-        <ProjectCard
-          projectTitle={proj?.projectName}
-          description={proj?.cardDescription}
-          bulletPoints={proj?.bullets}
-          href={proj?.href}
-          imgSrc={proj?.imgSrc}
-          imgAlt={proj?.imgAlt}
-          contentOrder="textFirst"
-          key={Math.floor(Math.random())}
-        />
+      {projects.map((project) => (
+        <ProjectCard key={project._id} project={project} />
       ))}
     </Box>
   );

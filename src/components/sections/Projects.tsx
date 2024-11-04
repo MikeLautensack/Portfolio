@@ -1,8 +1,22 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import AllProjects from "../misc/AllProjects";
+import { type SanityDocument } from "next-sanity";
+import { client } from "@/sanity/lib/client";
 
-const Projects = () => {
+const PROJECTS_QUERY = `*[
+  _type == "project"
+]{_id, projectName, projectType, projectSummary, projectDescription, pathVar, prod, github, projectImg, galary, features, technology, index}`;
+
+const options = { next: { revalidate: 30 } };
+
+const getProjects = async () => {
+  const query = client.fetch<SanityDocument[]>(PROJECTS_QUERY, {}, options);
+  return await query;
+};
+
+const Projects = async () => {
+  const projects = await getProjects();
   return (
     <Box
       component="section"
@@ -14,7 +28,7 @@ const Projects = () => {
       >
         Projects
       </Typography>
-      <AllProjects />
+      <AllProjects projects={projects} />
     </Box>
   );
 };

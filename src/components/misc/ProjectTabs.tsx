@@ -1,7 +1,7 @@
 "use client";
 
 import { Box, Tab, Tabs } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { CustomTabPanel } from "./CustomTabPanel";
 import TopThreeProjects from "./TopThreeProjects";
 import FullstackApps from "./FullstackApps";
@@ -9,6 +9,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import CourseProjects from "./CourseProjects";
 import MicroserviceProjects from "./MicroserviceProjects";
 import AllProjects from "./AllProjects";
+import { type SanityDocument } from "next-sanity";
 
 function a11yProps(index: number) {
   return {
@@ -17,7 +18,11 @@ function a11yProps(index: number) {
   };
 }
 
-const ProjectTabs = () => {
+type ProjectTabsProps = {
+  projects: SanityDocument[];
+};
+
+const ProjectTabs = ({ projects }: ProjectTabsProps) => {
   // Hooks
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -45,6 +50,14 @@ const ProjectTabs = () => {
     }
   }, [tab]);
 
+  // Callbacks
+  const filterProjects = useCallback(
+    (projects: SanityDocument[], projectType: string) => {
+      return projects.filter((project) => project.projectType === projectType);
+    },
+    []
+  );
+
   return (
     <Box component="div" className="w-full px-0">
       <Box
@@ -61,14 +74,14 @@ const ProjectTabs = () => {
                 newValue === 0
                   ? "top-three"
                   : newValue === 1
-                  ? "full-stack-apps"
-                  : newValue === 2
-                  ? "microservices"
-                  : newValue === 3
-                  ? "course-projects"
-                  : newValue === 4
-                  ? "all-projects"
-                  : ""
+                    ? "full-stack-apps"
+                    : newValue === 2
+                      ? "microservices"
+                      : newValue === 3
+                        ? "course-projects"
+                        : newValue === 4
+                          ? "all-projects"
+                          : ""
               }`
             );
           }}
@@ -127,19 +140,23 @@ const ProjectTabs = () => {
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
-        <TopThreeProjects />
+        <TopThreeProjects projects={filterProjects(projects, "top-three")} />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        <FullstackApps />
+        <FullstackApps projects={filterProjects(projects, "full-stack-app")} />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-        <MicroserviceProjects />
+        <MicroserviceProjects
+          projects={filterProjects(projects, "microservices")}
+        />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={3}>
-        <CourseProjects />
+        <CourseProjects
+          projects={filterProjects(projects, "course-projects")}
+        />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={4}>
-        <AllProjects />
+        <AllProjects projects={projects} />
       </CustomTabPanel>
     </Box>
   );

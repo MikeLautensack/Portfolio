@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import React, { useCallback, useEffect, useRef } from "react";
 import SkillsItem from "../misc/SkillsItem";
 import { motion, useAnimate, useInView } from "framer-motion";

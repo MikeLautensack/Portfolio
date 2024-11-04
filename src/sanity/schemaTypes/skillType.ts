@@ -20,5 +20,9 @@ export const skillType = defineType({
       type: "image",
       validation: (rule) => rule.required(),
     }),
+    defineField({
+      name: "index",
+      type: "number",
+    }),
   ],
 });

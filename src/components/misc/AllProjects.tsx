@@ -1,11 +1,15 @@
 "use client";
 
 import React, { useCallback, useEffect, useRef } from "react";
-import { projects } from "@/projectsData";
 import ProjectCard from "./ProjectCard";
 import { motion, useAnimate, useInView } from "framer-motion";
+import { type SanityDocument } from "next-sanity";
 
-const AllProjects = () => {
+type AllProjectsProps = {
+  projects: SanityDocument[];
+};
+
+const AllProjects = ({ projects }: AllProjectsProps) => {
   // Hooks
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope, { once: false, amount: 0.1 });
@@ -47,25 +51,8 @@ const AllProjects = () => {
       className="flex flex-col gap-4 justify-start items-start w-full"
       ref={scope}
     >
-      {projects.map((project, index) => (
-        <motion.div
-          className="w-full h-full"
-          key={project?.projectName}
-          ref={(el) => {
-            refs.current[index] = el;
-          }}
-          initial={{ opacity: 0 }}
-        >
-          <ProjectCard
-            projectTitle={project?.projectName}
-            description={project?.cardDescription}
-            bulletPoints={project?.bullets}
-            href={project?.href}
-            imgSrc={project?.imgSrc}
-            imgAlt={project?.imgAlt}
-            contentOrder="textFirst"
-          />
-        </motion.div>
+      {projects.map((project) => (
+        <ProjectCard key={project._id} project={project} />
       ))}
     </div>
   );
