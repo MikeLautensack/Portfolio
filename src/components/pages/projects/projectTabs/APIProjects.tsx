@@ -1,14 +1,14 @@
 import React from "react";
-import ProjectCard from "./ProjectCard";
 import { type SanityDocument } from "next-sanity";
+import ProjectCard from "@/components/misc/ProjectCard";
 
-type MicroserviceProjectsProps = {
+type APIProjectsProps = {
   projects: SanityDocument[];
 };
 
-const MicroserviceProjects = ({ projects }: MicroserviceProjectsProps) => {
+const APIProjects = ({ projects }: APIProjectsProps) => {
   return (
-    <div>
+    <div className="w-full flex flex-col gap-8">
       {projects.map((project) => (
         <ProjectCard key={project._id} project={project} />
       ))}
@@ -16,4 +16,4 @@ const MicroserviceProjects = ({ projects }: MicroserviceProjectsProps) => {
   );
 };
 
-export default MicroserviceProjects;
+export default APIProjects;

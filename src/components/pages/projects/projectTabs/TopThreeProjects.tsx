@@ -1,18 +1,15 @@
 import { Box } from "@mui/material";
 import React from "react";
-import ProjectCard from "./ProjectCard";
 import { type SanityDocument } from "next-sanity";
+import ProjectCard from "@/components/misc/ProjectCard";
 
-type CourseProjectsProps = {
+type TopThreeProjectsProps = {
   projects: SanityDocument[];
 };
 
-const CourseProjects = ({ projects }: CourseProjectsProps) => {
+const TopThreeProjects = ({ projects }: TopThreeProjectsProps) => {
   return (
-    <Box
-      component="div"
-      className="flex flex-col gap-4 justify-start items-starts"
-    >
+    <Box component="div" className="w-full flex flex-col gap-8">
       {projects.map((project) => (
         <ProjectCard key={project._id} project={project} />
       ))}
@@ -20,4 +17,4 @@ const CourseProjects = ({ projects }: CourseProjectsProps) => {
   );
 };
 
-export default CourseProjects;
+export default TopThreeProjects;

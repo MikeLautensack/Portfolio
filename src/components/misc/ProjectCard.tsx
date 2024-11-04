@@ -16,7 +16,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
       <ProjectCardInfo
         projectTitle={project.projectName}
         description={project.projectDescription}
-        href={project.prod}
+        href={`/projects/${project.pathVar}`}
       />
       <ProjectCardImg
         imgSrc={urlFor(project.projectImg).url()}

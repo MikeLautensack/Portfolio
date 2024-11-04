@@ -1,7 +1,6 @@
 import { Canvas } from "@react-three/fiber";
 import React from "react";
-import { useGLTF } from "@react-three/drei";
-import { Model } from "../../../Model";
+import { Model } from "../../../../../../Model";
 
 const Scene = () => {
   return (

@@ -1,12 +1,12 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
 import Image from "next/image";
-import { BulletPointType } from "./ProjectCard";
+import { BulletPointType } from "../../../misc/ProjectCard";
 
 type ProjectSummaryCardProps = {
   imgSrc: string;
   imgAlt: string;
-  bullets: BulletPointType[];
+  bullets?: BulletPointType[];
 };
 
 const ProjectSummaryCard = ({
@@ -23,7 +23,7 @@ const ProjectSummaryCard = ({
         component="div"
         className="flex flex-col justify-start items-start gap-2 w-full h-full"
       >
-        {bullets.map((bullet: BulletPointType) => (
+        {bullets?.map((bullet: BulletPointType) => (
           <Typography key={bullet.id} className="text-white">
             {bullet.text}
           </Typography>

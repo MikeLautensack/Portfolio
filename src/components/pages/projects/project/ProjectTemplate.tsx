@@ -2,8 +2,8 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 import ProjectHeaderCard from "./ProjectHeaderCard";
 import ProjectSummaryTabs from "./ProjectSummaryTabs";
-import { Stack } from "./ProjectSpecs";
-import { BulletPointType } from "./ProjectCard";
+import { Stack } from "../../../misc/ProjectSpecs";
+import { BulletPointType } from "../../../misc/ProjectCard";
 
 type GalaryItem = {
   img: any;
@@ -23,8 +23,8 @@ type ProjectTemplateProps = {
   description: string;
   loom?: any;
   galary?: GalaryItem[];
-  bullets: BulletPointType[];
-  stack: Stack;
+  bullets?: BulletPointType[];
+  stack?: Stack;
 };
 
 const ProjectTemplate = ({

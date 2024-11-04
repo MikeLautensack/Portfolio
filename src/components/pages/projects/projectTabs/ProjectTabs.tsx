@@ -2,14 +2,14 @@
 
 import { Box, Tab, Tabs } from "@mui/material";
 import React, { useCallback, useEffect, useState } from "react";
-import { CustomTabPanel } from "./CustomTabPanel";
-import TopThreeProjects from "./TopThreeProjects";
-import FullstackApps from "./FullstackApps";
+import { CustomTabPanel } from "../../../misc/CustomTabPanel";
 import { useRouter, useSearchParams } from "next/navigation";
-import CourseProjects from "./CourseProjects";
-import MicroserviceProjects from "./MicroserviceProjects";
-import AllProjects from "./AllProjects";
 import { type SanityDocument } from "next-sanity";
+import AllProjects from "./AllProjects";
+import FullstackApps from "./FullstackApps";
+import APIProjects from "./APIProjects";
+import MicroserviceProjects from "./MicroserviceProjects";
+import CourseProjects from "./CourseProjects";
 
 function a11yProps(index: number) {
   return {
@@ -36,9 +36,9 @@ const ProjectTabs = ({ projects }: ProjectTabsProps) => {
   // Effects
   useEffect(() => {
     if (tab) {
-      if (tab === "top-three") {
+      if (tab === "fullstack-webapps") {
         setValue(0);
-      } else if (tab === "full-stack-apps") {
+      } else if (tab === "apis") {
         setValue(1);
       } else if (tab === "microservices") {
         setValue(2);
@@ -51,9 +51,12 @@ const ProjectTabs = ({ projects }: ProjectTabsProps) => {
   }, [tab]);
 
   // Callbacks
-  const filterProjects = useCallback(
+  const filterAndSortProjects = useCallback(
     (projects: SanityDocument[], projectType: string) => {
-      return projects.filter((project) => project.projectType === projectType);
+      const filteredProjects = projects.filter(
+        (project) => project.projectType === projectType
+      );
+      return filteredProjects.sort((a, b) => a.typeIndex - b.typeIndex);
     },
     []
   );
@@ -72,9 +75,9 @@ const ProjectTabs = ({ projects }: ProjectTabsProps) => {
             router.push(
               `/projects?tab=${
                 newValue === 0
-                  ? "top-three"
+                  ? "fullstack-webapps"
                   : newValue === 1
-                    ? "full-stack-apps"
+                    ? "apis"
                     : newValue === 2
                       ? "microservices"
                       : newValue === 3
@@ -94,7 +97,7 @@ const ProjectTabs = ({ projects }: ProjectTabsProps) => {
                 color: "#31B0E9", // replace 'yourActiveColor' with your desired color
               },
             }}
-            label="The Top 3!"
+            label="Full Stack Apps"
             {...a11yProps(0)}
           />
           <Tab
@@ -104,7 +107,7 @@ const ProjectTabs = ({ projects }: ProjectTabsProps) => {
                 color: "#31B0E9", // replace 'yourActiveColor' with your desired color
               },
             }}
-            label="Full Stack Apps"
+            label="APIs"
             {...a11yProps(1)}
           />
           <Tab
@@ -140,19 +143,21 @@ const ProjectTabs = ({ projects }: ProjectTabsProps) => {
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
-        <TopThreeProjects projects={filterProjects(projects, "top-three")} />
+        <FullstackApps
+          projects={filterAndSortProjects(projects, "fullstack-webapp")}
+        />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        <FullstackApps projects={filterProjects(projects, "full-stack-app")} />
+        <APIProjects projects={filterAndSortProjects(projects, "api")} />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
         <MicroserviceProjects
-          projects={filterProjects(projects, "microservices")}
+          projects={filterAndSortProjects(projects, "microservice")}
         />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={3}>
         <CourseProjects
-          projects={filterProjects(projects, "course-projects")}
+          projects={filterAndSortProjects(projects, "course-project")}
         />
       </CustomTabPanel>
       <CustomTabPanel value={value} index={4}>

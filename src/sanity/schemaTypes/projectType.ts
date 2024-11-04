@@ -59,5 +59,9 @@ export const projectType = defineType({
       name: "index",
       type: "number",
     }),
+    defineField({
+      name: "typeIndex",
+      type: "number",
+    }),
   ],
 });

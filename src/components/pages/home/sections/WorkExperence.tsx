@@ -2,9 +2,9 @@
 
 import { Typography } from "@mui/material";
 import React from "react";
-import ExperenceItem from "../misc/ExperenceItem";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import ExperenceItem from "@/components/misc/ExperenceItem";
 
 const WorkExperence = () => {
   const { ref, inView } = useInView({

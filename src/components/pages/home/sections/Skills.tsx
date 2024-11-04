@@ -2,10 +2,10 @@
 
 import { Typography } from "@mui/material";
 import React, { useCallback, useEffect, useRef } from "react";
-import SkillsItem from "../misc/SkillsItem";
 import { motion, useAnimate, useInView } from "framer-motion";
 import { type SanityDocument } from "next-sanity";
 import { urlFor } from "@/sanity/lib/image";
+import SkillsItem from "@/components/misc/SkillsItem";
 
 type SkillsType = {
   skills: SanityDocument[];

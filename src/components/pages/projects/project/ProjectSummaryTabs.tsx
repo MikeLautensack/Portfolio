@@ -1,14 +1,12 @@
 "use client";
 
 import { Box, Tab, Tabs } from "@mui/material";
-import React, { useEffect, useState } from "react";
-import { CustomTabPanel } from "./CustomTabPanel";
-import TopThreeProjects from "./TopThreeProjects";
-import FullstackApps from "./FullstackApps";
+import React, { useState } from "react";
+import { CustomTabPanel } from "../../../misc/CustomTabPanel";
 import { useSearchParams } from "next/navigation";
-import ProjectSummary from "./ProjectSummary";
-import ProjectSpecs, { Stack } from "./ProjectSpecs";
-import ProjectGallary from "./ProjectGallary";
+import ProjectSummary from "../../../misc/ProjectSummary";
+import ProjectSpecs, { Stack } from "../../../misc/ProjectSpecs";
+import ProjectGallary from "../../../misc/ProjectGallary";
 
 function a11yProps(index: number) {
   return {
@@ -23,7 +21,7 @@ type ProjectSummaryTabsProps = {
   prod: string;
   github: string;
   docs: string;
-  stack: Stack;
+  stack?: Stack;
   gallary?: any;
 };
 

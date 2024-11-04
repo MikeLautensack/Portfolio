@@ -108,14 +108,14 @@ export default function CustomizedMenus() {
           Projects Catagories
         </Typography>
 
-        <Link href="/projects?tab=top-three">
+        <Link href="/projects?tab=fullstack-webapps">
           <MenuItem onClick={handleClose} disableRipple>
-            Top 3 Projects!
+            Full-Stack Webapps
           </MenuItem>
         </Link>
-        <Link href="/projects?tab=full-stack-apps">
+        <Link href="/projects?tab=apis">
           <MenuItem onClick={handleClose} disableRipple>
-            Full Stack Apps
+            APIs
           </MenuItem>
         </Link>
         <Link href="/projects?tab=microservices">

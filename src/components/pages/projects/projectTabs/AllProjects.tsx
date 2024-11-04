@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useCallback, useEffect, useRef } from "react";
-import ProjectCard from "./ProjectCard";
 import { motion, useAnimate, useInView } from "framer-motion";
 import { type SanityDocument } from "next-sanity";
+import ProjectCard from "@/components/misc/ProjectCard";
 
 type AllProjectsProps = {
   projects: SanityDocument[];

@@ -1,10 +1,10 @@
 "use client";
 
-import { Box, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import React from "react";
-import CertCard from "../misc/CertCard";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import CertCard from "@/components/misc/CertCard";
 
 const Certs = () => {
   const { ref, inView } = useInView({

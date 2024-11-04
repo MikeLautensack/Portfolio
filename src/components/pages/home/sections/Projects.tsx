@@ -1,12 +1,26 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import AllProjects from "../misc/AllProjects";
 import { type SanityDocument } from "next-sanity";
 import { client } from "@/sanity/lib/client";
+import AllProjects from "../../projects/projectTabs/AllProjects";
 
 const PROJECTS_QUERY = `*[
   _type == "project"
-]{_id, projectName, projectType, projectSummary, projectDescription, pathVar, prod, github, projectImg, galary, features, technology, index}`;
+] | order(index asc) {
+  _id, 
+  projectName, 
+  projectType, 
+  projectSummary, 
+  projectDescription, 
+  pathVar, 
+  prod, 
+  github, 
+  projectImg, 
+  galary, 
+  features, 
+  technology, 
+  index
+}`;
 
 const options = { next: { revalidate: 30 } };
 

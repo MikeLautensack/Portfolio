@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import HeroContent from "../misc/HeroContent";
-import Scene from "../scene/Scene";
 import { FaAnglesDown } from "react-icons/fa6";
 import * as motion from "framer-motion/client";
+import HeroContent from "@/components/misc/HeroContent";
+import Scene from "@/components/pages/home/sections/scene/Scene";
 
 const Hero = () => {
   return (

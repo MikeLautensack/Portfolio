@@ -1,38 +1,61 @@
-import ProjectTemplate from "@/components/misc/ProjectTemplate";
-import { projects } from "@/projectsData";
+import ProjectTemplate from "@/components/pages/projects/project/ProjectTemplate";
 import React from "react";
+import { type SanityDocument } from "next-sanity";
+import { client } from "@/sanity/lib/client";
+import { urlFor } from "@/sanity/lib/image";
 
-const getProject = (project: string) => {
-  for (let i = 0; i < projects.length; i++) {
-    if (projects[i].projectLabel === project) {
-      return projects[i];
-    }
-  }
+const PROJECT_BY_PATH_QUERY = `*[
+  _type == "project" && pathVar == $pathVar
+] {
+  _id, 
+  projectName, 
+  projectType, 
+  projectSummary, 
+  projectDescription, 
+  pathVar, 
+  prod, 
+  github, 
+  projectImg, 
+  galary, 
+  features, 
+  technology, 
+  index
+}`;
+
+const options = { next: { revalidate: 30 } };
+
+const getProject = async (project: string) => {
+  const query = client.fetch<SanityDocument[]>(
+    PROJECT_BY_PATH_QUERY,
+    { pathVar: project },
+    options
+  );
+  return await query;
 };
 
-const page = ({ params }: { params: { project: string } }) => {
-  const proj = getProject(params.project);
-  if (!proj) {
+const page = async ({ params }: { params: { project: string } }) => {
+  const projectQuery = await getProject(params.project);
+  if (!projectQuery) {
     return <div>No Project Data Found</div>;
   }
-  proj;
+  const project = projectQuery[0];
   return (
     <div className="px-8 md:px-16 lg:px-32 min-h-[calc(100vh-56px)]">
       <ProjectTemplate
-        projectLabel={proj.projectLabel}
-        projectName={proj.projectName}
-        projectType={proj.projectType}
-        imgSrc={proj.imgSrc}
-        imgAlt={proj.imgAlt}
-        prod={proj.prod}
-        github={proj.github}
-        docs={proj.docs}
-        summary={proj.summary}
-        description={proj.description}
-        loom={proj.loom}
-        galary={proj.galary}
-        bullets={proj.bullets}
-        stack={proj.stack}
+        projectLabel={project.projectName}
+        projectName={project.projectName}
+        projectType={project.projectType}
+        imgSrc={urlFor(project.projectImg).url()}
+        imgAlt={project.projectName}
+        prod={project.prod}
+        github={project.github}
+        // docs={project.docs}
+        summary={project.summary}
+        description={project.description}
+        // loom={project.loom}
+        galary={project.galary}
+        // bullets={project.bullets}
+        // stack={project.stack}
       />
     </div>
   );

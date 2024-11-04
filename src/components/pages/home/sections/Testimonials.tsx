@@ -2,9 +2,9 @@
 
 import { Box, Typography } from "@mui/material";
 import React from "react";
-import Testimonial from "../misc/Testimonial";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Testimonial from "@/components/misc/Testimonial";
 
 const Testimonials = () => {
   const { ref, inView } = useInView({

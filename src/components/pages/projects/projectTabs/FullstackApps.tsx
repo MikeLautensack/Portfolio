@@ -1,13 +1,13 @@
 import { Box } from "@mui/material";
 import React from "react";
-import ProjectCard from "./ProjectCard";
 import { type SanityDocument } from "next-sanity";
+import ProjectCard from "@/components/misc/ProjectCard";
 
-type TopThreeProjectsProps = {
+type FullstackAppsProps = {
   projects: SanityDocument[];
 };
 
-const TopThreeProjects = ({ projects }: TopThreeProjectsProps) => {
+const FullstackApps = ({ projects }: FullstackAppsProps) => {
   return (
     <Box component="div" className="w-full flex flex-col gap-8">
       {projects.map((project) => (
@@ -17,4 +17,4 @@ const TopThreeProjects = ({ projects }: TopThreeProjectsProps) => {
   );
 };
 
-export default TopThreeProjects;
+export default FullstackApps;
