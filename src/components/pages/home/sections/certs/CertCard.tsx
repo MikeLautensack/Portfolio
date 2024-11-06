@@ -18,7 +18,7 @@ const CertCard = ({ cert, buttonColor }: CertCardProps) => {
     <div className="flex w-full justify-start items-center gap-4 bg-[#1b2b5e]">
       <div className="relative h-full w-64 aspect-square rounded-full">
         <Image
-          src={urlFor(cert?.certImg).url()}
+          src={urlFor(cert.certImg).url()}
           alt={cert.certName}
           fill={true}
           //   blurDataURL="data:..." // automatically provided

@@ -16,7 +16,6 @@ const Certs = ({ certs }: CertsProps) => {
     threshold: 0.2, // Trigger animation when 10% of the element is visible
     triggerOnce: true, // Only animate once when the element enters view
   });
-  console.log(certs);
   return (
     <motion.section
       className="flex flex-col gap-4 justify-start items-start px-8 py-4 md:px-32 md:py-16"

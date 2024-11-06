@@ -18,9 +18,13 @@ const ProjectCardInfo = ({
   return (
     <Box
       component="div"
-      className="flex flex-col gap-4 justify-between items-start h-full w-full flex-grow"
+      className="flex flex-col justify-between items-start h-full w-full flex-1"
+      id="project-card-info"
     >
-      <div className="flex flex-col justify-start items-start">
+      <div
+        id="project-card-info-content"
+        className="flex flex-col justify-start items-start h-full"
+      >
         <Typography variant="h4" className="text-white">
           {projectTitle}
         </Typography>

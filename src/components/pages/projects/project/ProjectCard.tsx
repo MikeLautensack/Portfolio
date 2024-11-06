@@ -12,10 +12,10 @@ type ProjectCardProps = {
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <div className="w-full flex gap-4 flex-col-reverse sm:flex-row justify-start items-start bg-[#1b2b5e] border-b border-[#31B0E9] pb-4">
+    <div className="w-full h-full flex gap-4 flex-col-reverse sm:flex-row justify-start items-start bg-[#1b2b5e] border-b border-[#31B0E9] pb-4">
       <ProjectCardInfo
         projectTitle={project.projectName}
-        description={project.projectDescription}
+        description={project.projectSummary}
         href={`/projects/${project.pathVar}`}
       />
       <ProjectCardImg

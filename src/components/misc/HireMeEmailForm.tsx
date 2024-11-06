@@ -41,7 +41,6 @@ const HireMeEmailForm = () => {
   const onSubmit: SubmitHandler<HireMeEmailFormValues> = async (
     formData: HireMeEmailFormValues
   ) => {
-    console.log(formData);
     setLoadingState("loading");
     const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}api/email`, {
       method: "POST",
@@ -55,7 +54,6 @@ const HireMeEmailForm = () => {
         message: formData.message,
       }),
     });
-    console.log("Email endpoint res", res);
     if (res.status === 200) {
       setLoadingState("sent");
     } else {
@@ -80,10 +78,10 @@ const HireMeEmailForm = () => {
             loadingState === ""
               ? "secondary"
               : loadingState === "loading"
-              ? "secondary"
-              : loadingState === "error"
-              ? "error"
-              : "success"
+                ? "secondary"
+                : loadingState === "error"
+                  ? "error"
+                  : "success"
           }
         >
           {loadingState === "" ? (
