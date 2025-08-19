@@ -2,30 +2,30 @@
 
 import { Typography } from "@mui/material";
 import React from "react";
-import ExperenceItem from "../misc/ExperenceItem";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import ExperienceItem from "../misc/ExperenceItem";
 
 const WorkExperence = () => {
   const { ref, inView } = useInView({
-    threshold: 0.2, // Trigger animation when 10% of the element is visible
-    triggerOnce: true, // Only animate once when the element enters view
+    threshold: 0.2,
+    triggerOnce: true,
   });
   return (
     <motion.section
-      className="px-8 py-4 md:px-32 md:py-16 flex flex-col justify-start items-start gap-4"
-      ref={ref} // Attach the ref to the motion div
-      initial={{ opacity: 0 }} // Initial state: invisible and 50px down
-      animate={inView ? { opacity: 1 } : {}} // Animate when in view
-      transition={{ duration: 1, ease: "easeOut" }} // Smooth fade-in
+      className="py-4 flex flex-col justify-start items-start gap-8 px-6 md:px-16 lg:px-24 md:py-16 max-w-6xl mx-auto"
+      ref={ref}
+      initial={{ opacity: 0 }}
+      animate={inView ? { opacity: 1 } : {}}
+      transition={{ duration: 1, ease: "easeOut" }}
     >
       <Typography
         variant="h4"
-        className="w-max border-b-[3px] border-[#31B0E9] text-white"
+        className="w-max border-b-2 border-[#31B0E9] text-white"
       >
-        Work Experence
+        Work Experience
       </Typography>
-      <ExperenceItem
+      <ExperienceItem
         num="01."
         job="React / Front End Development"
         company="@ Software Harmonics"

@@ -22,22 +22,12 @@ const AllProjects = () => {
     });
   }, [animate]);
 
-  const resetAnimation = useCallback(() => {
-    refs.current.forEach((ref) => {
-      if (ref) {
-        animate(ref, { opacity: 0, y: 20 }, { duration: 0.075 });
-      }
-    });
-  }, [animate]);
-
   // Effects
   useEffect(() => {
     if (isInView) {
       onAnimate();
-    } else {
-      resetAnimation();
     }
-  }, [isInView, onAnimate, resetAnimation]);
+  }, [isInView, onAnimate]);
 
   // Refs
   const refs = useRef<(HTMLDivElement | null)[]>([]);

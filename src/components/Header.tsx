@@ -25,7 +25,7 @@ const Header = () => {
       >
         <Box
           component="div"
-          className="absolute left-0 md:ml-32 flex gap-2 h-full items-center"
+          className="absolute left-0 md:ml-32 lg:ml-56 flex gap-2 h-full items-center"
           sx={{
             display: {
               xs: "none", // Hidden on extra small screens
@@ -51,7 +51,7 @@ const Header = () => {
               md: "flex", // Visible as flex on medium screens and above
             },
           }}
-          className="flex justify-center items-center gap-2 absolute right-0 md:mr-32"
+          className="flex justify-center items-center gap-2 absolute right-0 md:mr-32 lg:mr-56"
         >
           <Link href="https://github.com/MikeLautensack">
             <IconButton color="primary">

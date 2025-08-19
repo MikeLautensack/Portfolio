@@ -45,7 +45,7 @@ const Skills = () => {
 
   return (
     <section
-      className="flex flex-col gap-4 justify-start items-start px-8 py-4 md:px-32 md:py-16"
+      className="flex flex-col gap-4 justify-start items-start px-8 py-4 md:px-32 lg:px-56 md:py-16"
       ref={scope}
     >
       <Typography
@@ -54,7 +54,7 @@ const Skills = () => {
       >
         Skills
       </Typography>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-6">
         {skillsData.map((skill, index) => (
           <motion.div
             key={skill.skill}
