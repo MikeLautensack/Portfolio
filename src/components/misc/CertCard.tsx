@@ -30,7 +30,7 @@ const CertCard = ({
   buttonColor,
 }: CertCardProps) => {
   return (
-    <div className="flex w-full justify-start items-center gap-4 bg-[#1b2b5e]">
+    <div className="flex w-full justify-start items-center gap-4">
       <div className="relative h-full w-64 aspect-square rounded-full">
         <Image
           src={img}

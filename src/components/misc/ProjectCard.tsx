@@ -24,7 +24,7 @@ const ProjectCard = ({
   contentOrder,
 }: ProjectCardProps) => {
   return (
-    <div className="w-full flex gap-4 flex-col-reverse sm:flex-row justify-start items-start bg-[#1b2b5e] border-b border-[#31B0E9] pb-4">
+    <div className="w-full flex gap-4 flex-col-reverse sm:flex-row justify-start items-start border-b border-[#31B0E9] pb-4">
       <ProjectCardInfo
         projectTitle={projectTitle}
         description={description}

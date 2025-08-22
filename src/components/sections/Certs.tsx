@@ -13,29 +13,31 @@ const Certs = () => {
   });
   return (
     <motion.section
-      className="flex flex-col gap-4 justify-start items-start px-8 py-4 md:px-32 md:py-16"
+      className="flex flex-col gap-8 justify-start items-center px-6 py-16 md:px-10"
       ref={ref} // Attach the ref to the motion div
       initial={{ opacity: 0 }} // Initial state: invisible and 50px down
       animate={inView ? { opacity: 1 } : {}} // Animate when in view
       transition={{ duration: 1, ease: "easeOut" }}
     >
-      <Typography
-        variant="h4"
-        className="w-max border-b-[3px] border-[#31B0E9] text-white"
-      >
-        Certifications
-      </Typography>
-      <CertCard
-        name={"Foundational C# with Microsoft"}
-        description={"Fundamentals of the C# programming language and .NET"}
-        issuedBy={"Free Code Camp/Microsoft Learn"}
-        issuedOn={new Date(2024, 8)}
-        certID="fcc7ca55ec2-de04-4ccf-8dc1-7c111f5d352a-fcswm"
-        certURL="https://www.freecodecamp.org/certification/fcc7ca55ec2-de04-4ccf-8dc1-7c111f5d352a/foundational-c-sharp-with-microsoft"
-        img={"/csharp.png"}
-        imgAlt={"C#"}
-        buttonColor="#66217B"
-      />
+      <div className="w-full max-w-6xl flex flex-col gap-4">
+        <Typography
+          variant="h4"
+          className="w-max border-b-[3px] border-[#31B0E9] text-white"
+        >
+          Certifications
+        </Typography>
+        <CertCard
+          name={"Foundational C# with Microsoft"}
+          description={"Fundamentals of the C# programming language and .NET"}
+          issuedBy={"Free Code Camp/Microsoft Learn"}
+          issuedOn={new Date(2024, 8)}
+          certID="fcc7ca55ec2-de04-4ccf-8dc1-7c111f5d352a-fcswm"
+          certURL="https://www.freecodecamp.org/certification/fcc7ca55ec2-de04-4ccf-8dc1-7c111f5d352a/foundational-c-sharp-with-microsoft"
+          img={"/csharp.png"}
+          imgAlt={"C#"}
+          buttonColor="#66217B"
+        />
+      </div>
     </motion.section>
   );
 };
