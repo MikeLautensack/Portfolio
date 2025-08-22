@@ -1,5 +1,5 @@
 import { createTheme } from "@mui/material/styles";
-import { Lato, Playfair_Display, Source_Code_Pro } from "next/font/google";
+import { Source_Code_Pro } from "next/font/google";
 
 declare module "@mui/material/styles" {
   interface PaletteOptions {
@@ -100,31 +100,22 @@ const source_code_pro = Source_Code_Pro({
   subsets: ["latin"],
 });
 
-// `extendTheme` is a new API
+// Keep CSS variables enabled and define standard palette keys MUI components use
 const theme = createTheme({
   cssVariables: true,
-  typography: {
-    fontFamily: source_code_pro.style.fontFamily,
-    body1: {
-      lineHeight: 2, // Set your desired line height here
-    },
-    body2: {
-      lineHeight: 1.6, // Set your desired line height here
-    },
-  },
   colorSchemes: {
     light: {
       palette: {
-        primary: {
-          main: "#001824",
-        },
+        primary: { main: "#31B0E9" },
+        secondary: { main: "#1b2b5e" },
+        error: { main: "#FF6F61" },
+        background: { default: "#1b2b5e", paper: "#1C2023" },
+        text: { primary: "#DFE3E7", secondary: "#C0C7CD" },
+        divider: "#41484D",
         surfaceTint: "#90CEF3",
         onPrimary: "#00354A",
         primaryContainer: "#004C69",
         onPrimaryContainer: "#C4E7FF",
-        secondary: {
-          main: "#31B0E9",
-        },
         onSecondary: "#4F2500",
         secondaryContainer: "#6D390A",
         onSecondaryContainer: "#FFDCC5",
@@ -132,14 +123,11 @@ const theme = createTheme({
         onTertiary: "#322C4C",
         tertiaryContainer: "#494264",
         onTertiaryContainer: "#E6DEFF",
-        error: {
-          main: "#FFB4AB",
-        },
         onError: "#690005",
         errorContainer: "#93000A",
         onErrorContainer: "#FFDAD6",
         onBackground: "#DFE3E7",
-        surface: "#0F1417",
+        surface: "#1b2b5e",
         onSurface: "#DFE3E7",
         surfaceVariant: "#41484D",
         onSurfaceVariant: "#C0C7CD",
@@ -169,6 +157,11 @@ const theme = createTheme({
         surfaceContainerHighest: "#313539",
       },
     },
+  },
+  typography: {
+    fontFamily: source_code_pro.style.fontFamily,
+    body1: { lineHeight: 2 },
+    body2: { lineHeight: 1.6 },
   },
 });
 export default theme;

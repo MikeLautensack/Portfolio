@@ -3,7 +3,6 @@ import React from "react";
 import Nav from "./Nav";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Link from "next/link";
-import { SiUpwork } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
 import IconButton from "@mui/material/IconButton";
 import SideBar from "./misc/SideBar";
@@ -56,11 +55,6 @@ const Header = () => {
           <Link href="https://github.com/MikeLautensack">
             <IconButton color="primary">
               <GitHubIcon className="text-[#E6EDF3] h-6 w-6" />
-            </IconButton>
-          </Link>
-          <Link href="https://www.upwork.com/freelancers/~01089f119f9eb6cd61">
-            <IconButton color="primary">
-              <SiUpwork className="text-[#0E0E0E] h-6 w-6" />
             </IconButton>
           </Link>
           <Link href="https://www.linkedin.com/in/mike-lautensack/">

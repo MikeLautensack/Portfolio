@@ -12,7 +12,7 @@ const AboutMe = () => {
 
   return (
     <motion.section
-      className="py-16 px-6 md:px-16 lg:px-24 max-w-6xl mx-auto"
+      className="py-16 px-6 md:px-10 max-w-6xl mx-auto"
       ref={ref}
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}

@@ -11,7 +11,10 @@ type ThemeProviderWrapperProps = {
 const ThemeProviderWrapper = ({ children }: ThemeProviderWrapperProps) => {
   return (
     <ThemeProvider theme={theme}>
-      <Paper square>{children}</Paper>
+      <CssBaseline />
+      <Paper square sx={{ minHeight: "100vh" }}>
+        {children}
+      </Paper>
     </ThemeProvider>
   );
 };

@@ -13,7 +13,7 @@ const Certs = () => {
   });
   return (
     <motion.section
-      className="flex flex-col gap-4 justify-start items-center px-8 py-4 md:px-32 lg:px-56 md:py-16"
+      className="flex flex-col gap-8 justify-start items-center px-6 py-16 md:px-10"
       ref={ref} // Attach the ref to the motion div
       initial={{ opacity: 0 }} // Initial state: invisible and 50px down
       animate={inView ? { opacity: 1 } : {}} // Animate when in view

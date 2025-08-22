@@ -81,7 +81,7 @@ const HeroContent = () => {
           },
         }}
       >
-        I specilize in{" "}
+        I specialize in{" "}
         <Typography
           component="span"
           color="#31B0E9"

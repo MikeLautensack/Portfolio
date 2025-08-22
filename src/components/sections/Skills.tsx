@@ -45,33 +45,35 @@ const Skills = () => {
 
   return (
     <section
-      className="flex flex-col gap-4 justify-start items-start px-8 py-4 md:px-32 lg:px-56 md:py-16"
+      className="flex flex-col gap-8 justify-start items-center px-6 py-16 md:px-10"
       ref={scope}
     >
-      <Typography
-        variant="h4"
-        className="w-max border-b-[3px] border-[#31B0E9] text-white"
-      >
-        Skills
-      </Typography>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-6">
-        {skillsData.map((skill, index) => (
-          <motion.div
-            key={skill.skill}
-            ref={(el) => {
-              refs.current[index] = el;
-            }}
-            initial={{ opacity: 0, y: 20 }}
-            className="w-full h-full"
-          >
-            <SkillsItem
-              skill={skill.skill}
-              description={skill.description}
-              imgSrc={skill.imgSrc}
-              imgAlt={skill.imgAlt}
-            />
-          </motion.div>
-        ))}
+      <div className="w-full max-w-6xl flex flex-col gap-6">
+        <Typography
+          variant="h4"
+          className="w-max border-b-[3px] border-[#31B0E9] text-white"
+        >
+          Skills
+        </Typography>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-6">
+          {skillsData.map((skill, index) => (
+            <motion.div
+              key={skill.skill}
+              ref={(el) => {
+                refs.current[index] = el;
+              }}
+              initial={{ opacity: 0, y: 20 }}
+              className="w-full h-full"
+            >
+              <SkillsItem
+                skill={skill.skill}
+                description={skill.description}
+                imgSrc={skill.imgSrc}
+                imgAlt={skill.imgAlt}
+              />
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
