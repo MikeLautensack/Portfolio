@@ -19,17 +19,24 @@ const WorkExperence = () => {
       animate={inView ? { opacity: 1 } : {}}
       transition={{ duration: 1, ease: "easeOut" }}
     >
-      <Typography
-        variant="h4"
-        className="w-max border-b-2 border-[#31B0E9] text-white"
-      >
+      <Typography variant="h4" className="w-max border-b-2 border-[#31B0E9] text-white">
         Work Experience
       </Typography>
       <ExperienceItem
         num="01."
+        job="Full-Stack Web Developer"
+        company="@ Loxone"
+        date="Oct 2025 – Present"
+        bullets={[
+          "Integrated Sentry error and performance monitoring into shop.loxone.com, eliminating manual bug reporting workflows for sales and lead gen teams",
+          "Migrated Next.js webshop from JavaScript to TypeScript with React Server Components, improving page load performance and SEO",
+        ]}
+      />
+      <ExperienceItem
+        num="02."
         job="Full-Stack Developer (Contract)"
         company="@ Upwork"
-        date="May 2023 – Present"
+        date="May 2023 – Oct 2025"
         bullets={[
           "Built and maintained web applications for small businesses using Node.js, Next.js, React.js, and PostgreSQL",
           "Integrated secure Stripe payment systems and implemented tiered subscription logic for SaaS platforms",
@@ -38,7 +45,7 @@ const WorkExperence = () => {
         ]}
       />
       <ExperienceItem
-        num="02."
+        num="03."
         job="Full-Stack Developer - Cargo Fax - cargofax.co (Contract)"
         company="@ Cargo Fax"
         date="Dec 2024 – May 2025"
@@ -49,7 +56,7 @@ const WorkExperence = () => {
         ]}
       />
       <ExperienceItem
-        num="03."
+        num="04."
         job="Backend Developer - evyAI - evyai.com (Contract)"
         company="@ evyAI"
         date="Dec 2024 – Jan 2025"
@@ -59,7 +66,7 @@ const WorkExperence = () => {
         ]}
       />
       <ExperienceItem
-        num="04."
+        num="05."
         job="Frontend Developer (Contract)"
         company="@ Software Harmonics LLC"
         date="Feb 2024 – Aug 2024"
