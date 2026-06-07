@@ -1,4 +1,4 @@
-import { Avatar, Box, Typography } from "@mui/material";
+import { Avatar } from "@mui/material";
 import React from "react";
 
 type WriterProps = {
@@ -9,17 +9,15 @@ type WriterProps = {
 
 const Writer = ({ writer, company, initial }: WriterProps) => {
   return (
-    <Box component="div" className="flex gap-2 justify-center items-center">
-      <Avatar className="bg-[#002834]">{initial}</Avatar>
-      <Box component="div" className="flex flex-col">
-        <Typography variant="body1" className="text-white">
-          {writer}
-        </Typography>
-        <Typography variant="body2" className="text-white">
-          {company}
-        </Typography>
-      </Box>
-    </Box>
+    <div className="flex items-center gap-3">
+      <Avatar sx={{ bgcolor: "#31B0E9", color: "#04121A", fontWeight: 700 }}>
+        {initial}
+      </Avatar>
+      <div className="flex flex-col">
+        <span className="text-sm font-semibold text-ink">{writer}</span>
+        <span className="text-xs text-ink-muted">{company}</span>
+      </div>
+    </div>
   );
 };
 

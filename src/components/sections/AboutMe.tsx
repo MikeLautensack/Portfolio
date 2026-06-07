@@ -3,6 +3,14 @@ import { Typography } from "@mui/material";
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import SectionHeading from "../misc/SectionHeading";
+
+const facts = [
+  "Top Rated freelancer on Upwork",
+  "100% Job Success Score",
+  "Azure Certified (AZ-900)",
+  "TypeScript · React · Next.js",
+];
 
 const AboutMe = () => {
   const { ref, inView } = useInView({
@@ -12,80 +20,76 @@ const AboutMe = () => {
 
   return (
     <motion.section
-      className="py-16 px-6 md:px-10 max-w-6xl mx-auto"
+      id="about"
+      className="mx-auto w-full max-w-content px-6 py-20 md:px-10 md:py-28"
       ref={ref}
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      <div className="w-full flex flex-col gap-12">
-        <div className="relative">
-          <Typography
-            variant="h4"
-            className="text-white font-bold text-3xl md:text-4xl relative inline-block pb-2"
-          >
-            About Me
-            <span className="absolute bottom-0 left-0 w-full md:w-3/4 h-1 bg-[#31B0E9] rounded-full"></span>
-          </Typography>
-        </div>
+      <div className="flex flex-col gap-10">
+        <SectionHeading
+          eyebrow="About Me"
+          title="Self-taught, product-minded engineer."
+        />
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-          <div className="md:col-span-12 space-y-6">
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 }}
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
+          <div className="flex flex-col gap-5 lg:col-span-8">
+            <Typography
+              variant="body1"
+              className="text-lg leading-relaxed text-ink"
             >
-              <Typography
-                variant="body1"
-                className="text-white text-lg leading-relaxed"
-              >
-                As a self-taught Full Stack Web Developer with 2.25 years of
-                focused experience, I specialize in creating robust web
-                applications using TypeScript, React, Next.js, and Vite. My
-                expertise spans frontend, backend, and fullstack development,
-                with a proven track record on Upwork as a Top Rated freelancer
-                with a 100% Job Success Score.
-              </Typography>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              I&apos;m a self-taught full-stack web developer who builds robust,
+              production-grade web applications with TypeScript, React, and
+              Next.js. My work spans the entire stack — from payment
+              integrations and server-side rendering to component libraries and
+              design systems.
+            </Typography>
+            <Typography
+              variant="body1"
+              className="text-lg leading-relaxed text-ink-muted"
             >
-              <Typography
-                variant="body1"
-                className="text-white text-lg leading-relaxed"
-              >
-                I excel in deploying Next.js applications on Vercel and RESTful
-                APIs to Azure, delivering comprehensive cloud solutions. My
-                projects, including an Estimate Generator for contractors and a
-                real-time Socket.io Chat App, showcase my ability to implement
-                complex features and integrate various technologies seamlessly.
-              </Typography>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              Recent highlights include integrating a PCI-compliant payments
+              architecture into a multi-country e-commerce webshop, leading its
+              migration to TypeScript and React Server Components, and building
+              an internal component library and design system from the ground
+              up. I&apos;ve also delivered production applications for a range of
+              clients as a Top Rated freelancer on Upwork, earning a 100% Job
+              Success Score.
+            </Typography>
+            <Typography
+              variant="body1"
+              className="text-lg leading-relaxed text-ink-muted"
             >
-              <Typography
-                variant="body1"
-                className="text-white text-lg leading-relaxed"
-              >
-                What sets me apart is my unique blend of technical expertise and
-                business acumen, derived from prior entrepreneurial experience.
-                This background enables me to build technically sound solutions
-                that align closely with small business needs, particularly in
-                developing SaaS products. My approach combines meticulous
-                attention to detail with a forward-thinking mindset, driving me
-                to create innovative web solutions that efficiently solve
-                real-world problems.
-              </Typography>
-            </motion.div>
+              What sets me apart is a blend of engineering depth and business
+              sense shaped by prior entrepreneurial experience, which helps me
+              build solutions that genuinely fit real-world needs — particularly
+              SaaS products for small businesses. That same mindset drives my
+              own product, Estimate Generator: a field service management
+              platform I designed and built for contractors, complete with a
+              REST API, PostgreSQL, secure authentication, and Stripe
+              subscription billing.
+            </Typography>
           </div>
+
+          <aside className="lg:col-span-4">
+            <div className="flex flex-col gap-4 rounded-2xl border border-line bg-surface p-6">
+              <span className="font-mono text-xs uppercase tracking-[0.2em] text-ink-faint">
+                Quick facts
+              </span>
+              <ul className="flex flex-col gap-3.5">
+                {facts.map((fact) => (
+                  <li
+                    key={fact}
+                    className="flex items-center gap-3 text-sm text-ink"
+                  >
+                    <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
+                    {fact}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </aside>
         </div>
       </div>
     </motion.section>

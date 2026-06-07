@@ -1,46 +1,28 @@
 "use client";
 
-import { Box, Button, Typography } from "@mui/material";
 import Link from "next/link";
 import React from "react";
 import ProjectsNavMenu from "./misc/ProjectsNavMenu";
 import { usePathname } from "next/navigation";
 
 const Nav = () => {
-  // Hooks
   const pathname = usePathname();
 
+  const linkClass = (href: string) =>
+    `text-sm font-medium transition-colors ${
+      pathname === href ? "text-accent" : "text-ink-muted hover:text-ink"
+    }`;
+
   return (
-    <Box component="div" className="flex justify-center items-center gap-4">
-      <Link href="/">
-        <Button variant="text">
-          <Typography
-            variant="h6"
-            className={`${pathname === "/" ? "text-[#31B0E9]" : "text-white"}`}
-          >
-            Home
-          </Typography>
-        </Button>
+    <nav className="flex items-center gap-7">
+      <Link href="/" className={linkClass("/")}>
+        Home
       </Link>
       <ProjectsNavMenu />
-      <Link href="/hire-me">
-        <Button variant="text">
-          <Typography
-            variant="h6"
-            className={`${
-              pathname === "/hire-me" ? "text-[#31B0E9]" : "text-white"
-            }`}
-          >
-            Hire Me
-          </Typography>
-        </Button>
+      <Link href="/hire-me" className={linkClass("/hire-me")}>
+        Hire Me
       </Link>
-      {/* <Link href="/resume">
-        <Button variant="text" className="text-white">
-          Resume
-        </Button>
-      </Link> */}
-    </Box>
+    </nav>
   );
 };
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { Card, Typography } from "@mui/material";
+import React from "react";
 import Image from "next/image";
 
 type SkillsItemProps = {
@@ -10,49 +10,24 @@ type SkillsItemProps = {
   imgAlt?: string;
 };
 
-const SkillsItem = ({
-  skill,
-  description,
-  imgSrc,
-  imgAlt,
-}: SkillsItemProps) => {
+const SkillsItem = ({ skill, description, imgSrc, imgAlt }: SkillsItemProps) => {
   return (
-    <Card
-      component="div"
-      className="flex flex-col md:items-center p-4 gap-4 h-full"
-      sx={{ backgroundColor: "#243B80" }}
-    >
-      <div className="flex gap-4 w-full justify-start items-center">
-        <div className="relative w-6 h-6 lg:w-8 lg:h-8">
-          <Image
-            src={imgSrc!}
-            alt={imgAlt!}
-            fill={true}
-            //   blurDataURL="data:..." // automatically provided
-            //   placeholder="blur" // Optional blur-up while loading
-          />
+    <div className="group flex h-full flex-col gap-3 rounded-2xl border border-line bg-surface/60 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:bg-surface">
+      <div className="flex items-center gap-3">
+        <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-xl border border-line bg-bg/50">
+          <div className="relative h-6 w-6">
+            <Image
+              src={imgSrc!}
+              alt={imgAlt!}
+              fill
+              className="object-contain"
+            />
+          </div>
         </div>
-        <Typography
-          className="text-white"
-          sx={{
-            typography: {
-              xs: "h6", // Small screens
-              sm: "h6", // Medium screens
-              md: "h5", // Large screens
-              lg: "h5", // Extra large screens
-            },
-          }}
-        >
-          {skill}
-        </Typography>
+        <h3 className="text-base font-semibold text-ink md:text-lg">{skill}</h3>
       </div>
-      <div className="flex w-full justify-center items-center"></div>
-      <div className="flex gap-4">
-        <Typography variant="body2" className="text-white">
-          {description}
-        </Typography>
-      </div>
-    </Card>
+      <p className="text-sm leading-relaxed text-ink-muted">{description}</p>
+    </div>
   );
 };
 

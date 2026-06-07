@@ -34,7 +34,7 @@ const AllProjects = () => {
 
   return (
     <div
-      className="flex flex-col gap-4 justify-start items-start w-full"
+      className="flex flex-col gap-6 justify-start items-start w-full"
       ref={scope}
     >
       {projects.map((project, index) => (

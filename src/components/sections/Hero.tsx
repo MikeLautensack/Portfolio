@@ -11,22 +11,26 @@ const Scene = dynamic(() => import("../scene/Scene"), {
   ssr: false,
   loading: () => (
     <div className="flex items-center justify-center w-full h-full">
-      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#31B0E9]"></div>
+      <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent"></div>
     </div>
   ),
 });
 
 const Hero = () => {
   return (
-    <div className="h-[calc(100vh-56px)] flex flex-col items-center px-6 md:px-10 relative bg-[#1C2023]">
+    <section className="relative flex min-h-[calc(100vh-64px)] flex-col justify-center overflow-hidden bg-bg">
+      {/* Ambient glow + dotted grid */}
+      <div className="pointer-events-none absolute inset-0 bg-hero-glow" />
+      <div className="pointer-events-none absolute inset-0 [background-image:radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.04)_1px,transparent_0)] [background-size:34px_34px] [mask-image:radial-gradient(ellipse_at_center,black,transparent_75%)]" />
+
       <div
         id="content-and-scene"
-        className="flex flex-col md:flex-row justify-center lg:justify-start items-center h-full w-full"
+        className="relative z-10 mx-auto flex w-full max-w-content flex-col items-start gap-12 px-6 py-24 md:flex-row md:items-center md:px-10 md:py-0 lg:justify-start"
       >
         <HeroContent />
         <motion.div
           id="scene-container"
-          className="flex lg:flex-grow absolute lg:h-2/3 lg:w-1/2 right-0 top-60 md:top-52 lg:top-auto w-full"
+          className="pointer-events-none absolute right-0 top-60 z-0 flex w-full opacity-50 md:top-52 md:opacity-100 lg:top-auto lg:h-2/3 lg:w-1/2 lg:flex-grow"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 2 }}
@@ -37,17 +41,16 @@ const Hero = () => {
           <Scene />
         </motion.div>
       </div>
-      <div className="flex justify-center items-center relative w-full h-8 bottom-4">
-        <motion.div
-          id="arrow"
-          initial={{ y: -10, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <FaAnglesDown className="text-[#31B0E9]" />
-        </motion.div>
-      </div>
-    </div>
+
+      <motion.div
+        className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2"
+        initial={{ y: -8, opacity: 0.4 }}
+        animate={{ y: 4, opacity: 1 }}
+        transition={{ duration: 1.4, repeat: Infinity, repeatType: "reverse" }}
+      >
+        <FaAnglesDown className="text-accent" />
+      </motion.div>
+    </section>
   );
 };
 

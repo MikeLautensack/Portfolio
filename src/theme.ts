@@ -1,167 +1,46 @@
 import { createTheme } from "@mui/material/styles";
-import { Source_Code_Pro } from "next/font/google";
 
-declare module "@mui/material/styles" {
-  interface PaletteOptions {
-    onPrimary: string;
-    surfaceTint: string;
-    primaryContainer: string;
-    onPrimaryContainer: string;
-    onSecondary: string;
-    secondaryContainer: string;
-    onSecondaryContainer: string;
-    tertiary: string;
-    onTertiary: string;
-    tertiaryContainer: string;
-    onTertiaryContainer: string;
-    onError: string;
-    errorContainer: string;
-    onErrorContainer: string;
-    onBackground: string;
-    surface: string;
-    onSurface: string;
-    surfaceVariant: string;
-    onSurfaceVariant: string;
-    outline: string;
-    outlineVariant: string;
-    inverseSurface: string;
-    inverseOnSurface: string;
-    inversePrimary: string;
-    primaryFixed: string;
-    onPrimaryFixed: string;
-    primaryFixedDim: string;
-    onPrimaryFixedVariant: string;
-    secondaryFixed: string;
-    onSecondaryFixed: string;
-    secondaryFixedDim: string;
-    onSecondaryFixedVariant: string;
-    tertiaryFixed: string;
-    onTertiaryFixed: string;
-    tertiaryFixedDim: string;
-    onTertiaryFixedVariant: string;
-    surfaceDim: string;
-    surfaceBright: string;
-    surfaceContainerLowest: string;
-    surfaceContainerLow: string;
-    surfaceContainer: string;
-    surfaceContainerHigh: string;
-    surfaceContainerHighest: string;
-  }
-  interface Palette {
-    onPrimary: string;
-    surfaceTint: string;
-    primaryContainer: string;
-    onPrimaryContainer: string;
-    onSecondary: string;
-    secondaryContainer: string;
-    onSecondaryContainer: string;
-    tertiary: string;
-    onTertiary: string;
-    tertiaryContainer: string;
-    onTertiaryContainer: string;
-    onError: string;
-    errorContainer: string;
-    onErrorContainer: string;
-    onBackground: string;
-    surface: string;
-    onSurface: string;
-    surfaceVariant: string;
-    onSurfaceVariant: string;
-    outline: string;
-    outlineVariant: string;
-    inverseSurface: string;
-    inverseOnSurface: string;
-    inversePrimary: string;
-    primaryFixed: string;
-    onPrimaryFixed: string;
-    primaryFixedDim: string;
-    onPrimaryFixedVariant: string;
-    secondaryFixed: string;
-    onSecondaryFixed: string;
-    secondaryFixedDim: string;
-    onSecondaryFixedVariant: string;
-    tertiaryFixed: string;
-    onTertiaryFixed: string;
-    tertiaryFixedDim: string;
-    onTertiaryFixedVariant: string;
-    surfaceDim: string;
-    surfaceBright: string;
-    surfaceContainerLowest: string;
-    surfaceContainerLow: string;
-    surfaceContainer: string;
-    surfaceContainerHigh: string;
-    surfaceContainerHighest: string;
-  }
-}
-
-const source_code_pro = Source_Code_Pro({
-  weight: "400",
-  style: "normal",
-  subsets: ["latin"],
-});
-
-// Keep CSS variables enabled and define standard palette keys MUI components use
+// Single intentional dark theme — "refined dark + blue".
+// Kept under the "light" colorScheme key because the app's InitColorSchemeScript
+// defaults to that scheme; the values below are our dark palette.
 const theme = createTheme({
   cssVariables: true,
   colorSchemes: {
     light: {
       palette: {
-        primary: { main: "#31B0E9" },
-        secondary: { main: "#1b2b5e" },
+        mode: "dark",
+        primary: { main: "#31B0E9", contrastText: "#04121A" },
+        secondary: { main: "#E7ECF2", contrastText: "#0A0E12" },
         error: { main: "#FF6F61" },
-        background: { default: "#1b2b5e", paper: "#1C2023" },
-        text: { primary: "#DFE3E7", secondary: "#C0C7CD" },
-        divider: "#41484D",
-        surfaceTint: "#90CEF3",
-        onPrimary: "#00354A",
-        primaryContainer: "#004C69",
-        onPrimaryContainer: "#C4E7FF",
-        onSecondary: "#4F2500",
-        secondaryContainer: "#6D390A",
-        onSecondaryContainer: "#FFDCC5",
-        tertiary: "#CAC1E9",
-        onTertiary: "#322C4C",
-        tertiaryContainer: "#494264",
-        onTertiaryContainer: "#E6DEFF",
-        onError: "#690005",
-        errorContainer: "#93000A",
-        onErrorContainer: "#FFDAD6",
-        onBackground: "#DFE3E7",
-        surface: "#1b2b5e",
-        onSurface: "#DFE3E7",
-        surfaceVariant: "#41484D",
-        onSurfaceVariant: "#C0C7CD",
-        outline: "#8B9297",
-        outlineVariant: "#41484D",
-        inverseSurface: "#DFE3E7",
-        inverseOnSurface: "#2C3134",
-        inversePrimary: "#1C6586",
-        primaryFixed: "#C4E7FF",
-        onPrimaryFixed: "#001E2C",
-        primaryFixedDim: "#90CEF3",
-        onPrimaryFixedVariant: "#004C69",
-        secondaryFixed: "#FFDCC5",
-        onSecondaryFixed: "#301400",
-        secondaryFixedDim: "#FFB782",
-        onSecondaryFixedVariant: "#6D390A",
-        tertiaryFixed: "#E6DEFF",
-        onTertiaryFixed: "#1D1736",
-        tertiaryFixedDim: "#CAC1E9",
-        onTertiaryFixedVariant: "#494264",
-        surfaceDim: "#0F1417",
-        surfaceBright: "#353A3D",
-        surfaceContainerLowest: "#0A0F12",
-        surfaceContainerLow: "#181C1F",
-        surfaceContainer: "#1C2023",
-        surfaceContainerHigh: "#262B2E",
-        surfaceContainerHighest: "#313539",
+        background: { default: "#0A0E12", paper: "#0A0E12" },
+        text: { primary: "#E7ECF2", secondary: "#9BA8B5" },
+        divider: "rgba(255,255,255,0.10)",
       },
     },
   },
+  shape: { borderRadius: 14 },
   typography: {
-    fontFamily: source_code_pro.style.fontFamily,
-    body1: { lineHeight: 2 },
+    fontFamily: "var(--font-sans), system-ui, sans-serif",
+    h1: { fontWeight: 800, lineHeight: 1.04, letterSpacing: "-0.02em" },
+    h2: { fontWeight: 800, lineHeight: 1.08, letterSpacing: "-0.02em" },
+    h3: { fontWeight: 700, lineHeight: 1.14, letterSpacing: "-0.015em" },
+    h4: { fontWeight: 700, lineHeight: 1.2, letterSpacing: "-0.01em" },
+    h5: { fontWeight: 600, lineHeight: 1.3, letterSpacing: "-0.01em" },
+    h6: { fontWeight: 600, lineHeight: 1.4 },
+    body1: { lineHeight: 1.7 },
     body2: { lineHeight: 1.6 },
+    button: { textTransform: "none", fontWeight: 600, letterSpacing: 0 },
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: { borderRadius: 9999, paddingInline: "1.4rem", paddingBlock: "0.55rem" },
+      },
+    },
+    MuiPaper: {
+      styleOverrides: { root: { backgroundImage: "none" } },
+    },
   },
 });
+
 export default theme;

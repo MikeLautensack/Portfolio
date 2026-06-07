@@ -1,41 +1,36 @@
 "use client";
 
-import { Box, Typography } from "@mui/material";
 import React from "react";
 import CertCard from "../misc/CertCard";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import SectionHeading from "../misc/SectionHeading";
 
 const Certs = () => {
   const { ref, inView } = useInView({
-    threshold: 0.2, // Trigger animation when 10% of the element is visible
-    triggerOnce: true, // Only animate once when the element enters view
+    threshold: 0.2,
+    triggerOnce: true,
   });
   return (
     <motion.section
-      className="flex flex-col gap-8 justify-start items-center px-6 py-16 md:px-10"
-      ref={ref} // Attach the ref to the motion div
-      initial={{ opacity: 0 }} // Initial state: invisible and 50px down
-      animate={inView ? { opacity: 1 } : {}} // Animate when in view
+      id="certifications"
+      className="mx-auto w-full max-w-content px-6 py-20 md:px-10 md:py-28"
+      ref={ref}
+      initial={{ opacity: 0 }}
+      animate={inView ? { opacity: 1 } : {}}
       transition={{ duration: 1, ease: "easeOut" }}
     >
-      <div className="w-full max-w-6xl flex flex-col gap-4">
-        <Typography
-          variant="h4"
-          className="w-max border-b-[3px] border-[#31B0E9] text-white"
-        >
-          Certifications
-        </Typography>
+      <div className="flex flex-col gap-10">
+        <SectionHeading eyebrow="Credentials" title="Certifications" />
         <CertCard
           name={"Foundational C# with Microsoft"}
           description={"Fundamentals of the C# programming language and .NET"}
-          issuedBy={"Free Code Camp/Microsoft Learn"}
+          issuedBy={"Free Code Camp / Microsoft Learn"}
           issuedOn={new Date(2024, 8)}
           certID="fcc7ca55ec2-de04-4ccf-8dc1-7c111f5d352a-fcswm"
           certURL="https://www.freecodecamp.org/certification/fcc7ca55ec2-de04-4ccf-8dc1-7c111f5d352a/foundational-c-sharp-with-microsoft"
           img={"/csharp.png"}
           imgAlt={"C#"}
-          buttonColor="#66217B"
         />
       </div>
     </motion.section>
