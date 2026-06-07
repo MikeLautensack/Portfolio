@@ -9,8 +9,8 @@ import { format } from "date-fns";
 type CertCardProps = {
   name: string;
   description: string;
-  issuedBy: string;
-  issuedOn: Date;
+  issuedBy?: string;
+  issuedOn?: Date;
   certID?: string;
   certURL?: string;
   img: string;
@@ -39,8 +39,8 @@ const CertCard = ({
         <h3 className="text-xl font-bold text-ink md:text-2xl">{name}</h3>
         <p className="text-sm text-ink-muted">{description}</p>
         <div className="flex flex-wrap gap-x-6 gap-y-1 font-mono text-xs text-ink-faint">
-          <span>Issued by {issuedBy}</span>
-          <span>{format(issuedOn, "MMMM yyyy")}</span>
+          {issuedBy && <span>Issued by {issuedBy}</span>}
+          {issuedOn && <span>{format(issuedOn, "MMMM yyyy")}</span>}
           {certID && <span className="break-all">ID: {certID}</span>}
         </div>
         {certURL && (

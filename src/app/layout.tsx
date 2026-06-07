@@ -24,7 +24,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Mike Lautensack — Full-Stack Web Developer",
   description:
-    "Portfolio of Mike Lautensack, a self-taught full-stack web developer specializing in TypeScript, React, and Next.js.",
+    "Portfolio of Mike Lautensack, a full-stack web developer specializing in TypeScript, React, and Next.js.",
 };
 
 export default function RootLayout({
