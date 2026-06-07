@@ -17,11 +17,11 @@ export const projects = [
     docs: "https://estimate-generator-docs.vercel.app/",
     href: "/projects/estimate-generator",
     cardDescription:
-      "A fullstack webapp for contractors to create and send work estimates to customers.",
+      "A full-stack field service management platform for contractors to create, send, and manage work estimates.",
     summary:
-      "Estimate Generator is webapp to help contractors and small business's create and manage work estimates and change orders.  Contractors can create work estimates for their customers and benefit from Estimate Generator's automated email systems that sends emails to customers every time a contractor creates and estimate, edits an estimate, or creates a change order.  Customers of contractors can use the account automatically created for them to view estimates or request a change order and can login to their accout by using the \"magic link\" in the emails.",
+      "Estimate Generator is a field service management platform that helps contractors and small businesses create and manage professional work estimates and change orders. Contractors generate estimates for their customers and rely on an automated email system that notifies customers whenever an estimate is created, edited, or updated with a change order. Each customer gets an account created automatically and can review estimates or request changes by signing in through a secure magic link delivered in those emails.",
     description:
-      "Estimate Generator is build with Next.js version 14 app router and a Neon serverless Postgres database.  The front end is leverageing React's new sever component model as well as using Next.js SSR and caching features.  The backend is build with Next.js route handlers and uses REST architecture.  I choose to build the backend with Next.js route handlers in the form of a REST api instead of server actions because I wanted to be able to use the same backend for a React-Native client coming soon as well as leverage existing REST architecture standards and use postman to do extensive api testing.  I am using a Neon serverless postgres database with Drizzle ORM for data schema, migrations, and querys.  The project uses NextAuth.js/Auth.js version 5 to implment a role-based authentication and authorization system with credentials login for users with a contractor role and magic link login for users with a customer role.",
+      "Estimate Generator is built on the Next.js 14 App Router with a Supabase PostgreSQL database. The frontend takes full advantage of React Server Components alongside Next.js server-side rendering and caching for fast, SEO-friendly pages. The backend is a REST API built with Next.js route handlers — I chose REST over server actions so the same API can power an upcoming React Native client, follow established REST conventions, and be tested thoroughly with Postman. Authentication and authorization use a JWT and database-session strategy, with credentials-based login for contractors and passwordless magic-link login for their customers. Stripe handles subscription billing, including webhook-driven plan management.",
     loom: "",
     galary: [
       {
@@ -30,10 +30,11 @@ export const projects = [
       },
     ],
     bullets: [
-      { id: 1, text: "• Next.js / React.js" },
-      { id: 2, text: "• Auth.js" },
-      { id: 3, text: "• Vercel Serverless" },
-      { id: 4, text: "• Drizzle ORM + Neon Serverless PostgreSQL" },
+      { id: 1, text: "• Next.js 14 / React.js" },
+      { id: 2, text: "• React Server Components" },
+      { id: 3, text: "• Supabase (PostgreSQL)" },
+      { id: 4, text: "• JWT + DB Session Auth" },
+      { id: 5, text: "• Stripe Subscription Billing" },
     ],
     stack: {
       lang: {
@@ -41,7 +42,7 @@ export const projects = [
         icon: <BiLogoTypescript className="text-white" />,
       },
       database: {
-        name: "Neon Serverless Postgres",
+        name: "Supabase Postgres",
         icon: <FaDatabase className="text-white" />,
       },
       infrastructure: {
@@ -64,9 +65,9 @@ export const projects = [
     github: "https://github.com/MikeLautensack/Socket-IO-Chat-App-Client",
     docs: "",
     href: "/projects/simple-chat",
-    cardDescription: "A simple realtime chat app.",
+    cardDescription: "A real-time chat app built with Socket.IO, Next.js, and Express.",
     summary:
-      "Simple Chat is a real time chat app built with a node/express socket.io server deployed on Azure app service and a Next.js client deployed on Vercel.  Login with google o-auth and create a chat room to begin chatting.",
+      "Simple Chat is a real-time chat application powered by a Node.js and Express server running Socket.IO, deployed on Azure App Service, with a Next.js client hosted on Vercel. Sign in with Google OAuth, create a chat room, and start messaging instantly.",
     description: "",
     loom: "",
     galary: [
@@ -85,7 +86,7 @@ export const projects = [
     stack: {
       lang: {
         name: "TypeScript",
-        icon: <RiJavascriptFill className="text-white" />,
+        icon: <BiLogoTypescript className="text-white" />,
       },
       infrastructure: {
         name: "Vercel",
@@ -93,7 +94,7 @@ export const projects = [
       },
       frontendFramework: {
         name: "Next.js",
-        icon: <SiVite className="text-white" />,
+        icon: <SiNextdotjs className="text-white" />,
       },
     },
   },
@@ -108,9 +109,9 @@ export const projects = [
     docs: "",
     href: "/projects/html-to-pdf",
     cardDescription:
-      "A C# .NET Minimal API microservice that converts HTML to PDF documents.",
+      "A C# .NET Minimal API microservice that converts HTML into PDF documents.",
     summary:
-      "HTML to PDF is a C# .NET microservice build using minimal api and Playwright to convert HTML to PDF documents and is deployed on Azure app service.",
+      "HTML to PDF is a C# .NET microservice built with Minimal APIs and Playwright that converts HTML into polished PDF documents. It is containerized with Docker and deployed on Azure App Service, and exposes an OpenAPI/Swagger UI for exploring and testing its endpoints.",
     description: "",
     loom: "",
     galary: [
@@ -149,7 +150,7 @@ export const projects = [
     href: "/projects/galaxy-generator",
     cardDescription: "A 3D galaxy you can customize with a controls menu",
     summary:
-      'Galaxy Generator is a course project from "Three.js Journey", a course on three.js and react-three-fiber.  Tweak the values in the control panel on the top right of the browser and you can see your galaxy change in real time.  This project is build using Vite with Javascript, Three.js, and datgui.',
+      'Galaxy Generator is a project from "Three.js Journey," a course on Three.js and React Three Fiber. Adjust the controls in the top-right panel — star count, size, spin, and colors — and watch the galaxy regenerate in real time. It is built with Vite, JavaScript, Three.js, and dat.GUI.',
     description: "",
     loom: "",
     galary: [
@@ -192,7 +193,7 @@ export const projects = [
     cardDescription:
       "A raging sea you can customize with a controls menu, built with custom shaders and rendered with three.js",
     summary:
-      'Raging Sea is a course project from "Three.js Journey", a course on three.js and react-three-fiber.  Tweak the values in the control panel on the top right of the browser and you can see the raging sea change in real time.  This project is build using Vite with Javascript, Three.js, datgui, and custom glsl shaders.',
+      'Raging Sea is a project from "Three.js Journey," a course on Three.js and React Three Fiber. Tweak the controls in the top-right panel to reshape the waves, colors, and surface in real time. It is built with Vite, JavaScript, Three.js, dat.GUI, and custom GLSL shaders.',
     description: "",
     loom: "",
     galary: [

@@ -1,6 +1,4 @@
-import { Box, Divider, Typography } from "@mui/material";
 import React from "react";
-import StackItem from "./StackItem";
 
 type SpecItemProps = {
   heading: string;
@@ -10,15 +8,17 @@ type SpecItemProps = {
 
 const SpecItem = ({ heading, name, icon }: SpecItemProps) => {
   return (
-    <Box component="div" className="flex flex-col gap-3 w-full items-start">
-      <Typography
-        variant="h5"
-        className="text-white border-b-[2px] border-white"
-      >
+    <div className="flex items-center justify-between gap-3 border-b border-line py-3 last:border-0">
+      <span className="text-xs uppercase tracking-wide text-ink-faint">
         {heading}
-      </Typography>
-      <StackItem name={name} icon={icon} />
-    </Box>
+      </span>
+      <span className="flex items-center gap-2 text-right text-sm font-medium text-ink">
+        <span className="flex h-4 w-4 items-center justify-center [&>svg]:h-4 [&>svg]:w-4">
+          {icon}
+        </span>
+        {name}
+      </span>
+    </div>
   );
 };
 

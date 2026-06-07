@@ -1,6 +1,7 @@
 import ProjectTemplate from "@/components/misc/ProjectTemplate";
 import { projects } from "@/projectsData";
 import React from "react";
+import Link from "next/link";
 
 const getProject = (project: string) => {
   for (let i = 0; i < projects.length; i++) {
@@ -13,11 +14,17 @@ const getProject = (project: string) => {
 const page = ({ params }: { params: { project: string } }) => {
   const proj = getProject(params.project);
   if (!proj) {
-    return <div>No Project Data Found</div>;
+    return (
+      <main className="mx-auto flex min-h-[calc(100vh-64px)] max-w-content flex-col items-start gap-4 px-6 py-20 md:px-10">
+        <h1 className="text-2xl font-bold text-ink">Project not found</h1>
+        <Link href="/projects" className="text-sm text-accent hover:underline">
+          ← Back to projects
+        </Link>
+      </main>
+    );
   }
-  proj;
   return (
-    <div className="px-8 md:px-16 lg:px-32 min-h-[calc(100vh-56px)]">
+    <main className="min-h-[calc(100vh-64px)]">
       <ProjectTemplate
         projectLabel={proj.projectLabel}
         projectName={proj.projectName}
@@ -34,7 +41,7 @@ const page = ({ params }: { params: { project: string } }) => {
         bullets={proj.bullets}
         stack={proj.stack}
       />
-    </div>
+    </main>
   );
 };
 

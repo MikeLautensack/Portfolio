@@ -28,17 +28,35 @@ export default function SideBar() {
 
   return (
     <div>
-      <Button onClick={toggleDrawer(true)}>
-        <MenuIcon className="text-white" />
+      <Button onClick={toggleDrawer(true)} aria-label="Open menu">
+        <MenuIcon className="text-ink" />
       </Button>
-      <Drawer anchor={"right"} open={state} onClose={toggleDrawer(false)}>
-        <div className="w-52 h-full p-4 flex flex-col justify-start items-start bg-slate-500">
+      <Drawer
+        anchor={"right"}
+        open={state}
+        onClose={toggleDrawer(false)}
+        PaperProps={{
+          sx: {
+            backgroundColor: "#0A0E12",
+            backgroundImage: "none",
+            borderLeft: "1px solid rgba(255,255,255,0.08)",
+          },
+        }}
+      >
+        <div className="flex h-full w-64 flex-col items-start gap-1 p-6">
+          <span className="mb-5 text-lg font-bold text-ink">
+            Mike <span className="text-accent">Lautensack</span>
+          </span>
           <Link href={"/"}>
-            <Button variant="text">Home</Button>
+            <Button variant="text" sx={{ color: "#E7ECF2" }}>
+              Home
+            </Button>
           </Link>
           <SideBarDropDown />
-          <Link href={"hire-me"}>
-            <Button variant="text">Hire Me</Button>
+          <Link href={"/hire-me"}>
+            <Button variant="text" sx={{ color: "#E7ECF2" }}>
+              Hire Me
+            </Button>
           </Link>
         </div>
       </Drawer>

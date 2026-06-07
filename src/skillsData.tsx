@@ -2,133 +2,133 @@ export const skillsData = [
   {
     skill: "JavaScript",
     description:
-      "Core programming language for web development, enabling interactive and dynamic website functionality",
+      "The foundational language of the web, powering interactive, dynamic behavior across browsers and servers.",
     imgSrc: "/jslogo.png",
     imgAlt: "jslogo",
   },
   {
     skill: "TypeScript",
     description:
-      "Advanced JavaScript with static typing for building scalable and maintainable applications",
+      "Statically typed JavaScript for building large, scalable, and maintainable applications with confidence. My primary language day to day.",
     imgSrc: "/tslogo.png",
     imgAlt: "tslogo",
   },
   {
     skill: "React.js",
     description:
-      "Library for building dynamic and responsive user interfaces with a component-based architecture",
+      "Component-based library for building fast, interactive, and reusable user interfaces.",
     imgSrc: "/reactlogo.png",
     imgAlt: "reactlogo.png",
   },
   {
     skill: "Next.js",
     description:
-      "React framework for server-side rendering, static site generation, and building production-ready applications",
+      "The React framework for production — server-side rendering, static generation, and full-stack apps with the App Router and React Server Components.",
     imgSrc: "/nextjslogo.png",
     imgAlt: "nextjslogo.png",
   },
   {
     skill: "Vite",
     description:
-      "Modern build tool for faster development and optimized production builds, with expertise in library mode for component libraries",
+      "Lightning-fast build tool and dev server, including library mode for shipping reusable component libraries.",
     imgSrc: "/vitelogo.png",
     imgAlt: "vitelogo",
   },
   {
     skill: "Node.js",
     description:
-      "JavaScript runtime for building scalable server-side applications and APIs",
+      "JavaScript runtime for building fast, scalable server-side applications and APIs.",
     imgSrc: "/nodejsStackedLight.svg",
     imgAlt: "nodelogo",
   },
   {
     skill: "Express.js",
     description:
-      "Web application framework for Node.js, used for building robust and flexible backend services",
+      "Minimal, flexible Node.js framework for building robust REST APIs and backend services.",
     imgSrc: "/express-js.png",
     imgAlt: "expresslogo",
   },
   {
     skill: "C#",
     description:
-      "Versatile, object-oriented programming language for developing a wide range of applications",
+      "Modern, object-oriented language for building cross-platform applications on the .NET platform.",
     imgSrc: "/csharp.png",
     imgAlt: "c#logo",
   },
   {
     skill: ".NET",
     description:
-      "Free, cross-platform, open-source developer platform for building many different types of applications",
+      "Free, open-source, cross-platform framework for building web services and applications.",
     imgSrc: "/dotnetcore.png",
     imgAlt: "dotnetlogo.png",
   },
   {
     skill: "Azure",
     description:
-      "Cloud platform for deploying, managing, and scaling web applications and services",
+      "Microsoft's cloud platform for deploying, hosting, and scaling web applications and services. Microsoft Certified: Azure Fundamentals (AZ-900).",
     imgSrc: "/azurelogo.png",
     imgAlt: "azurelogo",
   },
   {
     skill: "Vercel",
     description:
-      "Platform for deploying and hosting Next.js and other frontend applications with ease",
+      "The platform for deploying and hosting Next.js and modern frontend applications with zero-config CI/CD.",
     imgSrc: "/vercellogo.svg",
     imgAlt: "vercellogo",
   },
   {
     skill: "Git",
     description:
-      "Distributed version control system for tracking changes in source code during software development",
+      "Distributed version control for tracking changes and collaborating on code with confidence.",
     imgSrc: "/gitlogo.png",
     imgAlt: "gitlogo",
   },
   {
     skill: "GitHub",
     description:
-      "Web-based platform for version control and collaboration using Git",
+      "Cloud platform for hosting Git repositories, code review, and team collaboration.",
     imgSrc: "/githublogo.png",
     imgAlt: "githublogo",
   },
   {
     skill: "Docker",
     description:
-      "Containerization technology for consistent development, shipping, and deployment of applications",
+      "Containerization for building, shipping, and running applications consistently across environments.",
     imgSrc: "/dockerlogo.png",
     imgAlt: "dockerlogo",
   },
   {
     skill: "PostgreSQL",
     description:
-      "Open-source relational database management system for storing and managing application data",
+      "Powerful open-source relational database for reliably storing and querying application data.",
     imgSrc: "/postgresqllogo2.png",
     imgAlt: "postgresqllogo",
   },
   {
     skill: "MySQL",
     description:
-      "Popular open-source relational database management system for web applications",
+      "Widely used open-source relational database for web and application backends.",
     imgSrc: "/mysqllogo.png",
     imgAlt: "mysqllogo",
   },
   {
     skill: "REST API Design",
     description:
-      "Principles and best practices for designing scalable and efficient web APIs",
+      "Designing clean, scalable, and well-documented HTTP APIs that follow REST conventions.",
     imgSrc: "/restlogo.png",
     imgAlt: "restlogo",
   },
   {
     skill: "Socket.io",
     description:
-      "Library for building real-time, bidirectional communication between web clients and servers",
+      "Real-time, bidirectional communication between clients and servers over WebSockets.",
     imgSrc: "/socketiologo.png",
     imgAlt: "sockeriologo",
   },
   {
     skill: "Three.js",
     description:
-      "JavaScript library for creating 3D graphics and animations in the browser",
+      "JavaScript library for rendering interactive 3D graphics and animations in the browser.",
     imgSrc: "/threejslogo.png",
     imgAlt: "threejslogo",
   },

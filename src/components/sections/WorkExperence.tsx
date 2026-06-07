@@ -1,82 +1,88 @@
 "use client";
 
-import { Typography } from "@mui/material";
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import ExperienceItem from "../misc/ExperenceItem";
+import SectionHeading from "../misc/SectionHeading";
 
 const WorkExperence = () => {
   const { ref, inView } = useInView({
-    threshold: 0.2,
+    threshold: 0.15,
     triggerOnce: true,
   });
   return (
     <motion.section
-      className="py-16 flex flex-col justify-start items-start gap-12 px-6 md:px-10 max-w-6xl mx-auto"
+      id="experience"
+      className="mx-auto w-full max-w-content px-6 py-20 md:px-10 md:py-28"
       ref={ref}
       initial={{ opacity: 0 }}
       animate={inView ? { opacity: 1 } : {}}
       transition={{ duration: 1, ease: "easeOut" }}
     >
-      <Typography variant="h4" className="w-max border-b-2 border-[#31B0E9] text-white">
-        Work Experience
-      </Typography>
-      <ExperienceItem
-        num="01."
-        job="Full-Stack Web Developer"
-        company="@ Loxone"
-        date="Oct 2025 – Present"
-        bullets={[
-          "Integrated Sentry error and performance monitoring into shop.loxone.com, eliminating manual bug reporting workflows for sales and lead gen teams",
-          "Migrated Next.js webshop from JavaScript to TypeScript with React Server Components, improving page load performance and SEO",
-        ]}
-      />
-      <ExperienceItem
-        num="02."
-        job="Full-Stack Developer (Contract)"
-        company="@ Upwork"
-        date="May 2023 – Oct 2025"
-        bullets={[
-          "Built and maintained web applications for small businesses using Node.js, Next.js, React.js, and PostgreSQL",
-          "Integrated secure Stripe payment systems and implemented tiered subscription logic for SaaS platforms",
-          "Developed internal React component libraries and documentation for developers",
-          "Achieved Top Rated Plus, 100% Job Success Score, and many 5 Star client reviews on Upwork",
-        ]}
-      />
-      <ExperienceItem
-        num="03."
-        job="Full-Stack Developer - Cargo Fax - cargofax.co (Contract)"
-        company="@ Cargo Fax"
-        date="Dec 2024 – May 2025"
-        bullets={[
-          "Refactored legacy Python app to Next.js 14 app router with a PostgreSQL database via Supabase",
-          "Integrated subscription billing with Stripe",
-          "Integrated Sentry for error and performance monitoring in production",
-        ]}
-      />
-      <ExperienceItem
-        num="04."
-        job="Backend Developer - evyAI - evyai.com (Contract)"
-        company="@ evyAI"
-        date="Dec 2024 – Jan 2025"
-        bullets={[
-          "Wrote Google Firebase cloud functions in TypeScript for an AI web application + chrome extension",
-          "Wrote custom authentication and logger middleware for backend",
-        ]}
-      />
-      <ExperienceItem
-        num="05."
-        job="Frontend Developer (Contract)"
-        company="@ Software Harmonics LLC"
-        date="Feb 2024 – Aug 2024"
-        bullets={[
-          "Enhanced production React.js sales platform used by sales teams at a commercial trucking company",
-          "Refactored legacy React frontend application from Create React App to Vite, reducing dev server startup time from minutes to seconds, added hot module reloading, and updated from React 16 to React 18",
-          "Developed custom TypeScript React.js component library and VSCode extensions for internal development workflows at Software Harmonics LLC",
-          "Created comprehensive documentation for component library and developer tooling",
-        ]}
-      />
+      <div className="flex flex-col gap-10">
+        <SectionHeading eyebrow="Career" title="Work Experience" />
+        <div className="flex flex-col gap-5">
+          <ExperienceItem
+            num="01."
+            job="Full-Stack Web Developer"
+            company="@ Loxone"
+            date="Oct 2025 – Present"
+            bullets={[
+              "Integrated the Bank of America checkout API for credit card payments on shop.loxone.com, keeping the multi-country webshop PCI SAQ D compliant",
+              "Led the migration of the Next.js webshop from JavaScript to TypeScript and from client-side rendering to React Server Components with server-side data fetching, improving performance, UX, and SEO",
+              'Built and maintain "Loxone UIKit," a React and TypeScript component library and design system built on ShadCN and Tailwind CSS v4',
+              "Built the Loxone Status Page, an internal service-monitoring dashboard inspired by downdetector.com",
+              "Integrated Sentry into shop.loxone.com for production error and performance monitoring",
+            ]}
+          />
+          <ExperienceItem
+            num="02."
+            job="Full-Stack Developer (Contract)"
+            company="@ Upwork"
+            date="May 2023 – Oct 2025"
+            bullets={[
+              "Built and maintained web applications for small businesses using Node.js, Next.js, React.js, and PostgreSQL",
+              "Integrated secure Stripe payment systems and implemented tiered subscription logic for SaaS platforms",
+              "Developed internal React component libraries and documentation for developers",
+              "Achieved Top Rated Plus, 100% Job Success Score, and many 5 Star client reviews on Upwork",
+            ]}
+          />
+          <ExperienceItem
+            num="03."
+            job="Full-Stack Developer - Cargo Fax - cargofax.co (Contract)"
+            company="@ Cargo Fax"
+            date="Dec 2024 – May 2025"
+            bullets={[
+              "Refactored legacy Python app to Next.js 14 app router with a PostgreSQL database via Supabase",
+              "Integrated subscription billing with Stripe",
+              "Integrated Sentry for error and performance monitoring in production",
+            ]}
+          />
+          <ExperienceItem
+            num="04."
+            job="Backend Developer - evyAI - evyai.com (Contract)"
+            company="@ evyAI"
+            date="Dec 2024 – Jan 2025"
+            bullets={[
+              "Wrote Google Firebase cloud functions in TypeScript for an AI web application + chrome extension",
+              "Wrote custom authentication and logger middleware for backend",
+            ]}
+          />
+          <ExperienceItem
+            num="05."
+            job="Frontend Developer (Contract)"
+            company="@ Software Harmonics LLC"
+            date="Feb 2024 – Aug 2024"
+            bullets={[
+              "Enhanced production React.js sales platform used by sales teams at a commercial trucking company",
+              "Refactored legacy React frontend application from Create React App to Vite, reducing dev server startup time from minutes to seconds, added hot module reloading, and updated from React 16 to React 18",
+              "Developed custom TypeScript React.js component library and VSCode extensions for internal development workflows at Software Harmonics LLC",
+              "Created comprehensive documentation for component library and developer tooling",
+            ]}
+          />
+        </div>
+      </div>
     </motion.section>
   );
 };

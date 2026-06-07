@@ -1,136 +1,86 @@
-import { Button, Typography } from "@mui/material";
+import { Button } from "@mui/material";
 import Link from "next/link";
 import React from "react";
 import * as motion from "framer-motion/client";
 
+const container = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
+};
+
+const item = {
+  hidden: { opacity: 0, y: 16 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
 const HeroContent = () => {
   return (
     <motion.div
-      className="flex flex-col gap-6 justify-start items-start w-full lg:w-10/12 z-10"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
+      className="relative z-10 flex w-full flex-col items-start gap-6 lg:w-7/12"
+      variants={container}
+      initial="hidden"
+      animate="show"
     >
-      <Typography
-        color="#FFFFFF"
-        sx={{
-          typography: {
-            xs: "body1", // Small screens
-            sm: "h6", // Medium screens
-            md: "h5", // Large screens
-            lg: "h4", // Extra large screens
-          },
-        }}
-        noWrap
+      <motion.span
+        variants={item}
+        className="inline-flex items-center gap-2 rounded-full border border-line bg-surface/60 px-3 py-1 font-mono text-xs text-ink-muted"
       >
-        Hi, I am{" "}
-        <Typography
-          component="span"
-          color="#31B0E9"
-          sx={{
-            typography: {
-              xs: "body1", // Small screens
-              sm: "h6", // Medium screens
-              md: "h5", // Large screens
-              lg: "h4", // Extra large screens
-            },
-          }}
-        >
-          Mike
-        </Typography>{" "}
-        Lautensack
-      </Typography>
-      <Typography
-        color="#FFFFFF"
-        variant="h1"
-        sx={{
-          typography: {
-            xs: "h5", // Small screens
-            sm: "h3", // Medium screens
-            md: "h2", // Large screens
-            lg: "h1", // Extra large screens
-          },
-        }}
+        <span className="h-2 w-2 rounded-full bg-accent" />
+        Based in Norristown, PA · Remote-friendly
+      </motion.span>
+
+      <motion.p
+        variants={item}
+        className="font-mono text-sm text-accent md:text-base"
       >
-        I am a{" "}
-        <Typography
-          component="span"
-          color="#31B0E9"
-          variant="h1"
-          sx={{
-            typography: {
-              xs: "h5", // Small screens
-              sm: "h3", // Medium screens
-              md: "h2", // Large screens
-              lg: "h1", // Extra large screens
-            },
-          }}
-        >
-          Full-Stack
-        </Typography>{" "}
-        web developer
-      </Typography>
-      <Typography
-        color="#FFFFFF"
-        sx={{
-          typography: {
-            xs: "body2", // Small screens
-            sm: "h6", // Medium screens
-            md: "h6", // Large screens
-            lg: "h6", // Extra large screens
-          },
-        }}
+        Hi, I&apos;m Mike Lautensack
+      </motion.p>
+
+      <motion.h1
+        variants={item}
+        className="text-4xl font-extrabold leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-6xl"
       >
-        I specialize in{" "}
-        <Typography
-          component="span"
-          color="#31B0E9"
-          variant="h6"
-          sx={{ fontWeight: "600" }}
-        >
-          N
-        </Typography>
-        ode.js,{" "}
-        <Typography
-          component="span"
-          color="#31B0E9"
-          variant="h6"
-          sx={{ fontWeight: "600" }}
-        >
-          R
-        </Typography>
-        eact.js, and{" "}
-        <Typography
-          component="span"
-          color="#31B0E9"
-          variant="h6"
-          sx={{ fontWeight: "600" }}
-        >
-          N
-        </Typography>
-        ext.js
-      </Typography>
-      <div className="flex justify-center lg:justify-start items-center gap-4">
-        <Link href="/projects" className="w-full flex-grow">
-          <Button variant="contained" color="secondary" className="w-full">
-            <Typography
-              variant="h6"
-              color="white"
-              noWrap
-              sx={{ fontWeight: "600" }}
-            >
-              View Projects!
-            </Typography>
+        Full-Stack
+        <br />
+        <span className="text-accent">Web Developer</span>
+      </motion.h1>
+
+      <motion.p
+        variants={item}
+        className="max-w-md text-base leading-relaxed text-ink-muted md:text-lg"
+      >
+        I build robust, production-grade web applications with{" "}
+        <span className="text-ink">TypeScript</span>,{" "}
+        <span className="text-ink">React</span>, and{" "}
+        <span className="text-ink">Next.js</span>.
+      </motion.p>
+
+      <motion.div
+        variants={item}
+        className="flex flex-wrap items-center gap-3 pt-2"
+      >
+        <Link href="/projects">
+          <Button variant="contained" color="primary" size="large">
+            View Projects
           </Button>
         </Link>
-        {/* <Link href="/hire-me" className="w-full flex-grow">
-          <Button variant="contained" className="w-full">
-            <Typography variant="h6" noWrap>
-              Hire Me!
-            </Typography>
+        <Link href="/hire-me">
+          <Button
+            variant="outlined"
+            size="large"
+            sx={{
+              borderColor: "rgba(255,255,255,0.18)",
+              color: "#E7ECF2",
+              "&:hover": {
+                borderColor: "#31B0E9",
+                backgroundColor: "rgba(49,176,233,0.08)",
+              },
+            }}
+          >
+            Get in Touch
           </Button>
-        </Link> */}
-      </div>
+        </Link>
+      </motion.div>
     </motion.div>
   );
 };
