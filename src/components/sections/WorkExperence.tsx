@@ -29,23 +29,21 @@ const WorkExperence = () => {
             company="@ Loxone"
             date="Oct 2025 – Present"
             bullets={[
-              "Integrated the Bank of America checkout API for credit card payments on shop.loxone.com, keeping the multi-country webshop PCI SAQ D compliant",
+              "Integrated the Bank of America checkout API for credit card payments on shop.loxone.com",
               "Led the migration of the Next.js webshop from JavaScript to TypeScript and from client-side rendering to React Server Components with server-side data fetching, improving performance, UX, and SEO",
-              'Built and maintain "Loxone UIKit," a React and TypeScript component library and design system built on ShadCN and Tailwind CSS v4',
-              "Built the Loxone Status Page, an internal service-monitoring dashboard inspired by downdetector.com",
+              "Built the Loxone Status Page, an internal service-monitoring dashboard",
               "Integrated Sentry into shop.loxone.com for production error and performance monitoring",
             ]}
           />
           <ExperienceItem
             num="02."
-            job="Full-Stack Developer (Contract)"
-            company="@ Upwork"
+            job="Full-Stack Developer"
+            company="@ Independent / Contract"
             date="May 2023 – Oct 2025"
             bullets={[
               "Built and maintained web applications for small businesses using Node.js, Next.js, React.js, and PostgreSQL",
               "Integrated secure Stripe payment systems and implemented tiered subscription logic for SaaS platforms",
               "Developed internal React component libraries and documentation for developers",
-              "Achieved Top Rated Plus, 100% Job Success Score, and many 5 Star client reviews on Upwork",
             ]}
           />
           <ExperienceItem

@@ -6,8 +6,8 @@ import { useInView } from "react-intersection-observer";
 import SectionHeading from "../misc/SectionHeading";
 
 const facts = [
-  "Top Rated freelancer on Upwork",
-  "100% Job Success Score",
+  "Years of professional contract work",
+  "Production Next.js & React apps",
   "Azure Certified (AZ-900)",
   "TypeScript · React · Next.js",
 ];
@@ -30,7 +30,7 @@ const AboutMe = () => {
       <div className="flex flex-col gap-10">
         <SectionHeading
           eyebrow="About Me"
-          title="Self-taught, product-minded engineer."
+          title="Product-minded full-stack engineer."
         />
 
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
@@ -39,23 +39,21 @@ const AboutMe = () => {
               variant="body1"
               className="text-lg leading-relaxed text-ink"
             >
-              I&apos;m a self-taught full-stack web developer who builds robust,
+              I&apos;m a full-stack web developer who builds robust,
               production-grade web applications with TypeScript, React, and
               Next.js. My work spans the entire stack — from payment
-              integrations and server-side rendering to component libraries and
-              design systems.
+              integrations and server-side rendering to reusable component
+              libraries.
             </Typography>
             <Typography
               variant="body1"
               className="text-lg leading-relaxed text-ink-muted"
             >
-              Recent highlights include integrating a PCI-compliant payments
-              architecture into a multi-country e-commerce webshop, leading its
-              migration to TypeScript and React Server Components, and building
-              an internal component library and design system from the ground
-              up. I&apos;ve also delivered production applications for a range of
-              clients as a Top Rated freelancer on Upwork, earning a 100% Job
-              Success Score.
+              Recent highlights include integrating a payment processor into a
+              production e-commerce webshop and leading its migration to
+              TypeScript and React Server Components. I&apos;ve also delivered
+              production web applications for a range of clients through several
+              years of contract work.
             </Typography>
             <Typography
               variant="body1"

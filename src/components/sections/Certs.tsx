@@ -22,16 +22,27 @@ const Certs = () => {
     >
       <div className="flex flex-col gap-10">
         <SectionHeading eyebrow="Credentials" title="Certifications" />
-        <CertCard
-          name={"Foundational C# with Microsoft"}
-          description={"Fundamentals of the C# programming language and .NET"}
-          issuedBy={"Free Code Camp / Microsoft Learn"}
-          issuedOn={new Date(2024, 8)}
-          certID="fcc7ca55ec2-de04-4ccf-8dc1-7c111f5d352a-fcswm"
-          certURL="https://www.freecodecamp.org/certification/fcc7ca55ec2-de04-4ccf-8dc1-7c111f5d352a/foundational-c-sharp-with-microsoft"
-          img={"/csharp.png"}
-          imgAlt={"C#"}
-        />
+        <div className="flex flex-col gap-4">
+          <CertCard
+            name={"Microsoft Certified: Azure Fundamentals (AZ-900)"}
+            description={
+              "Validates foundational knowledge of cloud concepts and core Microsoft Azure services, security, and pricing."
+            }
+            issuedBy={"Microsoft"}
+            img={"/azurelogo.png"}
+            imgAlt={"Microsoft Azure"}
+          />
+          <CertCard
+            name={"Foundational C# with Microsoft"}
+            description={"Fundamentals of the C# programming language and .NET"}
+            issuedBy={"Free Code Camp / Microsoft Learn"}
+            issuedOn={new Date(2024, 8)}
+            certID="fcc7ca55ec2-de04-4ccf-8dc1-7c111f5d352a-fcswm"
+            certURL="https://www.freecodecamp.org/certification/fcc7ca55ec2-de04-4ccf-8dc1-7c111f5d352a/foundational-c-sharp-with-microsoft"
+            img={"/csharp.png"}
+            imgAlt={"C#"}
+          />
+        </div>
       </div>
     </motion.section>
   );
