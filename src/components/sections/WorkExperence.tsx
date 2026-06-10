@@ -27,7 +27,7 @@ const WorkExperence = () => {
             num="01."
             job="Full-Stack Web Developer"
             company="@ Loxone"
-            date="Oct 2025 – Present"
+            date="Oct 2025 – Jun 2026"
             bullets={[
               "Integrated the Bank of America checkout API for credit card payments on shop.loxone.com",
               "Led the migration of the Next.js webshop from JavaScript to TypeScript and from client-side rendering to React Server Components with server-side data fetching, improving performance, UX, and SEO",
