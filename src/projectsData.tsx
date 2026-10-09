@@ -57,6 +57,55 @@ export const projects = [
     },
   },
   {
+    projectLabel: "estimate-generator",
+    projectName: "Estimate Generator",
+    projectType: "Fullstack Webapp",
+    imgSrc: "/estimate-generator-img.png",
+    imgAlt: "Estimate Generator",
+    prod: "https://estimategeneratorapp.com/",
+    github: "https://github.com/MikeLautensack/Estimate-Generator",
+    docs: "https://estimate-generator-docs.vercel.app/",
+    href: "/projects/estimate-generator",
+    cardDescription:
+      "The full-stack estimating app for contractors that became the starting point for ServiceClerk.",
+    summary:
+      "Estimate Generator is a field service management platform that helps contractors and small businesses create and manage professional work estimates and change orders. Contractors generate estimates for their customers and rely on an automated email system that notifies customers whenever an estimate is created, edited, or updated with a change order. Each customer gets an account created automatically and can review estimates or request changes by signing in through a secure magic link delivered in those emails. It was the starting point for ServiceClerk, the production field service management SaaS I later built and launched.",
+    description:
+      "Estimate Generator is built on the Next.js 14 App Router with a Supabase PostgreSQL database. The frontend takes full advantage of React Server Components alongside Next.js server-side rendering and caching for fast, SEO-friendly pages. The backend is a REST API built with Next.js route handlers — I chose REST over server actions so the same API can power an upcoming React Native client, follow established REST conventions, and be tested thoroughly with Postman. Authentication and authorization use a JWT and database-session strategy, with credentials-based login for contractors and passwordless magic-link login for their customers. Stripe handles subscription billing, including webhook-driven plan management.",
+    loom: "",
+    galary: [
+      {
+        img: "",
+        heading: "",
+      },
+    ],
+    bullets: [
+      { id: 1, text: "• Next.js 14 / React.js" },
+      { id: 2, text: "• React Server Components" },
+      { id: 3, text: "• Supabase (PostgreSQL)" },
+      { id: 4, text: "• JWT + DB Session Auth" },
+      { id: 5, text: "• Stripe Subscription Billing" },
+    ],
+    stack: {
+      lang: {
+        name: "TypeScript",
+        icon: <BiLogoTypescript className="text-white" />,
+      },
+      database: {
+        name: "Supabase Postgres",
+        icon: <FaDatabase className="text-white" />,
+      },
+      infrastructure: {
+        name: "Vercel",
+        icon: <SiVercel className="text-white" />,
+      },
+      metaFramework: {
+        name: "Next.js 14 App Router",
+        icon: <SiNextdotjs className="text-white" />,
+      },
+    },
+  },
+  {
     projectLabel: "simple-chat",
     projectName: "Simple Chat",
     projectType: "Fullstack Webapp",
