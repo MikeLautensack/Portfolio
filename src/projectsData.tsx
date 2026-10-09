@@ -7,6 +7,56 @@ import { FaDatabase } from "react-icons/fa";
 
 export const projects = [
   {
+    projectLabel: "service-clerk",
+    projectName: "ServiceClerk",
+    projectType: "SaaS Product",
+    imgSrc: "/service-clerk-img.png",
+    imgAlt: "ServiceClerk homepage showing a sample job from quote to final payment",
+    prod: "https://getserviceclerk.com/",
+    github: "",
+    docs: "",
+    href: "/projects/service-clerk",
+    cardDescription:
+      "A field service management SaaS I founded and built for contractors — quotes, contracts, change orders, invoices, and payments, from the first quote to the final payment.",
+    summary:
+      "ServiceClerk is a field service management SaaS for independent contractors and the trades, and the product I'm taking to market. Contractors run the whole money side of a job in one place: build a quote, turn it into a signed contract, request a deposit, issue change orders and progress bills, and send the final invoice. Customers review, sign, and pay from a share link on their phone — no account needed. CRM, scheduling, and job-linked task management keep the day-to-day work close to the job. I designed, built, and launched it as the sole engineer across product, backend, infrastructure, and UI, growing it out of an earlier portfolio project, Estimate Generator.",
+    description:
+      "ServiceClerk is built on the Next.js 16 App Router with TypeScript, backed by Supabase PostgreSQL with Drizzle ORM as the query layer. Supabase Auth handles Google OAuth and email sign-in. Stripe Billing runs the SaaS subscriptions, while Stripe Connect onboards each contractor's own account so they can collect card and bank payments from homeowners for deposits, progress bills, and invoices. Payments are recorded in an append-only ledger, so documents say what is owed while the ledger records what actually moved. Resend delivers transactional email for account and customer-document workflows, Sentry provides production error and performance monitoring, and the app is deployed on Vercel.",
+    loom: "",
+    galary: [
+      {
+        img: "",
+        heading: "",
+      },
+    ],
+    bullets: [
+      { id: 1, text: "• Next.js 16 / React" },
+      { id: 2, text: "• Supabase (PostgreSQL)" },
+      { id: 3, text: "• Drizzle ORM" },
+      { id: 4, text: "• Stripe Billing + Connect" },
+      { id: 5, text: "• Google OAuth + Email Auth" },
+      { id: 6, text: "• Resend" },
+    ],
+    stack: {
+      lang: {
+        name: "TypeScript",
+        icon: <BiLogoTypescript className="text-white" />,
+      },
+      database: {
+        name: "Supabase Postgres",
+        icon: <FaDatabase className="text-white" />,
+      },
+      infrastructure: {
+        name: "Vercel",
+        icon: <SiVercel className="text-white" />,
+      },
+      metaFramework: {
+        name: "Next.js 16 App Router",
+        icon: <SiNextdotjs className="text-white" />,
+      },
+    },
+  },
+  {
     projectLabel: "estimate-generator",
     projectName: "Estimate Generator",
     projectType: "Fullstack Webapp",
@@ -17,9 +67,9 @@ export const projects = [
     docs: "https://estimate-generator-docs.vercel.app/",
     href: "/projects/estimate-generator",
     cardDescription:
-      "A full-stack field service management platform for contractors to create, send, and manage work estimates.",
+      "The full-stack estimating app for contractors that became the starting point for ServiceClerk.",
     summary:
-      "Estimate Generator is a field service management platform that helps contractors and small businesses create and manage professional work estimates and change orders. Contractors generate estimates for their customers and rely on an automated email system that notifies customers whenever an estimate is created, edited, or updated with a change order. Each customer gets an account created automatically and can review estimates or request changes by signing in through a secure magic link delivered in those emails.",
+      "Estimate Generator is a field service management platform that helps contractors and small businesses create and manage professional work estimates and change orders. Contractors generate estimates for their customers and rely on an automated email system that notifies customers whenever an estimate is created, edited, or updated with a change order. Each customer gets an account created automatically and can review estimates or request changes by signing in through a secure magic link delivered in those emails. It was the starting point for ServiceClerk, the production field service management SaaS I later built and launched.",
     description:
       "Estimate Generator is built on the Next.js 14 App Router with a Supabase PostgreSQL database. The frontend takes full advantage of React Server Components alongside Next.js server-side rendering and caching for fast, SEO-friendly pages. The backend is a REST API built with Next.js route handlers — I chose REST over server actions so the same API can power an upcoming React Native client, follow established REST conventions, and be tested thoroughly with Postman. Authentication and authorization use a JWT and database-session strategy, with credentials-based login for contractors and passwordless magic-link login for their customers. Stripe handles subscription billing, including webhook-driven plan management.",
     loom: "",

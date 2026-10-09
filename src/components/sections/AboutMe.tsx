@@ -6,6 +6,7 @@ import { useInView } from "react-intersection-observer";
 import SectionHeading from "../misc/SectionHeading";
 
 const facts = [
+  "Founder & engineer of ServiceClerk",
   "Years of professional contract work",
   "Production Next.js & React apps",
   "Azure Certified (AZ-900)",
@@ -62,11 +63,12 @@ const AboutMe = () => {
               What sets me apart is a blend of engineering depth and business
               sense shaped by prior entrepreneurial experience, which helps me
               build solutions that genuinely fit real-world needs — particularly
-              SaaS products for small businesses. That same mindset drives my
-              own product, Estimate Generator: a field service management
-              platform I designed and built for contractors, complete with a
-              REST API, PostgreSQL, secure authentication, and Stripe
-              subscription billing.
+              SaaS products for small businesses. That same mindset drives
+              ServiceClerk, the field service management SaaS I founded and
+              launched in 2026. I built it as the sole engineer, and it takes
+              contractors from the first quote to the final payment, with
+              contracts, change orders, progress billing, and Stripe-powered
+              payments all tied to the job.
             </Typography>
           </div>
 
