@@ -13,7 +13,10 @@ type Category = {
 
 const categories: Category[] = [
   { label: "All", match: () => true },
-  { label: "Full-Stack", match: (t) => t === "Fullstack Webapp" },
+  {
+    label: "Full-Stack",
+    match: (t) => t === "Fullstack Webapp" || t === "SaaS Product",
+  },
   { label: "Microservices", match: (t) => t === "Microservice" },
   { label: "Course Projects", match: (t) => t === "Course Project" },
 ];

@@ -25,6 +25,20 @@ const WorkExperence = () => {
         <div className="flex flex-col gap-5">
           <ExperienceItem
             num="01."
+            job="Founder / Full-Stack Engineer"
+            company="@ ServiceClerk"
+            date="Jun 2026 – Present"
+            bullets={[
+              "Designed, built, and launched getserviceclerk.com, a production field service management SaaS for contractors, as the sole engineer across product, backend, infrastructure, and UI",
+              "Built end-to-end quote-to-cash workflows spanning quotes, contracts, change orders, deposits, progress billing, invoices, and customer-facing share links",
+              "Built CRM, scheduling, job-linked task management, customer records, and branded document workflows for contractors running active jobs",
+              "Architected the application with the Next.js App Router, TypeScript, Supabase/PostgreSQL, Google OAuth and email authentication, and Vercel deployment",
+              "Integrated Stripe Billing and Stripe Connect for SaaS subscriptions, connected-account onboarding, and contractor-to-homeowner payment flows",
+              "Implemented transactional email with Resend for account and customer-document workflows",
+            ]}
+          />
+          <ExperienceItem
+            num="02."
             job="Full-Stack Web Developer"
             company="@ Loxone"
             date="Oct 2025 – Jun 2026"
@@ -36,7 +50,7 @@ const WorkExperence = () => {
             ]}
           />
           <ExperienceItem
-            num="02."
+            num="03."
             job="Full-Stack Developer"
             company="@ Independent / Contract"
             date="May 2023 – Oct 2025"
@@ -47,7 +61,7 @@ const WorkExperence = () => {
             ]}
           />
           <ExperienceItem
-            num="03."
+            num="04."
             job="Full-Stack Developer - Cargo Fax - cargofax.co (Contract)"
             company="@ Cargo Fax"
             date="Dec 2024 – May 2025"
@@ -58,7 +72,7 @@ const WorkExperence = () => {
             ]}
           />
           <ExperienceItem
-            num="04."
+            num="05."
             job="Backend Developer - evyAI - evyai.com (Contract)"
             company="@ evyAI"
             date="Dec 2024 – Jan 2025"
@@ -68,7 +82,7 @@ const WorkExperence = () => {
             ]}
           />
           <ExperienceItem
-            num="05."
+            num="06."
             job="Frontend Developer (Contract)"
             company="@ Software Harmonics LLC"
             date="Feb 2024 – Aug 2024"
